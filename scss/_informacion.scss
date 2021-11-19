@@ -1,0 +1,35 @@
+@import "variables";
+/* informacion */
+/* seccion 2 */
+.cuadro__contenedor--size {
+    border-radius: 5px;
+    padding-bottom: 5px;
+
+    div h2{
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+}
+.cuadro__contenedor--color {
+    background-color: $color3;
+    color: $color4;
+}
+.informacion__persona--modificacion {
+    display: flex;
+    flex-direction: row;
+}
+.persona--modificacion {
+    margin-top: 20px;
+}
+.persona__descripcion--modificacion {
+    margin-left: 20px;
+    width: 600px;
+    height: auto;
+}
+.persona__descripcion--size {
+    font-size: 20px;
+    font-family: $font1;
+}
+.persona__descripcion--color {
+    color: $color7;
+}

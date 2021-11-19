@@ -1,0 +1,129 @@
+@import "variables";
+/* contacto */
+/* seccion 2 */
+.formulario--modificacion{
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.formulario--size {
+    padding-top: 70px;
+    padding-bottom: 5%;
+}
+.formulario--color{
+    background-color: $color3;
+}
+.form--modificacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.form--size {
+    height: auto;
+}
+.cssInput {
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.email--modificacion {
+    border-radius: 5px;
+}
+.email--size {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+}
+.textarea--modificacion {
+    border-radius: 5px;
+}
+.textarea--size {
+    width: 80%;
+    height: 30%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.condiciones--modificacion {
+    display: flex;
+    align-items: center;
+}
+.condiciones--size {
+    padding-left: 35%;
+}
+.checkbox--modificacion {
+    cursor: pointer;
+}
+.checkbox--size {
+    width: 40px;
+    height: 30px;
+}
+.boton__enviar__borrar--modificacion{
+    flex-direction: row;
+}
+.borrar--modificacion  {
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.borrar--size {
+    width: 200px; 
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.borrar--color {
+    color: $color3;
+    background-color: $color6;
+}
+/* animacion borrar */
+.borrar--modificacion:hover {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    animation: pulseB 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    color: $color4;
+    transition: 0.6s;
+}
+.enviar--modificacion {
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.enviar--size {
+    width: 200px; 
+    height: 30px;
+}
+.enviar--color {
+    background-color: $color5;
+    color: $color3;
+}
+/* animacion enviar */
+.enviar--modificacion:hover  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    animation: pulseE 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    color: $color4;
+    transition: 0.6s;
+}
+@keyframes pulseE {
+    0% {
+        box-shadow: 0 0 0 3px $color5;
+    }
+    50% {
+        box-shadow: 0 0 0 0px $color5;
+    }
+    100% {
+        box-shadow: 0 0 0 3px $color5;
+    }
+}
+/* animacion borrar */
+@keyframes pulseB {
+    0% {
+        box-shadow: 0 0 0 3px $color6;
+    }
+    50% {
+        box-shadow: 0 0 0 0px $color6;
+    }
+    100% {
+        box-shadow: 0 0 0 3px $color6;
+    }
+}

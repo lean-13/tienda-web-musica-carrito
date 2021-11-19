@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music House contacto</title>
+    <!-- iconos portada -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <!-- iconos contacto -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- libreria AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="scss/style.css">
+    <!-- icono  -->
+    <link rel="shortcut icon" href="img/icons8-musicalmente.svg">
+    <!-- seo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="En music house encontraras los mejores precios en todo tipo de instrumentos como guitarras para crear tu propia musica">
+    <!-- palabras claves -->
+   <meta name="keywords"  content="INSTRUMENTOS, MUSICA, CONTACTO">
+</head>
+<body>
+    <!-- seccion 1 -->
+    <!-- menu -->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark border-3 border-bottom border-dark fixed-top">
+            <a href="index.html" class="navbar-brand" id="logo">
+                <img class="logo--modificacion logo--size logo--color logo--animacion" src="img/icons8-musicalmente.svg" alt="logo">
+                    <span class="material-icons-outlined logo__simbolo_recargar__pagina--modificacion logo__simbolo_recargar__pagina--size logo__simbolo_recargar__pagina--color logo__simbolo_recargar__pagina--animacion">undo</span>
+            </a>  
+            <button type="button" class="navbar-toggler" id="botonMenu">
+                <span class="navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"></span>
+            </button>
+            <div id="menuNavegacion" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="categorias.html" class="nav-link" role="button" data-bs-toggle="dropdown">Categorias</a>
+                        <ul class="dropdown-menu bg-dark" id="submenu">
+                            <li><a href="categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
+                            <li><a href="categoria-cuerda.html" class="dropdown-item">Instrumentos de cuerda</a></li>
+                            <li><a href="categoria-percusion.html" class="dropdown-item">Instrumentos de percusion</a></li>
+                            <li><a href="categoria-viento.html" class="dropdown-item">Instrumentos de viento</a></li>
+                            <li><a href="categoria-microfono.html" class="dropdown-item">Microfonos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="compra.html" class="nav-link">Donde comprar</a></li>
+                    <li class="nav-item"><a href="informacion.html" class="nav-link">Informacion</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- seccion 2 -->
+    <!-- formulario -->
+    <section class="formulario--modificacion formulario--size formulario--color">
+        <div class="separacion__seccion--modificacion" data-aos="zoom-in">
+            <form class="form--modificacion form--size" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
+                <h2 class="formulario__input--modificacion titulo--modificacion titulo--color">Formulario de Contacto</h2>
+                    <input type="text" placeholder="Nombre y Apellido" class="form-control cssInput" required>
+                    <div class="input-group mb-3 email--modificacion email--size">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">@example.com</span>
+                        </div>
+                    </div>
+                    <input type="number" placeholder="Telefono" class="form-control cssInput">
+                    <textarea name="areadetexto" id="" cols="30" rows="10" placeholder="Escriba Aqui!!" class="form-control textarea--modificacion textarea--size" required></textarea>
+                    <div class="condiciones--modificacion condiciones--size">
+                        <label for="terminos">Aceptar Terminos</label>
+                        <input type="checkbox" name="terminos" class="checkbox--modificacion checkbox--size" required>
+                    </div>
+                    <div class="boton__enviar__borrar--modificacion">
+                        <input type="reset" class="borrar--modificacion borrar--color borrar--size"> 
+                        <input type="submit" class="enviar--modificacion enviar--color enviar--size">
+                    </div>
+            </form>
+        </div>
+    </section>
+    <!-- seccion 3 -->
+    <!-- otros metodos de contacto -->
+    <section class="contacto--modificacion contacto--size contacto--color">
+        <h3 class="titulo--modificacion titulo--color">Contacto</h3>
+            <div class="iconos__contacto--modificacion iconos__contacto--size iconos__contacto--color">
+                <!-- formulario     -->
+                <a href="contacto.html"><i class="fas fa-file-alt"></i></a>
+                <!-- email -->
+                <a href=""><i class="fas fa-envelope"></i></a>
+                <!-- linkedin -->
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <!-- github -->
+                <a href=""><i class="fab fa-github"></i></a>
+                <!-- facebook -->
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <!-- twitter     -->
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <!-- instagram     -->
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+    </section>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iniciar libreria AOS -->
+    <script>
+        AOS.init();
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

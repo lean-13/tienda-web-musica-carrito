@@ -1,0 +1,21 @@
+@import "variables";
+/* seccion 2 */
+.producto--modificacion {
+    font-family: $font1;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.producto--size{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+
+    h2 {
+        width: 100%;
+    }
+}
+.producto--color {
+    background-color: $color3;
+}

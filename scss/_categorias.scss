@@ -1,0 +1,35 @@
+@import "variables";
+/* categorias */
+/* seccion 2 */
+.categorias {
+    padding-top: 48px;
+}
+/* categoria: todos los productos  */
+.galeria--modificacion {
+    border-radius: 5px;
+    font-family: $font1;
+    // grid
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.galeria--size {
+    height: auto;
+    width: 98%;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+.galeria--color {
+    background-color: $color3;
+}
+
+.informacionDesplegable{
+    visibility: hidden;
+    opacity: 0;
+}
+#persona {
+    margin-top: 20px;
+}

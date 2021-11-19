@@ -1,0 +1,23 @@
+// variables
+// colores
+$color1: #013440;
+$color2: blanchedalmond;
+$color3: white;
+$color4: black;
+$color5: rgb(100, 172, 29);
+$color6: rgb(209, 28, 28);
+$color7: gray;
+// fuentes de texto
+$font1: 'Roboto', sans-serif;
+$font2: 'Oswald', sans-serif;;
+$font3: "Century Gothic", CenturyGothic;
+// propiedades
+$mayus: uppercase;
+// mixin
+@mixin titulo__seccion {
+    font-family: $font3;
+    text-rendering: optimizeLegibility;
+    text-transform: $mayus;
+    font-size: 30px;
+    letter-spacing: 3px;
+}

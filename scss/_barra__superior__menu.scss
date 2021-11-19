@@ -1,0 +1,74 @@
+@import "variables";
+// menu
+/* seccion 1 */
+header {
+    z-index: 2;
+}
+/* color barra menu */
+nav{ 
+    background-color: $color1;
+    width: 100%;
+    height: 50px;
+    font-family: $font2;
+}
+header nav a{
+    padding: 20px;
+}
+.logo--modificacion{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 3;
+}
+.logo--size {
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.logo--animacion {
+    transition: transform 3s;
+    animation-delay: 2s;
+}
+.logo--animacion:hover {
+    transform: rotatey(190deg);
+}
+.logo__simbolo_recargar__pagina--modificacion{
+    position: absolute;
+}
+.logo__simbolo_recargar__pagina--size {
+    top: 18px;
+    left: 58px;
+    font-size: 20px;
+}
+.logo__simbolo_recargar__pagina--color {
+    color: $color2;
+}
+#menuNavegacion ul li a{
+    color: $color2;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+#menuNavegacion ul li a:hover {
+    color: $color3;
+    transition: 0.7s;
+}
+#portadaInicio {
+    div img {
+        margin-top: 50px;
+    }
+}
+#botonMenu {
+    width: 60px;
+    height: 40px;
+    margin-right: 20px;
+}
+/* submenu */
+#submenu li{
+    background-color: $color1;
+    padding-bottom: 5px;
+}
+#menuNavegacion ul li ul li a:hover {
+    color: $color1;
+    transition: 0.7s;
+}

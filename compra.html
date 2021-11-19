@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music House tienda fisicas</title>
+        <!-- iconos portada -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+          rel="stylesheet">
+        <!-- iconos contacto -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <!-- libreria AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- css -->
+        <link rel="stylesheet" href="scss/style.css">
+        <!-- icono  -->
+        <link rel="shortcut icon" href="img/icons8-musicalmente.svg">
+        <!-- seo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="En music house encontraras los mejores precios en todo tipo de instrumentos como guitarras para crear tu propia musica">
+        <!-- palabras claves -->
+       <meta name="keywords"  content="INSTRUMENTOS, GUITARRAS, MICROFONOS, PIANOS, BATERIAS, UKELELE, TIENDAS, LOCALES">
+    </head>
+<body>
+    <!-- seccion 1 -->
+    <!-- menu -->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark border-3 border-bottom border-dark fixed-top">
+            <a href="index.html" class="navbar-brand" id="logo">
+                <img class="logo--modificacion logo--size logo--color logo--animacion" src="img/icons8-musicalmente.svg" alt="logo">
+                    <span class="material-icons-outlined logo__simbolo_recargar__pagina--modificacion logo__simbolo_recargar__pagina--size logo__simbolo_recargar__pagina--color logo__simbolo_recargar__pagina--animacion">undo</span>
+            </a>  
+            <button type="button" class="navbar-toggler" id="botonMenu">
+                <span class="navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"></span>
+            </button>
+            <div id="menuNavegacion" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="categorias.html" class="nav-link" role="button" data-bs-toggle="dropdown">Categorias</a>
+                        <ul class="dropdown-menu bg-dark" id="submenu">
+                            <li><a href="categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
+                            <li><a href="categoria-cuerda.html" class="dropdown-item">Instrumentos de cuerda</a></li>
+                            <li><a href="categoria-percusion.html" class="dropdown-item">Instrumentos de percusion</a></li>
+                            <li><a href="categoria-viento.html" class="dropdown-item">Instrumentos de viento</a></li>
+                            <li><a href="categoria-microfono.html" class="dropdown-item">Microfonos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="compra.html" class="nav-link">Donde comprar</a></li>
+                    <li class="nav-item"><a href="informacion.html" class="nav-link">Informacion</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- seccion 2 -->
+    <!-- mapa con ubicacion de tiendas -->
+    <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.376723137093!2d-57.955749185041284!3d-34.92208778191929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62e51752c21%3A0xb45e63c76ccc4658!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1634562018057!5m2!1ses-419!2sar" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">Mapa con ubicacion de tiendas</iframe>
+    </section>
+    <!-- seccion 3 -->
+    <section class="informacion-ventas--modificacion informacion-ventas--color">
+        <!-- direcciones de tiendas -->
+        <div id="puntoDeVenta" data-aos="fade-right">
+            <h2 class="titulo--modificacion titulo--color">Puntos de venta</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"><strong class="ubicacion__local--color ubicacion__local--size">Tienda Fisica 1</strong></i></li>
+                <li><i class="fas fa-map-marker-alt"><strong class="ubicacion__local--color ubicacion__local--size">Tienda Fisica 2</strong></i></li>
+                <li><i class="fas fa-map-marker-alt"><strong class="ubicacion__local--color ubicacion__local--size">Tienda Fisica 3</strong></i></li>
+                <li><i class="fas fa-map-marker-alt"><strong class="ubicacion__local--color ubicacion__local--size">Tienda Fisica 4</strong></i></li>
+            </ul>
+        </div>
+    <!-- informacion sobre metodos de pago -->
+        <div class="metodos__pago--modificacion metodos__pago--size" data-aos="fade-right">
+            <h2>Metodos de pago</h2>
+                <p>Lorem <strong> ipsum </strong> dolor sit amet consectetur adipisicing elit. <br> Aperiam corrupti amet eveniet mollitia ex voluptas totam odio explicabo. Explicabo, velit!</p>
+        </div>
+    </section>
+    <!-- seccion 5 -->
+    <!-- contacto -->
+    <section class="contacto--modificacion contacto--size contacto--color">
+        <h3>Contacto</h3>
+            <div class="iconos__contacto--modificacion iconos__contacto--size iconos__contacto--color">
+                <!-- formulario     -->
+                <a href="contacto.html"><i class="fas fa-file-alt"></i></a>
+                <!-- email -->
+                <a href=""><i class="fas fa-envelope"></i></a>
+                <!-- linkedin -->
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <!-- github -->
+                <a href=""><i class="fab fa-github"></i></a>
+                <!-- facebook -->
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <!-- twitter     -->
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+                <!-- instagram     -->
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+    </section>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iniciar libreria AOS -->
+    <script>
+        AOS.init();
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

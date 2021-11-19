@@ -1,0 +1,46 @@
+@import "variables";
+/* donde comprar */
+/* seccion 2 */
+#map {
+    padding-top: 40px;
+}
+#map iframe{
+    border-radius: 5px;
+    padding-top: 10px;
+}
+/* seccion 3 */
+.informacion-ventas--modificacion {
+    border-radius: 5px;
+}
+.informacion-ventas--color {
+    background-color: $color3;
+}
+#puntoDeVenta {
+    padding-left: 10px;
+
+    ul li{
+        font-size: 20px;
+        padding-top: 10px;
+        color: $color6;
+    }
+}
+.ubicacion__local--size {
+    padding-left: 15px;
+}
+.ubicacion__local--color {
+    color: $color4;
+}
+/* seccion 4 */
+.metodos__pago--modificacion {
+    text-align: center;
+
+}
+.metodos__pago--size {
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+    h2 {
+        padding-bottom: 10px;
+    }
+}

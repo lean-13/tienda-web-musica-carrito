@@ -671,7 +671,7 @@ header nav a {
 }
 
 .formulario--size {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 5%;
 }
 
@@ -928,6 +928,7 @@ header nav a {
 .cuadro__contenedor--size {
   border-radius: 5px;
   padding-bottom: 5px;
+  margin-top: 30px;
 }
 
 .cuadro__contenedor--size div h2 {

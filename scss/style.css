@@ -579,8 +579,8 @@ header nav a {
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .iconos__contacto--size a {
@@ -612,7 +612,7 @@ header nav a {
 .galeria--size {
   height: auto;
   width: 98%;
-  padding-top: 100px;
+  padding-top: 5px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 10px;
@@ -652,7 +652,7 @@ header nav a {
   padding-bottom: 40px;
 }
 
-.producto--size h2 {
+.producto--size h1 {
   width: 100%;
 }
 
@@ -968,5 +968,86 @@ header nav a {
 
 .persona__descripcion--color {
   color: gray;
+}
+
+.cuadro__404--modificacion {
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 200px;
+}
+
+.cuadro__404--size {
+  width: 99%;
+  height: auto;
+}
+
+.cuadro__404--color {
+  background-color: white;
+}
+
+.titulo__404--size {
+  margin-bottom: 20px;
+}
+
+.boton__404__inicio--modificacion a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.boton__404__inicio--size {
+  padding-bottom: 200px;
+}
+
+.boton__404__inicio--size a {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.boton__404__inicio--color a {
+  background-color: #013440;
+  color: white;
+  -webkit-box-shadow: 0 0 0 0 rgba(63, 60, 60, 0.1);
+          box-shadow: 0 0 0 0 rgba(63, 60, 60, 0.1);
+  -webkit-animation: pulse404 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulse404 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.boton__404__inicio--color a:hover {
+  color: blanchedalmond;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+@-webkit-keyframes pulse404 {
+  0% {
+    -webkit-box-shadow: 0 0 0 5px gray;
+            box-shadow: 0 0 0 5px gray;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px gray;
+            box-shadow: 0 0 0 0px gray;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 5px gray;
+            box-shadow: 0 0 0 5px gray;
+  }
+}
+
+@keyframes pulse404 {
+  0% {
+    -webkit-box-shadow: 0 0 0 5px gray;
+            box-shadow: 0 0 0 5px gray;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px gray;
+            box-shadow: 0 0 0 0px gray;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 5px gray;
+            box-shadow: 0 0 0 5px gray;
+  }
 }
 /*# sourceMappingURL=style.css.map */

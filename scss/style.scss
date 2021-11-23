@@ -257,7 +257,7 @@ body::-webkit-scrollbar-thumb {
     i:hover {
         color: $color3;
         transition: 0.7s;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 .iconos__contacto--size {
@@ -275,3 +275,4 @@ body::-webkit-scrollbar-thumb {
 @import "contacto__formulario";
 @import "donde__comprar";
 @import "informacion";
+@import "error__404";

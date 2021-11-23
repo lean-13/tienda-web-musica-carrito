@@ -382,18 +382,8 @@ header nav a {
 .producto__catalogo--color {
   background-color: white;
 }
-
-.producto__catalogo--modificacion:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
 .logo__carrito--modificacion {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .logo__carrito--color {
@@ -408,14 +398,6 @@ header nav a {
 .logo__carrito--modificacion:hover {
   color: #64ac1d;
 }
-
-.producto__catalogo--modificacion:hover .logo__carrito--modificacion {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
 .ofertaTexto {
   color: #64ac1d;
   font-size: 20px;

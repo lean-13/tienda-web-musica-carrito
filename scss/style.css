@@ -382,6 +382,7 @@ header nav a {
 .producto__catalogo--color {
   background-color: white;
 }
+
 .logo__carrito--modificacion {
   position: absolute;
 }
@@ -390,14 +391,17 @@ header nav a {
   color: #013440;
 }
 
+.logo__carrito--color:hover {
+  color: #64ac1d;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
 .logo__carrito--position {
   bottom: 10px;
   right: 20px;
 }
 
-.logo__carrito--modificacion:hover {
-  color: #64ac1d;
-}
 .ofertaTexto {
   color: #64ac1d;
   font-size: 20px;
@@ -958,12 +962,13 @@ header nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 200px;
 }
 
 .cuadro__404--size {
   width: 99%;
   height: auto;
+  padding-top: 200px;
+  margin-top: 50px;
 }
 
 .cuadro__404--color {

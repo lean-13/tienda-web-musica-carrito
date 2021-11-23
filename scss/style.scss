@@ -103,6 +103,10 @@ body::-webkit-scrollbar-thumb {
 .logo__carrito--color {
     color: $color1;
 }
+.logo__carrito--color:hover {
+    color: $color5;
+    transition: 0.7s;
+}
 .logo__carrito--position {
     bottom: 10px;
     right: 20px;

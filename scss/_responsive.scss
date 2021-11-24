@@ -65,6 +65,15 @@
     .logo__simbolo_recargar__pagina--size {
         font-size: 0px;
     }
+    // producto x
+    .producto__x--modificacion {
+        flex-direction: column;
+    }
+    // boton comprar
+    .boton__comprar__texto--size {
+        // position
+        right: 40px;
+    }
 }
 @media screen and (max-width:680px) {
     .carousel-control-prev{
@@ -126,6 +135,12 @@
     .carousel-control-next{
         /* ubicacion boton */
         margin-right: 10px;
+    }
+    .informacion__persona--modificacion {
+        flex-direction: column;
+    }
+    .persona__descripcion--size {
+        margin-left: -200px;
     }
 }
 @media screen and (max-width:365px) {

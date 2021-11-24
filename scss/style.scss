@@ -93,24 +93,30 @@ body::-webkit-scrollbar-thumb {
     img{
         padding-left:6%;
     }
+
 }
 .producto__catalogo--color {
-    background-color: $color3;
+    a {
+        background-color: $color3;
+    }
 }
-.logo__carrito--modificacion {
-    position: absolute;
+// quitar text decoration
+.card--link {
+    text-decoration: none;
 }
-.logo__carrito--color {
+// titulo de productos
+.producto__catalogo__titulo--size {
+    font-size: 18px;
+}
+// animar color titulo
+.producto__catalogo--color:hover .producto__catalogo__titulo--color {
     color: $color1;
-}
-.logo__carrito--color:hover {
-    color: $color5;
     transition: 0.7s;
 }
-.logo__carrito--position {
-    bottom: 10px;
-    right: 20px;
+.producto__catalogo__titulo--color {
+    color: $color4;
 }
+// texto de oferta
 .ofertaTexto{
     color: $color5;
     font-size: 20px;
@@ -119,6 +125,7 @@ body::-webkit-scrollbar-thumb {
     /* separacion con foto de producto */
     margin-top: 2px;
 }
+// carousel botones
 .carousel__control__prev--size {
     // tamaño
     width: 50px;
@@ -265,3 +272,4 @@ body::-webkit-scrollbar-thumb {
 @import "donde__comprar";
 @import "informacion";
 @import "error__404";
+@import "producto__x";

@@ -1,0 +1,55 @@
+@import "variables";
+
+.producto__x--modificacion {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.producto__x--size {
+    width: 99%;
+    height: auto;
+    padding-top: 100px;
+    margin-left: 8px;
+    padding-bottom: 78px;
+}
+.producto__x--color {
+    background-color: $color3;
+}
+// img
+.producto__x__img--size {
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+// descripcion
+.producto__x__descripcion--size {
+    padding-right: 80px;
+    padding-left: 30px;
+}
+// boton comprar
+.boton__comprar--modificacion {
+    position: relative;
+    a {
+        text-decoration: none;
+    }
+}
+.boton__comprar__texto--modificacion {
+    border-radius: 5px;
+    position: absolute;
+}
+.boton__comprar__texto--size {
+    width: 140px;
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 3px;
+    // position
+    right: 130px;
+    bottom: 0px;
+}
+.boton__comprar__texto--color {
+    background-color: $color1;
+    color: $color3;
+}
+.boton__comprar__texto--color:hover {
+    color: $color2;
+    transition: 0.7s;
+}

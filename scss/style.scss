@@ -32,9 +32,9 @@ body::-webkit-scrollbar-thumb {
     margin-left: 45%;
     bottom: 50px;
     animation-name: flechaInicio;
-    animation-duration: 5s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
-    animation-delay: 2s;
+    animation-delay: 0s;
 }
 #iconoFlecha span:hover{
     color: $color3;
@@ -42,13 +42,19 @@ body::-webkit-scrollbar-thumb {
 }
 @keyframes flechaInicio{
     0%{
-        transform: translatey(10px);
+        transform: translatey(0px);
+    }
+    30%{
+        transform: translateY(10px);
     }
     50%{
         transform: translateY(0px);
     }
+    80%{
+        transform: translateY(10px);
+    }
     100%{
-        transform: translatey(10px);
+        transform: translatey(0px);
     }
 }
 @import "responsive";
@@ -60,8 +66,8 @@ body::-webkit-scrollbar-thumb {
 .seccion--size {
     height: auto;
     width: 98%;
-    margin: 10px;
-    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-left: 1%;
     padding: 10px;
 
     h2 {
@@ -112,6 +118,23 @@ body::-webkit-scrollbar-thumb {
 .producto__catalogo--color:hover .producto__catalogo__titulo--color {
     color: $color1;
     transition: 0.7s;
+}
+// animacion sombra card 
+.producto__catalogo--color:hover {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    animation: pulsecard 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    transition: 0.7s;
+}
+@keyframes pulsecard {
+    0% {
+        box-shadow: 0 0 0 3px $color1;
+    }
+    50% {
+        box-shadow: 0 0 0 0px $color1;
+    }
+    100% {
+        box-shadow: 0 0 0 3px $color1;
+    }
 }
 .producto__catalogo__titulo--color {
     color: $color4;
@@ -182,11 +205,6 @@ body::-webkit-scrollbar-thumb {
         color: $color4;
     }
 }
-/* imagenes de categorias */
-.imgCategoria {
-    border-radius: 10px;
-    padding-top: 5px;
-}
 #categoriasDestacadas {
     /* distancia con el border */
     margin-top: -40px;
@@ -224,6 +242,47 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
     transform: translateY(0);
 }
+// categoria destacada
+.categoria__destacada__img__text--modificacion {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+/* imagenes de categorias */
+.categoria__img--modificacion {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    filter: sepia(60%);
+}
+// animacion img
+.categoria__img--modificacion:hover {
+    filter: sepia(0%);
+    transition: 1s;
+}
+// texto categorias
+.titulos__flotantes__categorias--modificacion {
+    text-transform: $mayus;
+    position: absolute;
+    font-family: $font2;
+}
+.titulos__flotantes__categorias--size {
+    width: auto;
+    height: auto;
+    top: 240px;
+    padding-left: 10px;
+
+    h4 {
+        font-size: 30px;
+    }
+}
+.titulos__flotantes__categorias--color {
+    color: $color3;
+}
 /* section 5 */
 .contacto--modificacion {
     border-radius: 10px;
@@ -253,7 +312,7 @@ body::-webkit-scrollbar-thumb {
     i:hover {
         color: $color3;
         transition: 0.7s;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 .iconos__contacto--size {

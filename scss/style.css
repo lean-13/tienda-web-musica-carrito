@@ -127,12 +127,12 @@ header nav a {
   bottom: 50px;
   -webkit-animation-name: flechaInicio;
           animation-name: flechaInicio;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 #iconoFlecha span:hover {
@@ -143,31 +143,47 @@ header nav a {
 
 @-webkit-keyframes flechaInicio {
   0% {
-    -webkit-transform: translatey(10px);
-            transform: translatey(10px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  30% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   50% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
   100% {
-    -webkit-transform: translatey(10px);
-            transform: translatey(10px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
 }
 
 @keyframes flechaInicio {
   0% {
-    -webkit-transform: translatey(10px);
-            transform: translatey(10px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  30% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   50% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
   100% {
-    -webkit-transform: translatey(10px);
-            transform: translatey(10px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
 }
 
@@ -236,11 +252,10 @@ header nav a {
     padding-top: -10px;
     margin-bottom: -5px;
   }
-  .logo__simbolo_recargar__pagina--modificacion {
-    display: none;
-  }
   .logo__simbolo_recargar__pagina--size {
-    font-size: 0px;
+    top: 25px;
+    left: 55px;
+    font-size: 18px;
   }
   .producto__x--modificacion {
     -webkit-box-orient: vertical;
@@ -292,8 +307,7 @@ header nav a {
             flex-direction: column;
   }
   .borrar--size {
-    margin-bottom: 10px;
-    margin-left: 18px;
+    padding: 0px;
   }
   .boton__comprar__texto--size {
     top: 10px;
@@ -358,8 +372,8 @@ header nav a {
 .seccion--size {
   height: auto;
   width: 98%;
-  margin: 10px;
-  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-left: 1%;
   padding: 10px;
 }
 
@@ -416,6 +430,45 @@ header nav a {
   color: #013440;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.producto__catalogo--color:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  -webkit-animation: pulsecard 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulsecard 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+@-webkit-keyframes pulsecard {
+  0% {
+    -webkit-box-shadow: 0 0 0 3px #013440;
+            box-shadow: 0 0 0 3px #013440;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #013440;
+            box-shadow: 0 0 0 0px #013440;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 3px #013440;
+            box-shadow: 0 0 0 3px #013440;
+  }
+}
+
+@keyframes pulsecard {
+  0% {
+    -webkit-box-shadow: 0 0 0 3px #013440;
+            box-shadow: 0 0 0 3px #013440;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #013440;
+            box-shadow: 0 0 0 0px #013440;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 3px #013440;
+            box-shadow: 0 0 0 3px #013440;
+  }
 }
 
 .producto__catalogo__titulo--color {
@@ -496,12 +549,6 @@ header nav a {
   color: black;
 }
 
-/* imagenes de categorias */
-.imgCategoria {
-  border-radius: 10px;
-  padding-top: 5px;
-}
-
 #categoriasDestacadas {
   /* distancia con el border */
   margin-top: -40px;
@@ -552,6 +599,62 @@ header nav a {
           transform: translateY(0);
 }
 
+.categoria__destacada__img__text--modificacion {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.categoria__destacada__img__text--modificacion a {
+  text-decoration: none;
+}
+
+/* imagenes de categorias */
+.categoria__img--modificacion {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-filter: sepia(60%);
+          filter: sepia(60%);
+}
+
+.categoria__img--modificacion:hover {
+  -webkit-filter: sepia(0%);
+          filter: sepia(0%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.titulos__flotantes__categorias--modificacion {
+  text-transform: uppercase;
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+}
+
+.titulos__flotantes__categorias--size {
+  width: auto;
+  height: auto;
+  top: 240px;
+  padding-left: 10px;
+}
+
+.titulos__flotantes__categorias--size h4 {
+  font-size: 30px;
+}
+
+.titulos__flotantes__categorias--color {
+  color: white;
+}
+
 /* section 5 */
 .contacto--modificacion {
   border-radius: 10px;
@@ -585,8 +688,8 @@ header nav a {
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .iconos__contacto--size a {
@@ -933,8 +1036,9 @@ header nav a {
 /* seccion 2 */
 .cuadro__contenedor--size {
   border-radius: 5px;
-  padding-bottom: 5px;
-  margin-top: 30px;
+  padding-bottom: 20px;
+  padding-top: 80px;
+  padding-left: 1%;
 }
 
 .cuadro__contenedor--size div h2 {
@@ -947,29 +1051,32 @@ header nav a {
   color: black;
 }
 
-.informacion__persona--modificacion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .persona--modificacion {
   margin-top: 20px;
 }
 
+.informacion__persona--modificacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.informacion__persona--modificacion img {
+  border-radius: 5px;
+  -webkit-box-shadow: #013440 2px 2px 2px 2px;
+          box-shadow: #013440 2px 2px 2px 2px;
+}
+
 .persona__descripcion--modificacion {
-  margin-left: 20px;
-  width: 600px;
-  height: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .persona__descripcion--size {
+  max-width: 600px;
+  height: auto;
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  margin-left: 2%;
+  margin-top: 10px;
 }
 
 .persona__descripcion--color {
@@ -1117,9 +1224,57 @@ header nav a {
   color: white;
 }
 
+/* animacion boton comprar */
 .boton__comprar__texto--color:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  -webkit-animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
   color: blanchedalmond;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+@-webkit-keyframes pulseb {
+  0% {
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
+  }
+}
+
+@keyframes pulseb {
+  0% {
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
+  }
+}
+
+.precio--modificacion {
+  text-transform: uppercase;
+  font-family: "Century Gothic", CenturyGothic;
+}
+
+.precio--size {
+  font-size: 25px;
+}
+
+.precio--xolor {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

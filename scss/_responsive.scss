@@ -59,11 +59,10 @@
         padding-top: -10px;
         margin-bottom: -5px;
     }
-    .logo__simbolo_recargar__pagina--modificacion {
-        display: none;
-    }
     .logo__simbolo_recargar__pagina--size {
-        font-size: 0px;
+        top: 25px;
+        left: 55px;
+        font-size: 18px;
     }
     // producto x
     .producto__x--modificacion {
@@ -110,8 +109,7 @@
         flex-direction: column;
     }
     .borrar--size {
-        margin-bottom: 10px;
-        margin-left: 18px;
+        padding: 0px;
     }
     .boton__comprar__texto--size {
         // position

@@ -3,8 +3,9 @@
 /* seccion 2 */
 .cuadro__contenedor--size {
     border-radius: 5px;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-left: 1%;
 
     div h2{
         padding-bottom: 10px;
@@ -15,21 +16,28 @@
     background-color: $color3;
     color: $color4;
 }
-.informacion__persona--modificacion {
-    display: flex;
-    flex-direction: row;
-}
+// titulo "quien soy"
 .persona--modificacion {
     margin-top: 20px;
 }
+// div con img y texto
+.informacion__persona--modificacion {
+    display: flex;
+
+    img {
+        border-radius: 5px;
+        box-shadow: $color1 2px 2px 2px 2px;
+    }
+}
 .persona__descripcion--modificacion {
-    margin-left: 20px;
-    width: 600px;
-    height: auto;
+    font-family: $font1;
 }
 .persona__descripcion--size {
+    max-width: 600px;
+    height: auto;
     font-size: 20px;
-    font-family: $font1;
+    margin-left: 2%;
+    margin-top: 10px;
 }
 .persona__descripcion--color {
     color: $color7;

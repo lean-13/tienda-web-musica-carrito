@@ -655,6 +655,12 @@ header nav a {
   color: white;
 }
 
+.titulos__flotantes__categorias--color:hover {
+  color: blanchedalmond;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 /* section 5 */
 .contacto--modificacion {
   border-radius: 10px;

@@ -283,6 +283,10 @@ body::-webkit-scrollbar-thumb {
 .titulos__flotantes__categorias--color {
     color: $color3;
 }
+.titulos__flotantes__categorias--color:hover {
+    color: $color2;
+    transition: 1s;
+}
 /* section 5 */
 .contacto--modificacion {
     border-radius: 10px;

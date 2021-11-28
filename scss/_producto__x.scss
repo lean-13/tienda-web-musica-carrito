@@ -9,7 +9,7 @@
     width: 99%;
     height: auto;
     padding-top: 100px;
-    margin-left: 8px;
+    margin-left: 0.5%;
     padding-bottom: 78px;
 }
 .producto__x--color {
@@ -17,7 +17,7 @@
 }
 // img
 .producto__x__img--size {
-    padding-left: 40px;
+    padding-left: 1%;
     padding-bottom: 20px;
 }
 // descripcion
@@ -59,13 +59,13 @@
 }
 @keyframes pulseb {
     0% {
-        box-shadow: 0 0 0 3px $color5;
+        box-shadow: 0 0 0 3px $color1;
     }
     50% {
-        box-shadow: 0 0 0 0px $color5;
+        box-shadow: 0 0 0 0px $color1;
     }
     100% {
-        box-shadow: 0 0 0 3px $color5;
+        box-shadow: 0 0 0 3px $color1;
     }
 }
 // texto precio
@@ -75,7 +75,4 @@
 }
 .precio--size {
     font-size: 25px;
-}
-.precio--xolor {
-    color: $color4;
 }

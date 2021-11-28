@@ -59,26 +59,51 @@
     <!-- seccion 2 -->
     <!-- categorias -->
     <section class="categorias">
-        <div class="separacion__seccion2--modificacion separacion__seccion2--size">
-            <div>
-                <!-- todos los productos -->
-                <a href="categoria-productos.html"><img class="imgAnimation" src="img/categoria-0.png" alt="todos los productos" width="100%" height="500px"></a>
+        <div class="categorias__all--modificacion categorias__all--size categorias__all--color">
+            <div data-aos="zoom-in" class="categoria__destacada__img__text--modificacion .categoria__destacada__img__text--size">
+                <!-- todos los productos-->
+                <a href="categoria-productos.html">
+                    <img class="categoria__img--modificacion categoria__img--size" src="img/categoria-0.png" alt="categoria-0" width="100%" height="500px">
+                    <div class="titulos__flotantes__categorias--modificacion titulos__flotantes__categorias--size titulos__flotantes__categorias--color"> 
+                        <h4>todos los productos</h4>
+                    </div>
+                </a>
             </div>
-            <div>
-                <!-- intrumentos de cuerda -->
-                <a href="categoria-cuerda.html"><img class="imgAnimation" src="img/categoria-1.jpg" alt="instrumento de cuerda" width="100%" height="500px"></a>
+            <div data-aos="zoom-in" class="categoria__destacada__img__text--modificacion .categoria__destacada__img__text--size">
+                <!-- instrumentos de cuerda -->
+                <a href="categoria-cuerda.html">
+                    <img class="categoria__img--modificacion categoria__img--size" src="img/categoria-1.jpg" alt="categoria-1" width="100%" height="500px">
+                    <div class="titulos__flotantes__categorias--modificacion titulos__flotantes__categorias--size titulos__flotantes__categorias--color"> 
+                        <h4>instrumentos de cuerda</h4>
+                    </div>
+                </a>
             </div>
-            <div>
+            <div data-aos="zoom-in" class="categoria__destacada__img__text--modificacion .categoria__destacada__img__text--size">
                 <!-- instrumentos de percusion -->
-                <a href="categoria-percusion.html"><img  class="imgAnimation" src="img/categoria-2.jpg" alt="instrumentos de percusion" width="100%" height="500px"></a>
+                <a href="categoria-percusion.html">
+                    <img class="categoria__img--modificacion categoria__img--size" src="img/categoria-2.jpg" alt="categoria-2" width="100%" height="500px">
+                    <div class="titulos__flotantes__categorias--modificacion titulos__flotantes__categorias--size titulos__flotantes__categorias--color"> 
+                        <h4>instrumentos de percusion</h4>
+                    </div>
+                </a>
             </div>
-            <div>
-                <!-- microfonos -->
-                <a href="categoria-microfono.html"><img class="imgAnimation" src="img/categoria-3.jpg" alt="microfonos" width="100%" height="500px"></a>
-            </div>
-            <div>
+            <div data-aos="zoom-in" class="categoria__destacada__img__text--modificacion .categoria__destacada__img__text--size">
                 <!-- instrumentos de viento -->
-                <a href="categoria-viento.html"><img class="imgAnimation" src="img/categoria-4.jpg" alt="instrumentos de viento" width="100%" height="500px"></a>
+                <a href="categoria-viento.html">
+                    <img class="categoria__img--modificacion categoria__img--size" src="img/categoria-4.jpg" alt="categoria-4" width="100%" height="500px">
+                    <div class="titulos__flotantes__categorias--modificacion titulos__flotantes__categorias--size titulos__flotantes__categorias--color"> 
+                        <h4>instrumentos de viento</h4>
+                    </div>
+                </a>
+            </div>
+            <div data-aos="zoom-in" class="categoria__destacada__img__text--modificacion .categoria__destacada__img__text--size">
+                <!-- microfonos -->
+                <a href="categoria-microfono.html">
+                    <img class="categoria__img--modificacion categoria__img--size" src="img/categoria-3.jpg" alt="categoria-3" width="100%" height="500px">
+                    <div class="titulos__flotantes__categorias--modificacion titulos__flotantes__categorias--size titulos__flotantes__categorias--color"> 
+                        <h4>microfonos</h4>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -107,7 +132,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- iniciar libreria AOS -->
     <script>
-        AOS.init();
+        AOS.init({
+            // pixeles para iniciar animacion
+            offset: -20,
+        });
     </script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

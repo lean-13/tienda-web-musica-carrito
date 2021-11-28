@@ -1,11 +1,25 @@
 @import "variables";
 /* categorias */
 /* seccion 2 */
-.categorias {
+.categorias--size {
     margin-left: 0.5%;
     padding-left: 0.5%;
     padding-right: 0.5%;
     padding-bottom: 0.5%;
+
+}
+.categorias--modificacion {
+    border-radius: 5px;
+}
+.categorias--color {
+    background-color: $color3;
+}
+// categorias all
+.categorias__all--size {
+    padding-top: 60px;
+}
+.categoria__destacada__img__text--size {
+    margin-bottom: 5px;
 }
 /* categoria: todos los productos  */
 .producto--modificacion {
@@ -78,15 +92,4 @@
 }
 #persona {
     margin-top: 20px;
-}
-// categorias all
-.categorias__all--modificacion {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    grid-gap: 5px;
-    grid-auto-rows: minmax(100px, auto);
-}
-.categorias__all--size {
-    margin-top: 10px;
-    padding-top: 45px;
 }

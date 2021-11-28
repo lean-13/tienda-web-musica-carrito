@@ -349,7 +349,7 @@ header nav a {
   }
   .carousel-control-next {
     /* ubicacion boton */
-    margin-right: -10px;
+    margin-right: 10px;
   }
 }
 
@@ -391,7 +391,7 @@ header nav a {
   padding-top: 5px;
   padding-left: 2%;
   margin-bottom: 10px;
-  margin-left: 0.5%;
+  margin-left: 12%;
 }
 
 .producto__catalogo--size img {
@@ -407,11 +407,43 @@ header nav a {
   background-color: white;
 }
 
-.producto__catalogo__titulo--size {
-  font-size: 18px;
+.producto__catalogo__titulo--modificacion {
+  position: relative;
 }
 
-.producto__catalogo--color:hover .producto__catalogo__titulo--color {
+.producto__catalogo__titulo--modificacion a {
+  text-decoration: none;
+}
+
+.producto__catalogo__titulo--size a {
+  font-size: 17px;
+}
+
+.simbolo__link__producto--modificacion {
+  position: absolute;
+}
+
+.simbolo__link__producto--modificacion a {
+  text-decoration: none;
+}
+
+.simbolo__link__producto--size {
+  font-size: 30px;
+  bottom: 2px;
+  right: 5px;
+}
+
+.simbolo__link__producto--color a {
+  color: black;
+}
+
+.simbolo__link__producto--color a:hover {
+  color: #013440;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.producto__catalogo--color:hover .producto__catalogo__titulo--color a {
   color: #013440;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -456,7 +488,7 @@ header nav a {
   }
 }
 
-.producto__catalogo__titulo--color {
+.producto__catalogo__titulo--color a {
   color: black;
 }
 

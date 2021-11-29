@@ -657,13 +657,13 @@ header nav a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  -webkit-filter: sepia(60%);
-          filter: sepia(60%);
+  -webkit-filter: opacity(0.95) blur(1px);
+          filter: opacity(0.95) blur(1px);
 }
 
 .categoria__img--modificacion:hover {
-  -webkit-filter: sepia(0%);
-          filter: sepia(0%);
+  -webkit-filter: opacity(1) blur(0);
+          filter: opacity(1) blur(0);
   -webkit-transition: 1s;
   transition: 1s;
 }

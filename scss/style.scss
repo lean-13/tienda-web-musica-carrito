@@ -97,30 +97,23 @@ body::-webkit-scrollbar-thumb {
 .producto__catalogo--modificacion {
     position: relative;
     text-align: center;
-}
-.producto__catalogo--color {
-    a {
-        background-color: $color3;
-    }
-}
-// titulo de productos
-.producto__catalogo__titulo--modificacion {
     a {
         text-decoration: none;
     }
+}
+.producto__catalogo--color {
+    background-color: $color3;
+}
+// titulo de productos
+.producto__catalogo__titulo--modificacion {
     position: relative;
 }
 .producto__catalogo__titulo--size {
-    a {
-        font-size: 17px;
-    }
+    font-size: 17px;
 }
 // simbolo de link
 .simbolo__link__producto--modificacion {
     position: absolute;
-    a {
-        text-decoration: none;
-    }
 }
 .simbolo__link__producto--size {
     font-size: 30px;
@@ -128,17 +121,14 @@ body::-webkit-scrollbar-thumb {
     right: 5px;
 }
 .simbolo__link__producto--color {
-    
-    a {
-        color: $color4;
-    }
-    a:hover {
-        color: $color1;
-        transition: 0.7s;
-    }
+    color: $color4;
+}
+.simbolo__link__producto--color:hover {
+    color: $color1;
+    transition: 0.7s;
 }
 // animar color titulo
-.producto__catalogo--color:hover .producto__catalogo__titulo--color a{
+.producto__catalogo--color:hover .producto__catalogo__titulo--color {
     color: $color1;
     transition: 0.7s;
 }
@@ -160,9 +150,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 .producto__catalogo__titulo--color {
-    a {
-        color: $color4;
-    }
+    color: $color4;
 }
 // texto de oferta
 .ofertaTexto{

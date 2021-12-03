@@ -409,6 +409,10 @@ header nav a {
   text-decoration: none;
 }
 
+.producto__catalogo--size {
+  margin-top: 5px;
+}
+
 .producto__catalogo--color {
   background-color: white;
 }

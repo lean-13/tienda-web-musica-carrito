@@ -347,6 +347,9 @@ header nav a {
   .producto__trio--size {
     margin-left: -13%;
   }
+  .galeria--size {
+    margin-left: -8%;
+  }
 }
 
 /* seccion 3 */

@@ -238,12 +238,12 @@ header nav a {
   .carousel-control-prev {
     /* ubicacion boton */
     margin-top: -198px;
-    margin-left: 440px;
+    margin-left: 60%;
   }
   .carousel-control-next {
     /* ubicacion boton */
     margin-top: -198px;
-    margin-right: 60px;
+    margin-right: 20%;
   }
   .logo--modificacion {
     width: 60px;
@@ -277,7 +277,7 @@ header nav a {
 @media screen and (max-width: 680px) {
   .carousel-control-prev {
     /* ubicacion boton */
-    margin-left: 400px;
+    margin-left: 60%;
   }
 }
 
@@ -294,7 +294,7 @@ header nav a {
   }
   .carousel-control-prev {
     /* ubicacion boton */
-    margin-left: 300px;
+    margin-left: 55%;
   }
   .boton__enviar__borrar--modificacion {
     -webkit-box-orient: vertical;
@@ -310,29 +310,10 @@ header nav a {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .carousel-control-prev {
-    /* ubicacion boton */
-    margin-left: 250px;
-  }
-  /* separacion de ver mas */
-  .subtitulo__categoria__vermas--size {
-    margin-right: 80px;
-  }
-}
-
 @media screen and (max-width: 400px) {
   #iconoFlecha span {
     margin-left: 39%;
     bottom: 80px;
-  }
-  .carousel-control-prev {
-    /* ubicacion boton */
-    margin-left: 190px;
-  }
-  .carousel-control-next {
-    /* ubicacion boton */
-    margin-right: 10px;
   }
   .informacion__persona--modificacion {
     -webkit-box-orient: vertical;

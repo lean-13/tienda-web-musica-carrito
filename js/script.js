@@ -10,37 +10,44 @@ while (terminos != "y") {
 };
 alert("Gracias por aceptar terminos y condiciones");
 // dolar
-const DOLAR = 103.29;
-let precioDolar = "n";
+const DOLAR = 104;
 // productos
-let precioProducto;
-const guitarra = 329;
-const piano = 474;
-let productos = parseInt(prompt("elija el producto que quiere consultar. guitarra = 1, piano = 2, flauta = 3"));
+let guitarra = 329;
+let piano = 474;
+let bateria = 949;
+let producto = 0;
+let productos = parseInt(prompt("elija el producto que quiere consultar. guitarra = 1, piano = 2, bateria = 3"));
 switch (productos) {
     case 1:
-        alert("GUITARRA CRIOLLA CLÁSICA LA ALPUJARRA 80. precio" + " " + guitarra + " " + "dolares")
-        precioDolar = prompt ("Para convertir el precio a pesos ingrese y")
-        if (precioDolar == "y") {
-            precioProducto = DOLAR * guitarra;
-            alert(precioProducto + " " + "pesos argentinos")
-        }
-        precioDolar == "n";
+        producto = guitarra;
+        alert("GUITARRA CRIOLLA CLÁSICA LA ALPUJARRA 80. precio" + " " + producto + " " + "dolares")
+        conversionPesos()
         break;
     case 2:
-        alert("PIANO ELÉCTRICO ARTESIA PERFORMER. precio" + " " + piano + " " + "dolares")
-        precioDolar = prompt ("Para convertir el precio a pesos ingrese y")
-        if (precioDolar == "y") {
-            precioProducto = DOLAR * piano;
-            alert(precioProducto + " " + "pesos argentinos")
-        }
-        precioDolar == "n";
+        producto = piano;
+        alert("PIANO ELÉCTRICO ARTESIA PERFORMER. precio" + " " + producto + " " + "dolares")
+        conversionPesos()
+        break;
+    case 3:
+        producto = bateria;
+        alert("BATERIA MAPEX PRODIGY. precio" + " " + producto + " " + "dolares")
+        conversionPesos()
         break;
     default:
         alert("opcion no valida")
         break;
 }
+function conversionPesos(precioProducto,precioDolar) {
+    precioDolar = "n";
+    precioDolar = prompt ("Para convertir el precio a pesos ingrese: y")
+    if ((precioDolar == "y") || (precioDolar == "Y")) {
+        precioProducto = DOLAR * producto;
+        alert(precioProducto + " " + "pesos argentinos")
+    }
+    precioDolar == "n";
+}
 // agregar cuotas
+// usar funcion para cuotas y agregarlo en cada case
  
 
 

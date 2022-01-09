@@ -22,19 +22,19 @@ switch (productos) {
         producto = guitarra;
         alert("GUITARRA CRIOLLA CLÁSICA LA ALPUJARRA 80. precio" + " " + producto + " " + "dolares")
         conversionPesos()
-        seleccionCuotas()
+        preguntaCuotas()
         break;
     case 2:
         producto = piano;
         alert("PIANO ELÉCTRICO ARTESIA PERFORMER. precio" + " " + producto + " " + "dolares")
         conversionPesos()
-        seleccionCuotas()
+        preguntaCuotas()
         break;
     case 3:
         producto = bateria;
         alert("BATERIA MAPEX PRODIGY. precio" + " " + producto + " " + "dolares")
         conversionPesos()
-        seleccionCuotas()
+        preguntaCuotas()
         break;
     default:
         alert("opcion no valida")
@@ -51,6 +51,12 @@ function conversionPesos(precioProducto,precioDolar) {
     precioDolar == "n";
 }
 // cuotas
+function preguntaCuotas(calcularCuotas) {
+    calcularCuotas = prompt("Para calcular cuotas ingrese: y")
+    if ((calcularCuotas == "y") || (calcularCuotas == "Y")) {
+        seleccionCuotas()
+    }
+}
 function seleccionCuotas(cuotas) {
     cuotas = prompt("desea cuotas en dolares o pesos?")
     if ((cuotas == "dolares") || (cuotas == "dolar")) {

@@ -328,7 +328,7 @@ body::-webkit-scrollbar-thumb:hover {
     height: auto;
 
     h3{
-        padding-top: 5px;
+        padding-top: 10px;
         padding-left: 50px;
         font-size: 30px;
     }
@@ -362,7 +362,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 @import "categorias";
 @import "contacto__formulario";
-@import "donde__comprar";
+@import "carrito";
 @import "informacion";
 @import "error__404";
 @import "producto__x";

@@ -710,7 +710,7 @@ header nav a {
 }
 
 .contacto--size h3 {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 50px;
   font-size: 30px;
 }
@@ -1076,57 +1076,41 @@ header nav a {
   }
 }
 
-/* donde comprar */
-/* seccion 2 */
-#map {
-  padding-top: 40px;
-}
-
-#map iframe {
-  border-radius: 5px;
-  padding-top: 10px;
-}
-
-/* seccion 3 */
-.informacion-ventas--modificacion {
+.carrito--modificacion {
   border-radius: 5px;
 }
 
-.informacion-ventas--color {
+.carrito--size {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 2%;
+}
+
+.carrito--color {
   background-color: white;
 }
 
-#puntoDeVenta {
-  padding-left: 10px;
+.carrito__productos--size {
+  margin-right: 2%;
 }
 
-#puntoDeVenta ul li {
-  font-size: 20px;
-  padding-top: 10px;
-  color: #d11c1c;
+.producto__carrito--modificacion {
+  border-radius: 5px;
 }
 
-.ubicacion__local--size {
-  padding-left: 15px;
+.producto__carrito--size {
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
 }
 
-.ubicacion__local--color {
+.producto__carrito--color {
+  background-color: white;
+  -webkit-box-shadow: #013440 2px 2px 2px 2px;
+          box-shadow: #013440 2px 2px 2px 2px;
   color: black;
-}
-
-/* seccion 4 */
-.metodos__pago--modificacion {
-  text-align: center;
-}
-
-.metodos__pago--size {
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.metodos__pago--size h2 {
-  padding-bottom: 10px;
 }
 
 /* informacion */

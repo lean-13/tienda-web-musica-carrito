@@ -22,21 +22,25 @@ switch (productos) {
         producto = guitarra;
         alert("GUITARRA CRIOLLA CLÁSICA LA ALPUJARRA 80. precio" + " " + producto + " " + "dolares")
         conversionPesos()
+        seleccionCuotas()
         break;
     case 2:
         producto = piano;
         alert("PIANO ELÉCTRICO ARTESIA PERFORMER. precio" + " " + producto + " " + "dolares")
         conversionPesos()
+        seleccionCuotas()
         break;
     case 3:
         producto = bateria;
         alert("BATERIA MAPEX PRODIGY. precio" + " " + producto + " " + "dolares")
         conversionPesos()
+        seleccionCuotas()
         break;
     default:
         alert("opcion no valida")
         break;
 }
+// cambio de moneda
 function conversionPesos(precioProducto,precioDolar) {
     precioDolar = "n";
     precioDolar = prompt ("Para convertir el precio a pesos ingrese: y")
@@ -46,8 +50,27 @@ function conversionPesos(precioProducto,precioDolar) {
     }
     precioDolar == "n";
 }
-// agregar cuotas
-// usar funcion para cuotas y agregarlo en cada case
+// cuotas
+function seleccionCuotas(cuotas) {
+    cuotas = prompt("desea cuotas en dolares o pesos?")
+    if ((cuotas == "dolares") || (cuotas == "dolar")) {
+        cuotasDolar()
+    }
+    else if ((cuotas == "pesos") || (cuotas == "peso")) {
+        cuotasPesos()
+    }
+}
+function cuotasDolar(calcularCuotas,cuotas) {
+    cuotas = prompt("cuantas cuotas desea?")
+    calcularCuotas = producto / cuotas;
+    alert(cuotas + " " +"cuotas de" + " " + calcularCuotas + " " + "dolares");
+}
+function cuotasPesos(calcularCuotas,cuotas,precioProducto) {
+    precioProducto = DOLAR * producto;
+    cuotas = prompt("cuantas cuotas desea?")
+    calcularCuotas = precioProducto / cuotas;
+    alert(cuotas + " " +"cuotas de" + " " + calcularCuotas + " " + "pesos");
+}
  
 
 

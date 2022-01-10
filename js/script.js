@@ -4,9 +4,9 @@ let autor = console.log ("El autor de esta pagina es Goñi Leandro");
 
 alert("Bienvenido a Music House")
 
-let terminos = " ";
+let terminos;
 while (terminos != "y") {
-    terminos = prompt ("Ingrese Y para aceptar terminios y condiciones")
+    terminos = prompt ("Ingrese Y para aceptar terminios y condiciones").toLowerCase()
 };
 alert("Gracias por aceptar terminos y condiciones");
 // dolar
@@ -15,22 +15,22 @@ const DOLAR = 104;
 let guitarra = 329;
 let piano = 474;
 let bateria = 949;
-let producto = 0;
-let productos = parseInt(prompt("elija el producto que quiere consultar. guitarra = 1, piano = 2, bateria = 3"));
-switch (productos) {
-    case 1:
+let producto;
+let catalogoProductos = prompt("elija el producto que quiere consultar. Guitarra, Piano, Bateria").toLowerCase();
+switch (catalogoProductos) {
+    case "guitarra":
         producto = guitarra;
         alert("GUITARRA CRIOLLA CLÁSICA LA ALPUJARRA 80. precio" + " " + producto + " " + "dolares")
         conversionPesos()
         preguntaCuotas()
         break;
-    case 2:
+    case "piano":
         producto = piano;
         alert("PIANO ELÉCTRICO ARTESIA PERFORMER. precio" + " " + producto + " " + "dolares")
         conversionPesos()
         preguntaCuotas()
         break;
-    case 3:
+    case "bateria":
         producto = bateria;
         alert("BATERIA MAPEX PRODIGY. precio" + " " + producto + " " + "dolares")
         conversionPesos()
@@ -41,24 +41,22 @@ switch (productos) {
         break;
 }
 // cambio de moneda
-function conversionPesos(precioProducto,precioDolar) {
-    precioDolar = "n";
-    precioDolar = prompt ("Para convertir el precio a pesos ingrese: y")
-    if ((precioDolar == "y") || (precioDolar == "Y")) {
+function conversionPesos() {
+    let precioDolar = prompt ("Para convertir el precio a pesos ingrese: y").toLowerCase()
+    if (precioDolar == "y") {
         precioProducto = DOLAR * producto;
         alert(precioProducto + " " + "pesos argentinos")
     }
-    precioDolar == "n";
 }
 // cuotas
-function preguntaCuotas(calcularCuotas) {
-    calcularCuotas = prompt("Para calcular cuotas ingrese: y")
-    if ((calcularCuotas == "y") || (calcularCuotas == "Y")) {
+function preguntaCuotas() {
+    let preguntaCuotas = prompt("Para calcular cuotas ingrese: y").toLowerCase()
+    if (preguntaCuotas == "y") {
         seleccionCuotas()
     }
 }
-function seleccionCuotas(cuotas) {
-    cuotas = prompt("desea cuotas en dolares o pesos?")
+function seleccionCuotas() {
+    let cuotas = prompt("desea cuotas en dolares o pesos?")
     if ((cuotas == "dolares") || (cuotas == "dolar")) {
         cuotasDolar()
     }
@@ -66,15 +64,15 @@ function seleccionCuotas(cuotas) {
         cuotasPesos()
     }
 }
-function cuotasDolar(calcularCuotas,cuotas) {
-    cuotas = prompt("cuantas cuotas desea?")
-    calcularCuotas = producto / cuotas;
+function cuotasDolar() {
+    let cuotas = prompt("cuantas cuotas desea?")
+    let calcularCuotas = producto / cuotas;
     alert(cuotas + " " +"cuotas de" + " " + calcularCuotas + " " + "dolares");
 }
-function cuotasPesos(calcularCuotas,cuotas,precioProducto) {
-    precioProducto = DOLAR * producto;
-    cuotas = prompt("cuantas cuotas desea?")
-    calcularCuotas = precioProducto / cuotas;
+function cuotasPesos() {
+    let precioProducto = DOLAR * producto;
+    let cuotas = parseInt(prompt("cuantas cuotas desea?"))
+    let calcularCuotas = precioProducto / cuotas;
     alert(cuotas + " " +"cuotas de" + " " + calcularCuotas + " " + "pesos");
 }
  

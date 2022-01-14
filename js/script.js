@@ -41,7 +41,7 @@ const GUITARRA = new Product("GUITARRA CRIOLLA CLÁSICA","ALPUJARRA","329");
 const PIANO = new Product("PIANO ELÉCTRICO","ARTESIA","474");
 
 // catalogo
-let seleccionProductos = prompt("elija el producto que quiere consultar. Guitarra, Piano, Bateria").toLowerCase();
+let seleccionProductos = prompt("elija el producto que quiere consultar:"+ "\n" + "Guitarra" + "\n" + "Piano" + "\n" + "Bateria").toLowerCase();
 switch (seleccionProductos) {
     case "guitarra":
         GUITARRA.calcularEnvio();
@@ -55,4 +55,5 @@ switch (seleccionProductos) {
         alert("Producto no valido")
         break;
 }
-
+// array carrito
+const carrito = [];

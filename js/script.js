@@ -1,6 +1,4 @@
 
-let autor = console.log ("El autor de esta pagina es Goñi Leandro");
-
 alert("Bienvenido a Music House")
 
 // aceptar terminos y condiciones
@@ -36,24 +34,52 @@ class Product{
         alert("Producto: " + this.nombre + "\n" + "Marca: " + this.marca + "\n" + "Precio: " + this.precio + " Dolares" + "\n" + "Envio: " + this.envio + " pesos");
     }
 }
+
+var productoCarrito;
+
 // productos
 const GUITARRA = new Product("GUITARRA CRIOLLA CLÁSICA","ALPUJARRA","329");
 const PIANO = new Product("PIANO ELÉCTRICO","ARTESIA","474");
 
-// catalogo
+
+// array carrito
+const carrito = [];
+
+ // catalogo
 let seleccionProductos = prompt("elija el producto que quiere consultar:"+ "\n" + "Guitarra" + "\n" + "Piano" + "\n" + "Bateria").toLowerCase();
 switch (seleccionProductos) {
     case "guitarra":
+        productoCarrito = "Guitarra";
         GUITARRA.calcularEnvio();
         GUITARRA.mostrarProducto();
+        agregarCarrito()
         break;
     case "piano":
+        productoCarrito = "Piano";
         PIANO.calcularEnvio();
         PIANO.mostrarProducto();
+        agregarCarrito()
         break;
     default:
-        alert("Producto no valido")
+        alert("Producto no valido");
         break;
 }
-// array carrito
-const carrito = [];
+verCarrito();
+
+function agregarCarrito() {
+    let agregarProducto = prompt("Deseas agregar el producto al carrito?" + "\n" + "ingrese y para agregar").toLowerCase();
+    if (agregarProducto == "y") {
+        carrito.push(productoCarrito);
+        alert(productoCarrito + " agregado al carrito con exito");
+    }
+    else {
+        alert("Ningun producto fue agregado al carrito");
+    }
+}
+
+function verCarrito() {
+    let ver = prompt("desea ingresar al carrito?" + "\n" + " Ingrese y para ir al carrito").toLowerCase();
+    if (ver == "y") {
+        alert("Su carrito contiene:" + "\n" + productoCarrito)
+    }
+}

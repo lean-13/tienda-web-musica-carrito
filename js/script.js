@@ -40,6 +40,8 @@ const GUITARRA = new Product("GUITARRA CRIOLLA CLÁSICA","ALPUJARRA","329");
 const PIANO = new Product("PIANO ELÉCTRICO","ARTESIA","474");
 
 // array carrito
+
+let productoCarrito;
 const carrito = [];
 
 let catalogo = true;
@@ -75,23 +77,22 @@ function salirCarrito(){
     }
 }
 
-let productoCarrito;
 function agregarCarrito() {
-    let agregarProducto = prompt("Deseas agregar el producto al carrito?" + "\n" + "ingrese y para agregar").toLowerCase();
+    let agregarProducto = prompt("Deseas agregar un producto al carrito?" + "\n" + "ingrese y para agregar").toLowerCase();
     while (agregarProducto == "y") {
         let catalogoCarrito = prompt("elija el producto que quiere agregar:"+ "\n" + "Guitarra" + "\n" + "Piano" + "\n" + "Bateria").toLowerCase();
         switch (catalogoCarrito) {
             case "guitarra":
-                productoCarrito = "Piano";
+                productoCarrito = "GUITARRA CRIOLLA CLÁSICA";
                 break;
             case "piano":
-                productoCarrito = "Guitarra criolla";
+                productoCarrito = "PIANO ELÉCTRICO";
                 break;
             default:
                 alert("Producto no valido");
                 break;
         }
-        carrito.push(productoCarrito);
+        carrito.push("\n" + productoCarrito);
         alert(productoCarrito + " agregado al carrito con exito");
         agregarProducto = prompt("Desea agregar otro producto al carrito?" + "\n" + "ingrese y para agregar")
     }
@@ -99,7 +100,10 @@ function agregarCarrito() {
 
 function verCarrito() {
     let ver = prompt("Desea ver el carrito?" + "\n" + " Ingrese y para ir al carrito").toLowerCase();
-    if (ver == "y") {
+    if ((ver == "y") && (carrito.length >= 1)){
         alert("Su carrito contiene:" + "\n" + carrito.toString());
+    }
+    else if ((ver == "y") && (carrito.length === 0)){
+        alert("Su carrito esta vacio")
     }
 }

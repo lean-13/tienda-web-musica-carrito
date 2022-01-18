@@ -68,11 +68,11 @@ while (catalogo) {
     }
     agregarCarrito();
     verCarrito();
-    salirCarrito();
+    salirCatalogo();
 
 }
 
-function salirCarrito(){
+function salirCatalogo(){
     if (catalogo = true) {
         let catalogoSalir = prompt("Para salir del catalogo ingrese:" + "\n" + "salir")
         if (catalogoSalir == "salir") {
@@ -107,20 +107,45 @@ function verCarrito() {
     let ver = prompt("Desea ver el carrito?" + "\n" + " Ingrese y para ir al carrito").toLowerCase();
     if ((ver == "y") && (carrito.length >= 1)){
         alert("Su carrito contiene:" + "\n" + carrito.toString() + "\n" +"Numero de productos: " + numeroPosicionProducto);
+        preguntaBorradoCompra();
     }
     else if ((ver == "y") && (carrito.length === 0)){
         alert("Su carrito esta vacio")
+    } 
+}
+function preguntaBorradoCompra() {
+    let preguntaBorradoCompra = prompt("Desea comprar o vaciar el carrito?" + "\n" + "Opciones:" + "\n" +"Comprar" + "\n" + "Borrar" + "\n" + "salir").toLowerCase();
+    switch (preguntaBorradoCompra) {
+        case "comprar":
+            compraCarrito();
+            break;
+        case "borrar":
+            borrarCarrito();
+            break;
+        case "salir":
+            alert("El carrito seguira disponible");
+            break;
+        default:
+            alert("Opcion no disponible");
+            break;
     }
 }
-
+function compraCarrito() {
+    let compraCarrito = prompt("Esta seguro que desea comprar el carrito?" + "\n" + "Ingrese y para comprar").toLowerCase();
+    if ((compraCarrito = "y")) {
+        alert("Compra realizada con exito:" + "\n" + carrito.toString());
+        carrito.length = 0;
+    }
+}
+function borrarCarrito() {
+    let borrarCarrito = prompt("Esta seguro que desea vaciar el carrito?" + "\n" + "Ingrese y para vaciar el carrito").toLowerCase();
+    if ((borrarCarrito == "y")) {
+        carrito.length = 0;
+        alert("Carrito vaciado con exito")
+    }
+}
 function posicionProducto() {
     for (let index = 0; index < carrito.length; index++) {
         numeroPosicionProducto = index + 1;
     }
 }
-
-// ordenar de menor a mayor
-
-const productos = [474,329,90];
-
-productos.sort((a, b) => a - b);

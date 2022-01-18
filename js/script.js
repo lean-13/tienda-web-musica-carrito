@@ -13,7 +13,7 @@ const IVA = 1.21;
 const ENVIOGRATIS = 40;
 
 // productos
-class Product{
+class Producto{
 
     constructor(nombre,marca,precio){
         this.nombre = nombre;
@@ -29,6 +29,9 @@ class Product{
             this.envio = 800;
         }
     }
+    sumaIva(){
+        this.precio = this.precio * IVA;
+    }
 
     mostrarProducto(){
         alert("Producto: " + this.nombre + "\n" + "Marca: " + this.marca + "\n" + "Precio: " + this.precio + " Dolares" + "\n" + "Envio: " + this.envio + " pesos");
@@ -36,8 +39,8 @@ class Product{
 }
 
 // productos
-const GUITARRA = new Product("GUITARRA CRIOLLA CLÁSICA","ALPUJARRA","329");
-const PIANO = new Product("PIANO ELÉCTRICO","ARTESIA","474");
+const GUITARRA = new Producto("GUITARRA CRIOLLA CLÁSICA","ALPUJARRA","329");
+const PIANO = new Producto("PIANO ELÉCTRICO","ARTESIA","474");
 
 // array carrito
 
@@ -115,3 +118,9 @@ function posicionProducto() {
         numeroPosicionProducto = index + 1;
     }
 }
+
+// ordenar de menor a mayor
+
+const productos = [474,329,90];
+
+productos.sort((a, b) => a - b);

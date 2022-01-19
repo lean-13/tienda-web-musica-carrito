@@ -48,9 +48,9 @@ let productoCarrito = " ";
 let numeroPosicionProducto;
 const carrito = [];
 
-let catalogo = true;
+let menu = true;
 
-while (catalogo) {
+while (menu) {
     // catalogo
     let seleccionProductos = prompt("elija el producto que quiere consultar:"+ "\n" + "Guitarra" + "\n" + "Piano" + "\n" + "Bateria").toLowerCase();
     switch (seleccionProductos) {
@@ -68,17 +68,9 @@ while (catalogo) {
     }
     agregarCarrito();
     verCarrito();
-    salirCatalogo();
+    alert("Esta a punto de salir del catalogo")
+    salir();
 
-}
-
-function salirCatalogo(){
-    if (catalogo = true) {
-        let catalogoSalir = prompt("Para salir del catalogo ingrese:" + "\n" + "salir")
-        if (catalogoSalir == "salir") {
-            catalogo = false;
-        }
-    }
 }
 
 function agregarCarrito() {
@@ -91,6 +83,9 @@ function agregarCarrito() {
                 break;
             case "piano":
                 productoCarrito = "PIANO ELÉCTRICO";
+                break;
+            case "salir":
+                alert("Vuelva pronto")
                 break;
             default:
                 alert("Producto no valido");
@@ -116,20 +111,25 @@ function verCarrito() {
     } 
 }
 function preguntaBorradoCompra() {
-    let preguntaBorradoCompra = prompt("Desea comprar o vaciar el carrito?" + "\n" + "Opciones:" + "\n" +"Comprar" + "\n" + "Borrar" + "\n" + "salir").toLowerCase();
-    switch (preguntaBorradoCompra) {
-        case "comprar":
-            compraCarrito();
-            break;
-        case "borrar":
-            borrarCarrito();
-            break;
-        case "salir":
-            alert("El carrito seguira disponible");
-            break;
-        default:
-            alert("Opcion no disponible");
-            break;
+    menu = true;
+    while (menu) {
+        let preguntaBorradoCompra = prompt("Desea comprar o vaciar el carrito?" + "\n" + "Opciones:" + "\n" +"Comprar" + "\n" + "Borrar" + "\n" + "salir").toLowerCase();
+        switch (preguntaBorradoCompra) {
+            case "comprar":
+                compraCarrito();
+                break;
+            case "borrar":
+                borrarCarrito();
+                break;
+            case "salir":
+                alert("El carrito seguira disponible");
+                break;
+            default:
+                alert("Opcion no disponible");
+                break;
+        }
+        alert("Esta a punto de salir del carrito")
+        salir()
     }
 }
 function compraCarrito() {
@@ -146,8 +146,21 @@ function borrarCarrito() {
         alert("Carrito vaciado con exito")
     }
 }
+
+// contar productos
 function posicionProducto() {
     for (let index = 0; index < carrito.length; index++) {
         numeroPosicionProducto = index + 1;
     }
 }
+
+// salir de while
+function salir(){
+    if (menu = true) {
+        let menuSalir = prompt("Para salir ingrese:" + "\n" + "salir")
+        if (menuSalir == "salir") {
+            menu = false;
+        }
+    }
+}
+

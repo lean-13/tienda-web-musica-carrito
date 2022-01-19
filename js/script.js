@@ -129,8 +129,13 @@ function preguntaBorradoCompra() {
                 alert("Opcion no disponible");
                 break;
         }
-        alert("Esta a punto de salir del carrito")
-        salir()
+        if (carrito.length >= 1) {
+            alert("Esta a punto de salir del carrito")
+            salir()
+        }else if (carrito.length === 0) {
+            menu = false;
+        }
+
     }
 }
 function compraCarrito() {

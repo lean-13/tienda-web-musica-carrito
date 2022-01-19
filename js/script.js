@@ -89,6 +89,7 @@ function agregarCarrito() {
                 break;
             default:
                 alert("Producto no valido");
+                productoCarrito = " ";
                 break;
         }
         if (productoCarrito != " ") {

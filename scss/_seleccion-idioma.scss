@@ -19,17 +19,37 @@
 .bienvenida--color {
     background-color: $color3;
 }
-
+.bienvenida--animation {
+    opacity: 0;
+    animation: mostrar 1s forwards;
+}
+@keyframes mostrar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 .botones__idioma {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
+    border: none;
 }
 .boton__idioma {
     border-radius: 5px;
     color: $color3;
-    border-color: $color1;
     background-color: $color1;
+    border-color: $color1;
     // dimensiones
     padding-right: 5px;
     padding-left: 5px;
@@ -37,7 +57,7 @@
 }
 .boton__idioma:hover {
     color: $color2;
-    box-shadow: $color4 0px 2px 0px 1px;
+    box-shadow: $color4 2px 2px 0px 1px;
     transition: 0.7s;
 }
 

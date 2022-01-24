@@ -39,8 +39,6 @@
 .boton__comprar__texto--size {
     width: 150px;
     height: 30px;
-    padding-left: 20px;
-    padding-top: 3px;
     // position
     right: 130px;
     bottom: 0px;
@@ -48,11 +46,11 @@
 .boton__comprar__texto--color {
     background-color: $color1;
     color: $color3;
+    border-color: $color1;
 }
 
 /* animacion boton comprar */
 .boton__comprar__texto--color:hover {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
     animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
     color: $color2;
     transition: 0.7s;

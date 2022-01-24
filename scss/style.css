@@ -1127,6 +1127,21 @@ header nav a {
   color: black;
 }
 
+.carrito__compra--size {
+  width: 98%;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.precio__total--modificacion {
+  text-align: right;
+}
+
+.precio__total--size {
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
 /* informacion */
 /* seccion 2 */
 .cuadro__contenedor--size {
@@ -1306,7 +1321,7 @@ header nav a {
 }
 
 .boton__comprar__texto--size {
-  width: 140px;
+  width: 150px;
   height: 30px;
   padding-left: 20px;
   padding-top: 3px;
@@ -1367,5 +1382,66 @@ header nav a {
 
 .precio--size {
   font-size: 25px;
+}
+
+.bienvenida--modificacion {
+  position: fixed;
+  text-align: center;
+  z-index: 3;
+  border-radius: 5px;
+}
+
+.bienvenida--size {
+  width: 50%;
+  height: 450px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  top: 100px;
+  left: 25%;
+}
+
+.bienvenida--color {
+  background-color: white;
+}
+
+.botones__idioma {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 40px;
+}
+
+.boton__idioma {
+  border-radius: 5px;
+  color: white;
+  border-color: #013440;
+  background-color: #013440;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+.boton__idioma:hover {
+  color: blanchedalmond;
+  -webkit-box-shadow: black 0px 2px 0px 1px;
+          box-shadow: black 0px 2px 0px 1px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.logo__grande--modificacion {
+  text-align: center;
+  -webkit-filter: drop-shadow(4px 6px 2px #013440);
+          filter: drop-shadow(4px 6px 2px #013440);
+}
+
+.logo__grande--size {
+  width: 100px;
+  height: 100px;
+  margin-top: 80px;
 }
 /*# sourceMappingURL=style.css.map */

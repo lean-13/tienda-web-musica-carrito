@@ -33,3 +33,16 @@
     box-shadow: $color1 2px 2px 2px 2px;
     color: $color4;
 }
+// compra carrito
+.carrito__compra--size {
+    width: 98%;
+    height: 50px;
+    margin-top: 20px;
+}
+.precio__total--modificacion {
+    text-align: right;
+}
+.precio__total--size {
+    padding-right: 20px;
+    padding-top: 10px;
+}

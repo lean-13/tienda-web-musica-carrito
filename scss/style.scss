@@ -368,11 +368,12 @@ body::-webkit-scrollbar-thumb:hover {
         color: $color2;
     }
 }
+
 @import "categorias";
 @import "contacto__formulario";
 @import "carrito";
 @import "informacion";
 @import "error__404";
 @import "producto__x";
-
+@import "seleccion-idioma";
 

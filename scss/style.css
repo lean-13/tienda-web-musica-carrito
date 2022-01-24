@@ -209,6 +209,12 @@ header nav a {
   }
 }
 
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .bienvenida--size {
+    width: 120%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   #portadaInicio div img {
     margin-top: 50px;
@@ -229,6 +235,10 @@ header nav a {
   }
   #iconoFlecha span {
     bottom: 10px;
+  }
+  .bienvenida--size {
+    width: 90%;
+    left: 5%;
   }
 }
 
@@ -283,6 +293,10 @@ header nav a {
   }
   .categorias__all--size {
     margin-top: 20px;
+  }
+  .bienvenida--size {
+    width: 120%;
+    left: 5%;
   }
 }
 
@@ -1487,6 +1501,6 @@ header nav a {
 .logo__grande--size {
   width: 100px;
   height: 100px;
-  margin-top: 80px;
+  margin-top: 10%;
 }
 /*# sourceMappingURL=style.css.map */

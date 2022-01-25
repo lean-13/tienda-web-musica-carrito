@@ -1387,14 +1387,14 @@ header nav a {
   font-size: 25px;
 }
 
-.bienvenida--modificacion {
+.modal--modificacion {
   position: fixed;
   text-align: center;
   z-index: 3;
   border-radius: 5px;
 }
 
-.bienvenida--size {
+.modal--size {
   width: 80%;
   height: 450px;
   padding-top: 40px;
@@ -1403,13 +1403,13 @@ header nav a {
   left: 10%;
 }
 
-.bienvenida--color {
+.modal--color {
   background-color: white;
   -webkit-box-shadow: #013440 0px 2px 10px 4px;
           box-shadow: #013440 0px 2px 10px 4px;
 }
 
-.bienvenida--animation {
+.modal--animation {
   opacity: 0;
   -webkit-animation: mostrar 1s forwards;
           animation: mostrar 1s forwards;

@@ -1,5 +1,5 @@
 // seleccion de idioma español o ingles
-const seleccion = document.querySelector(".bienvenida--modificacion");
+const seleccion = document.querySelector(".modal--modificacion");
 const seleccionIdioma = ()=>{
     document.querySelector(".es").addEventListener("click",()=>{
         localStorage.setItem("idioma","es");

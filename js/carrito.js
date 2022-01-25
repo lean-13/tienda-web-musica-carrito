@@ -36,7 +36,7 @@ class Carrito {
             }
     
     addCarrito() {
-
+        
     }
 
     // borrar todo el carrito

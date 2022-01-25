@@ -236,10 +236,6 @@ header nav a {
   #iconoFlecha span {
     bottom: 10px;
   }
-  .bienvenida--size {
-    width: 90%;
-    left: 5%;
-  }
 }
 
 @media screen and (max-width: 780px) {
@@ -293,10 +289,6 @@ header nav a {
   }
   .categorias__all--size {
     margin-top: 20px;
-  }
-  .bienvenida--size {
-    width: 120%;
-    left: 5%;
   }
 }
 
@@ -1358,31 +1350,31 @@ header nav a {
 
 @-webkit-keyframes pulseb {
   0% {
-    -webkit-box-shadow: 0 0 0 3px #013440;
-            box-shadow: 0 0 0 3px #013440;
+    -webkit-box-shadow: 0 0 0 3px black;
+            box-shadow: 0 0 0 3px black;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px #013440;
-            box-shadow: 0 0 0 0px #013440;
+    -webkit-box-shadow: 0 0 0 0px black;
+            box-shadow: 0 0 0 0px black;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 3px #013440;
-            box-shadow: 0 0 0 3px #013440;
+    -webkit-box-shadow: 0 0 0 3px black;
+            box-shadow: 0 0 0 3px black;
   }
 }
 
 @keyframes pulseb {
   0% {
-    -webkit-box-shadow: 0 0 0 3px #013440;
-            box-shadow: 0 0 0 3px #013440;
+    -webkit-box-shadow: 0 0 0 3px black;
+            box-shadow: 0 0 0 3px black;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px #013440;
-            box-shadow: 0 0 0 0px #013440;
+    -webkit-box-shadow: 0 0 0 0px black;
+            box-shadow: 0 0 0 0px black;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 3px #013440;
-            box-shadow: 0 0 0 3px #013440;
+    -webkit-box-shadow: 0 0 0 3px black;
+            box-shadow: 0 0 0 3px black;
   }
 }
 
@@ -1403,12 +1395,12 @@ header nav a {
 }
 
 .bienvenida--size {
-  width: 50%;
+  width: 80%;
   height: 450px;
   padding-top: 40px;
   padding-bottom: 80px;
   top: 100px;
-  left: 25%;
+  left: 10%;
 }
 
 .bienvenida--color {

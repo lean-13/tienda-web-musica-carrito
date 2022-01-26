@@ -1,10 +1,4 @@
 
-// iva
-const IVA = 1.21;
-// envio gratis
-const ENVIOGRATIS = 40;
-
-
 // array carrito
 
 let productoCarrito = " ";
@@ -24,17 +18,22 @@ function posicionProducto() {
     }
 }
 
-
+function mostrarCompra() {
+    const infoCompra = document.getElementById("modalCompraInfo");
+    const htmlInfoCompra = document.createElement("p")
+    htmlInfoCompra.textContent = carrito.toString();
+    infoCompra.appendChild(htmlInfoCompra)
+}   
 
 let modalAbrir = document.querySelectorAll(".botonCompra")[0];
 let modalCerrar = document.querySelectorAll(".botonCerrar")[0];
 let modalCompra = document.querySelectorAll(".modalCompra")[0];
 
 modalAbrir.addEventListener("click", function(e) {
-    agregarCarrito()
     e.preventDefault();
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
+    agregarCarrito();
 });
 
 modalCerrar.addEventListener("click", function() {

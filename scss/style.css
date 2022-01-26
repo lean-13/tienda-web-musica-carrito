@@ -1398,7 +1398,7 @@ header nav a {
 .modalCompra--size {
   width: 50%;
   height: 450px;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 80px;
   top: 100px;
   left: 25%;
@@ -1415,7 +1415,7 @@ header nav a {
 }
 
 .modalCompraBotones--size {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-right: 40px;
 }
 

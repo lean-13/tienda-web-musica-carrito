@@ -18,12 +18,22 @@ function posicionProducto() {
     }
 }
 
-
+let infoModal = 1;
 function mostrarCompra() {
-    const infoCompra = document.getElementById("modalCompraInfo");
-    const htmlInfoCompra = document.createElement("p")
-    htmlInfoCompra.textContent = carrito.toString();
-    infoCompra.appendChild(htmlInfoCompra)
+    if (infoModal < 2) {
+        const infoCompra = document.getElementById("modalCompraInfo");
+        const htmlInfoCompra = document.createElement("p")
+        htmlInfoCompra.textContent = carrito.toString();
+        infoCompra.appendChild(htmlInfoCompra)
+        infoModal = infoModal + 1;
+    }
+    else {
+        const infoCompras = document.getElementById("modalCompraInfo");
+        const htmlInfoCompras = document.createElement("p")
+        htmlInfoCompras.textContent = infoModal;
+        infoCompras.appendChild(htmlInfoCompras)
+        infoModal = infoModal + 1;
+    }
 }   
 
 let modalAbrir = document.querySelectorAll(".botonCompra")[0];

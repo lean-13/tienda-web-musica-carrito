@@ -83,13 +83,13 @@
     text-align: center;
 }
 .modalCompra--size {
-    width: 80%;
+    width: 50%;
     height: 450px;
     padding-top: 80px;
     padding-bottom: 80px;
     // position
     top: 100px;
-    left: 10%;
+    left: 25%;
 }
 .modalCompra--color {
     background-color: $color3;
@@ -124,4 +124,9 @@
         color: $color4;
         transition: 0.7s;
     }
+}
+// animacion
+.modalCompra {
+    opacity: 0;
+    visibility: hidden;
 }

@@ -1396,12 +1396,12 @@ header nav a {
 }
 
 .modalCompra--size {
-  width: 80%;
+  width: 50%;
   height: 450px;
   padding-top: 80px;
   padding-bottom: 80px;
   top: 100px;
-  left: 10%;
+  left: 25%;
 }
 
 .modalCompra--color {
@@ -1447,6 +1447,11 @@ header nav a {
   color: black;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.modalCompra {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .modal--modificacion {

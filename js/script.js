@@ -1,4 +1,4 @@
-
+/*
 // iva
 const IVA = 1.21;
 // envio gratis
@@ -54,27 +54,20 @@ function posicionProducto() {
         numeroPosicionProducto = index + 1;
     }
 }
+*/
 
-class modalcompra {
-    addItems(producto) {
-        const itemCarrito = document.getElementById('carritoItems');
-        const element = document.createElement('div');
-        element.innerHTML = `
-        <div class="producto__carrito--modificacion producto__carrito--size producto__carrito--color">
-            <strong>Producto Name</strong>: ${producto.name}
-            <strong>Producto Marca</strong>: ${producto.marca}
-            <strong>Producto Precio</strong>: ${producto.precio}
-        </div>
-        `;
-        carritoItems.appendChild(element);
-    }
-}
 
-document.getElementById('boton1').addEventListener("click", function() {
-    new producto = producto(GUITARRA);
-    new productoCarrito = productoCarrito();
-    producto.additems(producto);
+let modalAbrir = document.querySelectorAll(".botonCompra")[0];
+let modalCerrar = document.querySelectorAll(".botonCerrar")[0];
+let modalCompra = document.querySelectorAll(".modalCompra")[0];
+
+modalAbrir.addEventListener("click", function(e) {
     e.preventDefault();
+    modalCompra.style.opacity = "1";
+    modalCompra.style.visibility = "visible";
 });
 
-
+modalCerrar.addEventListener("click", function() {
+    modalCompra.style.opacity = "0";
+    modalCompra.style.visibility = "hidden";
+})

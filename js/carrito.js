@@ -27,7 +27,6 @@ const PIANO = new Producto(2,"PIANO ELÉCTRICO","ARTESIA",474);
 
 // array carrito
 
-let productoCarrito = " ";
 let numeroPosicionProducto;
 class Carrito {
   
@@ -54,19 +53,8 @@ class Carrito {
     
 }
 
-
-// salir de while
-function salir(){
-    if (menu = true) {
-        let menuSalir = prompt("Para salir ingrese:" + "\n" + "salir")
-        if (menuSalir == "salir") {
-            menu = false;
-        }
-    }
-}
-
 class productoCarrito {
-    addItems(items) {
+    addItems(producto) {
         const itemCarrito = document.getElementById('carritoItems');
         const element = document.createElement('div');
         element.innerHTML = `
@@ -80,7 +68,9 @@ class productoCarrito {
     }
 }
 
-document.getElementById('1').addEventListener("click", function() {
+document.getElementById('boton1').addEventListener("click", function() {
+    new producto = producto(GUITARRA);
     new productoCarrito = productoCarrito();
-    posicionProducto();
+    producto.additems(producto);
+    e.preventDefault();
 });

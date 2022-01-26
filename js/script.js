@@ -18,6 +18,7 @@ function posicionProducto() {
     }
 }
 
+
 function mostrarCompra() {
     const infoCompra = document.getElementById("modalCompraInfo");
     const htmlInfoCompra = document.createElement("p")
@@ -34,6 +35,7 @@ modalAbrir.addEventListener("click", function(e) {
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
     agregarCarrito();
+    mostrarCompra();
 });
 
 modalCerrar.addEventListener("click", function() {

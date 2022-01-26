@@ -120,7 +120,10 @@
     span {
         color: $color2;
     }
-    span:hover {
+
+}
+.botonCerrar--color:hover {
+    span {
         color: $color4;
         transition: 0.7s;
     }

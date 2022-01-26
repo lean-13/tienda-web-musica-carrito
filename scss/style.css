@@ -1443,7 +1443,7 @@ header nav a {
   color: blanchedalmond;
 }
 
-.botonCerrar--color span:hover {
+.botonCerrar--color:hover span {
   color: black;
   -webkit-transition: 0.7s;
   transition: 0.7s;

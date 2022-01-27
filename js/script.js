@@ -27,7 +27,7 @@ function mostrarCompra() {
         infoCompra.appendChild(htmlInfoCompra)
         infoModal = infoModal + 1;
     }
-    else if (infoModal < 3) {
+    else  {
         const infoCompras = document.getElementById("modalCompraInfo");
         const htmlInfoCompras = document.createElement("p");
         htmlInfoCompras.className = "numeroProductos";
@@ -35,11 +35,7 @@ function mostrarCompra() {
         infoCompras.appendChild(htmlInfoCompras)
         infoModal = infoModal + 1;
     }
-    else if (infoModal >= 4) {
-        htmlInfoCompras.textContent = infoModal;
-        infoCompras.appendChild(htmlInfoCompras)
-        infoModal = infoModal + 1;
-    }
+
 
 }   
 

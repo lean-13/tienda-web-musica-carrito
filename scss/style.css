@@ -1396,12 +1396,12 @@ header nav a {
 }
 
 .modalCompra--size {
-  width: 50%;
-  height: 450px;
+  width: 70%;
+  height: 480px;
   padding-top: 60px;
   padding-bottom: 80px;
   top: 100px;
-  left: 25%;
+  left: 15%;
 }
 
 .modalCompra--color {

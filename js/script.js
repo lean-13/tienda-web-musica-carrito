@@ -6,7 +6,7 @@ let numeroPosicionProducto;
 const carrito = [];
 
 function agregarCarrito() {
-    productoCarrito = "GUITARRA CRIOLLA CLÁSICA";
+    productoCarrito = "Guitarra Criolla Clasica";
     carrito.push("\n" + productoCarrito);
     posicionProducto();
 }

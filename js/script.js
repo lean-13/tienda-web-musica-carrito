@@ -23,18 +23,24 @@ function mostrarCompra() {
     if (infoModal < 2) {
         const infoCompra = document.getElementById("modalCompraInfo");
         const htmlInfoCompra = document.createElement("p")
-        htmlInfoCompra.textContent = carrito.toString();
+        htmlInfoCompra.textContent = "Producto: " + carrito.toString();
         infoCompra.appendChild(htmlInfoCompra)
         infoModal = infoModal + 1;
     }
-    else {
+    else if (infoModal < 3) {
         const infoCompras = document.getElementById("modalCompraInfo");
         const htmlInfoCompras = document.createElement("p");
         htmlInfoCompras.className = "numeroProductos";
+        htmlInfoCompras.textContent = "Cantidad: " + infoModal;
+        infoCompras.appendChild(htmlInfoCompras)
+        infoModal = infoModal + 1;
+    }
+    else if (infoModal >= 4) {
         htmlInfoCompras.textContent = infoModal;
         infoCompras.appendChild(htmlInfoCompras)
         infoModal = infoModal + 1;
     }
+
 }   
 
 let modalAbrir = document.querySelectorAll(".botonCompra")[0];

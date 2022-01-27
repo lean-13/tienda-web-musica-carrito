@@ -1461,7 +1461,8 @@ header nav a {
 }
 
 .modalCompraInfo--size strong {
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
   color: #013440;
 }
 
@@ -1555,6 +1556,9 @@ header nav a {
   margin-bottom: 20px;
   margin-right: 20%;
   margin-left: 20%;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .boton__idioma:hover {

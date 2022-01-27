@@ -57,6 +57,10 @@
     margin-bottom: 20px;
     margin-right: 20%;
     margin-left: 20%;
+    // text
+    font-size: 20px;
+    text-transform: $mayus;
+    letter-spacing: 1.5px;
 }
 .boton__idioma:hover {
     color: $color2;

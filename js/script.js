@@ -18,25 +18,21 @@ function posicionProducto() {
     }
 }
 
+const MAX = 9;
 let infoModal = 1;
 function mostrarCompra() {
-    if (infoModal < 2) {
-        const infoCompra = document.getElementById("modalCompraInfo");
-        const htmlInfoCompra = document.createElement("p")
-        htmlInfoCompra.textContent = "Producto: " + carrito.toString();
-        infoCompra.appendChild(htmlInfoCompra)
+    if (infoModal === 1) {
+        const infoCompra = document.getElementById("infoProductoComprado");
+        infoProductoComprado.textContent = "Producto: " + carrito.toString();
         infoModal = infoModal + 1;
     }
-    else  {
-        const infoCompras = document.getElementById("modalCompraInfo");
-        const htmlInfoCompras = document.createElement("p");
-        htmlInfoCompras.className = "numeroProductos";
-        htmlInfoCompras.textContent = "Cantidad: " + infoModal;
-        infoCompras.appendChild(htmlInfoCompras)
-        infoModal = infoModal + 1;
+    else if (infoModal >= 2) {
+        const numeroProductos = document.getElementById("infoNumeroComprado");
+        infoNumeroComprado.textContent ="Cantidad: " + infoModal;
+        if (infoModal < MAX) {
+            infoModal = infoModal + 1;
+        }
     }
-
-
 }   
 
 let modalAbrir = document.querySelectorAll(".botonCompra")[0];

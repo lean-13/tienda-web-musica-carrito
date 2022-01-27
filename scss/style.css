@@ -1460,6 +1460,15 @@ header nav a {
   margin-top: 20px;
 }
 
+.modalCompraInfo--size strong {
+  font-size: 20px;
+  color: #013440;
+}
+
+#infoProductoComprado {
+  display: block;
+}
+
 .modal--modificacion {
   position: fixed;
   text-align: center;

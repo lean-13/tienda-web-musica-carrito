@@ -1,13 +1,17 @@
 
+const items = document.getElementById('carrito');
+const elementProducto = document.getElementById('producto__x').content;
+const fragment = document.createDocumentFragment();
+
 // productos
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
+
 const fetchData = async () => {
     try {
         const res = await fetch('../data/dataProductos.json');
         const data = await res.json();
-        console.log(data);
     } catch (error) {
         console.log(Error);
     }
@@ -17,6 +21,8 @@ const fetchData = async () => {
 
 let productoCarrito = " ";
 let numeroPosicionProducto;
+let cuotas = 1;
+
 const carrito = [];
 
 function agregarCarrito() {

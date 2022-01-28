@@ -67,6 +67,36 @@
         box-shadow: 0 0 0 3px $color4;
     }
 }
+// cuotas
+.seleccionCuotas {
+    // modificacion
+    border-radius: 5px;
+    position: absolute;
+    select {
+        cursor: pointer;
+
+    }
+    // size
+    width: 50px;
+    height: 50px;
+    // position
+    right: 320px;
+    bottom: 250px;
+    // color
+    color: $color4;
+    select {
+        box-shadow: 3px 3px 2px 0px $color1;
+    }
+    // text
+    label {
+        font-size: 18px;
+        letter-spacing: 0.1px;
+    }
+}
+.seleccionCuotas:hover {
+    color: $color1;
+    transition: 0.7s;
+}
 // texto precio
 .precio--modificacion {
     text-transform: $mayus;

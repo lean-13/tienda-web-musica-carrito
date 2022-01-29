@@ -36,14 +36,12 @@ function posicionProducto() {
 }
 
 // cuotas
-let productoPrecioCuotas = " ";
-let numeroCuotas = 1;
 
 const selectCuotas = document.querySelector('.selectCuotas');
 
 selectCuotas.addEventListener('change', (event) => {
-    const resultCuotas = document.getElementById('infoNumeroCuotas');
-    console.log(event.target.value);
+    const cantidadCuotas = document.getElementById('infoNumeroCuotas');
+    infoNumeroCuotas.textContent = "Cuotas: " + event.target.value;
 })
 
 function precioCuotas() {

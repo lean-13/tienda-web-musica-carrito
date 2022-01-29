@@ -129,7 +129,7 @@
     text-align: right;
 }
 .modalCompraBotones--size {
-    margin-top: 40px;
+    margin-top: 200px;
     margin-right: 40px;
 }
 .botonCerrar--modificacion {
@@ -181,5 +181,8 @@
     display: block;
 }
 #infoPrecioFinal {
+    display: block;
+}
+#infoPrecioCuotas {
     display: block;
 }

@@ -1445,7 +1445,7 @@ header nav a {
 }
 
 .modalCompraBotones--size {
-  margin-top: 40px;
+  margin-top: 200px;
   margin-right: 40px;
 }
 
@@ -1505,6 +1505,10 @@ header nav a {
 }
 
 #infoPrecioFinal {
+  display: block;
+}
+
+#infoPrecioCuotas {
   display: block;
 }
 

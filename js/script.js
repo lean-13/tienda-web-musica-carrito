@@ -19,12 +19,14 @@ const fetchData = async () => {
 // array carrito
 
 let productoCarrito = " ";
+let precio = 34.000;
+const IVA = 1.21;
 let numeroPosicionProducto;
 
 const carrito = [];
 
 function agregarCarrito() {
-    productoCarrito = "Guitarra Criolla Clasica";
+    productoCarrito = "Guitarra Criolla Clasica" + " " + precio;
     carrito.push("\n" + productoCarrito);
     posicionProducto();
 }
@@ -34,7 +36,10 @@ function posicionProducto() {
         numeroPosicionProducto = index + 1;
     }
 }
-
+function precioFinal() {
+    let precioFInal = precio * IVA;
+    infoPrecioFinal.textContent = "Precio: $" + precioFInal;
+}
 // cuotas
 
 const selectCuotas = document.querySelector('.selectCuotas');

@@ -1,7 +1,6 @@
 
 const items = document.getElementById('carrito');
 const elementProducto = document.getElementById('producto__x').content;
-const fragment = document.createDocumentFragment();
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +20,6 @@ const fetchData = async () => {
 
 let productoCarrito = " ";
 let numeroPosicionProducto;
-let cuotas = 1;
 
 const carrito = [];
 
@@ -30,12 +28,27 @@ function agregarCarrito() {
     carrito.push("\n" + productoCarrito);
     posicionProducto();
 }
-
 // contar productos
 function posicionProducto() {
     for (let index = 0; index < carrito.length; index++) {
         numeroPosicionProducto = index + 1;
     }
+}
+
+// cuotas
+let productoPrecioCuotas = " ";
+let numeroCuotas = 1;
+
+const selectCuotas = document.querySelector('.selectCuotas');
+
+selectCuotas.addEventListener('change', (event) => {
+    const resultCuotas = document.getElementById('infoNumeroCuotas');
+    console.log(event.target.value);
+})
+
+function precioCuotas() {
+    let cuotas = precioProducto() /  numeroCuotas;
+    infoNumeroCuotas.textContent ="Cantidad: " + numeroCuotas;
 }
 
 const MAX = 9;

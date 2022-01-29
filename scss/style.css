@@ -1429,7 +1429,7 @@ header nav a {
   width: 70%;
   height: 480px;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
   top: 100px;
   left: 15%;
 }
@@ -1497,6 +1497,14 @@ header nav a {
 }
 
 #infoProductoComprado {
+  display: block;
+}
+
+#infoNumeroComprado {
+  display: block;
+}
+
+#infoPrecioFinal {
   display: block;
 }
 

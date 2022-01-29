@@ -19,27 +19,25 @@ const fetchData = async () => {
 // array carrito
 
 let productoCarrito = " ";
-let precio = 34.000;
+let precio = 34000;
 const IVA = 1.21;
 let numeroPosicionProducto;
-
+let numeroCuotas = 1;
+let precioProductoFinal;
 const carrito = [];
 
 function agregarCarrito() {
-    productoCarrito = "Guitarra Criolla Clasica" + " " + precio;
+    productoCarrito = "Guitarra Criolla Clasica";
     carrito.push("\n" + productoCarrito);
-    posicionProducto();
+    precioFinal();
 }
-// contar productos
-function posicionProducto() {
-    for (let index = 0; index < carrito.length; index++) {
-        numeroPosicionProducto = index + 1;
-    }
-}
+
 function precioFinal() {
-    let precioFInal = precio * IVA;
-    infoPrecioFinal.textContent = "Precio: $" + precioFInal;
+    precioProductoFinal = precio * IVA * infoModal;
+    const infoPrecioFinal = document.getElementById('infoPrecioFinal')
+    infoPrecioFinal.textContent = "Precio: $" + precioProductoFinal;
 }
+
 // cuotas
 
 const selectCuotas = document.querySelector('.selectCuotas');
@@ -47,11 +45,13 @@ const selectCuotas = document.querySelector('.selectCuotas');
 selectCuotas.addEventListener('change', (event) => {
     const cantidadCuotas = document.getElementById('infoNumeroCuotas');
     infoNumeroCuotas.textContent = "Cuotas: " + event.target.value;
+    numeroCuotas = event.target.value;
 })
 
-function precioCuotas() {
-    let cuotas = precioProducto() /  numeroCuotas;
-    infoNumeroCuotas.textContent ="Cantidad: " + numeroCuotas;
+function calcularPrecioCuotas() {
+    let precioCuotas = precioProductoFinal / numeroCuotas;
+    const infoPrecioCuotas = document.getElementById('infoPrecioCuotas')
+    infoPrecioCuotas.textContent = "Cuotas de: $" + precioCuotas;
 }
 
 const MAX = 9;
@@ -80,6 +80,7 @@ modalAbrir.addEventListener("click", function(e) {
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
     agregarCarrito();
+    calcularPrecioCuotas()
     mostrarCompra();
 });
 

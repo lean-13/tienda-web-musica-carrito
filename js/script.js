@@ -1,8 +1,4 @@
 
-const items = document.getElementById('carrito');
-const elementProducto = document.querySelector('.divBotonCompra').content;
-const fragment = document.createDocumentFragment()
-
 // productos
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
@@ -90,11 +86,3 @@ modalCerrar.addEventListener("click", function() {
     modalCompra.style.visibility = "hidden";
 })
 
-const pintarBoton = data => {
-    data.forEach(producto => {
-        elementProducto.querySelector('botonCompra').dataset.id = producto.id;
-        const clone = elementProducto.cloneNode(true);
-        fragment.appendChild(clone);
-    })
-    botonCompra.appendChild(fragment)
-}

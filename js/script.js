@@ -56,12 +56,12 @@ let infoModal = 1;
 function mostrarCompra() {
     if (infoModal === 1) {
         const infoCompra = document.getElementById("infoProductoComprado");
-        infoProductoComprado.textContent = "Producto: " + carrito.toString();
+        infoCompra.textContent = "Producto: " + carrito.toString();
         infoModal = infoModal + 1;
     }
     else if (infoModal >= 2) {
         const numeroProductos = document.getElementById("infoNumeroComprado");
-        infoNumeroComprado.textContent ="Cantidad: " + infoModal;
+        numeroProductos.textContent ="Cantidad: " + infoModal;
         if (infoModal < MAX) {
             infoModal = infoModal + 1;
         }

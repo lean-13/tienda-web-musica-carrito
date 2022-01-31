@@ -1,6 +1,7 @@
 
 const items = document.getElementById('carrito');
-const elementProducto = document.getElementById('producto__x').content;
+const elementProducto = document.querySelector('.divBotonCompra').content;
+const fragment = document.createDocumentFragment()
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,7 +81,7 @@ modalAbrir.addEventListener("click", function(e) {
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
     agregarCarrito();
-    calcularPrecioCuotas()
+    calcularPrecioCuotas();
     mostrarCompra();
 });
 
@@ -88,3 +89,12 @@ modalCerrar.addEventListener("click", function() {
     modalCompra.style.opacity = "0";
     modalCompra.style.visibility = "hidden";
 })
+
+const pintarBoton = data => {
+    data.forEach(producto => {
+        elementProducto.querySelector('botonCompra').dataset.id = producto.id;
+        const clone = elementProducto.cloneNode(true);
+        fragment.appendChild(clone);
+    })
+    botonCompra.appendChild(fragment)
+}

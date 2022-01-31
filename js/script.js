@@ -41,7 +41,7 @@ const selectCuotas = document.querySelector('.selectCuotas');
 
 selectCuotas.addEventListener('change', (event) => {
     const cantidadCuotas = document.getElementById('infoNumeroCuotas');
-    infoNumeroCuotas.textContent = "Cuotas: " + event.target.value;
+    cantidadCuotas.textContent = "Cuotas: " + event.target.value;
     numeroCuotas = event.target.value;
 })
 
@@ -85,4 +85,5 @@ modalCerrar.addEventListener("click", function() {
     modalCompra.style.opacity = "0";
     modalCompra.style.visibility = "hidden";
 })
+
 

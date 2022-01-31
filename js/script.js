@@ -18,7 +18,6 @@ const fetchData = async () => {
 let productoCarrito = " ";
 let precio = 34000;
 const IVA = 1.21;
-let numeroPosicionProducto;
 let numeroCuotas = 1;
 let precioProductoFinal;
 const carrito = [];
@@ -58,6 +57,7 @@ function mostrarCompra() {
         const infoCompra = document.getElementById("infoProductoComprado");
         infoCompra.textContent = "Producto: " + carrito.toString();
         infoModal = infoModal + 1;
+        carritoTemporal();
     }
     else if (infoModal >= 2) {
         const numeroProductos = document.getElementById("infoNumeroComprado");
@@ -65,6 +65,7 @@ function mostrarCompra() {
         if (infoModal < MAX) {
             infoModal = infoModal + 1;
         }
+        carritoTemporalActualizar();
     }
 }   
 
@@ -87,3 +88,14 @@ modalCerrar.addEventListener("click", function() {
 })
 
 
+function carritoTemporal() {
+    const carritoItems = document.getElementById('carritoTemporal')
+    const items = document.createElement('p')
+    carritoItems.appendChild(items);
+    items.className = "itemsCarrito";
+    items.textContent =  "Producto: " + productoCarrito + " Precio: $" + precioProductoFinal + " " +"Cantidad de cuotas: " + numeroCuotas;
+}
+function carritoTemporalActualizar() {
+    const itemsActualiza = document.querySelector(".itemsCarrito")
+    itemsActualiza.textContent =  "Producto: " + productoCarrito + " Precio: $" + precioProductoFinal + " " +"Cantidad de cuotas: " + numeroCuotas;
+}

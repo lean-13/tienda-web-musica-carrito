@@ -15,27 +15,17 @@ const fetchData = async () => {
 
 const addCartProductoButon = document.querySelectorAll('.botonCompra');
 addCartProductoButon.forEach(addCartButon => {
-    addCartButon.addEventListener('click', addCartClick);
+    addCartButon.addEventListener('click', addCart);
 })
 
-function addCartClick(event) {
+function addCart(e) {
     const boton = event.target;
-    const item = boton.closest('.items');
-    console.log('addCartClick => item', item)
+    const item = boton.closest('.productoItems');
+    setCarrito(item);
 }
-
-// array carrito
-
-class carrito {
-    addProducto(e) {
-        e.preventDefault();
-        if (e.target.classList.contains('botonCompra')) {
-            const producto = e.target.parentElement.parentElement;
-            this.leerDatosProducto(producto);
-        }
-    }
+const setCarrito = objeto => {
+    console.log(objeto)
 }
-
 
 /*
 const IVA = 1.21;

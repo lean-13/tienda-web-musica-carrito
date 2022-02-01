@@ -13,18 +13,31 @@ const fetchData = async () => {
     }
 }
 
+let carrito = {}
+
+
+const pintarProducto = () => {
+    data.forEach(producto => {
+        producto.id;
+    })
+}
+
 const addCartProductoButon = document.querySelectorAll('.botonCompra');
 addCartProductoButon.forEach(addCartButon => {
     addCartButon.addEventListener('click', addCart);
 })
 
-function addCart(e) {
+function addCart(event) {
     const boton = event.target;
     const item = boton.closest('.productoItems');
     setCarrito(item);
 }
 const setCarrito = objeto => {
-    console.log(objeto)
+    // console.log(objeto)
+    const producto = {
+        id: objeto.querySelector('.botonCompra').id
+    }
+    console.log(producto)
 }
 
 /*

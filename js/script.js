@@ -15,8 +15,14 @@ const fetchData = async () => {
 
 const addCartProductoButon = document.querySelectorAll('.botonCompra');
 addCartProductoButon.forEach(addCartButon => {
-    addCartButon.addEventListener('click', () => console.log('click'))
+    addCartButon.addEventListener('click', addCartClick);
 })
+
+function addCartClick(event) {
+    const boton = event.target;
+    const item = boton.closest('.items');
+    console.log('addCartClick => item', item)
+}
 
 // array carrito
 

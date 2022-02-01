@@ -35,7 +35,11 @@ function addCart(event) {
 const setCarrito = objeto => {
     // console.log(objeto)
     const producto = {
-        id: objeto.querySelector('.botonCompra').id
+        id: objeto.querySelector('.botonCompra').id,
+        img: objeto.querySelector('.imgProducto').src,
+        nombre: objeto.querySelector('.tituloProducto').textContent,
+        precio: objeto.querySelector('.precioProducto').textContent,
+        cantidad: 1
     }
     console.log(producto)
 }

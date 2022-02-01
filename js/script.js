@@ -13,20 +13,28 @@ const fetchData = async () => {
     }
 }
 
+const addCartProductoButon = document.querySelectorAll('.botonCompra');
+addCartProductoButon.forEach(addCartButon => {
+    addCartButon.addEventListener('click', () => console.log('click'))
+})
+
 // array carrito
 
-let productoCarrito = " ";
-let precio = 34000;
+class carrito {
+    addProducto(e) {
+        e.preventDefault();
+        if (e.target.classList.contains('botonCompra')) {
+            const producto = e.target.parentElement.parentElement;
+            this.leerDatosProducto(producto);
+        }
+    }
+}
+
+
+/*
 const IVA = 1.21;
 let numeroCuotas = 1;
-let precioProductoFinal;
-const carrito = [];
 
-function agregarCarrito() {
-    productoCarrito = "Guitarra Criolla Clasica";
-    carrito.push("\n" + productoCarrito);
-    precioFinal();
-}
 
 function precioFinal() {
     precioProductoFinal = precio * IVA * infoModal;
@@ -57,7 +65,6 @@ function mostrarCompra() {
         const infoCompra = document.getElementById("infoProductoComprado");
         infoCompra.textContent = "Producto: " + carrito.toString();
         infoModal = infoModal + 1;
-        carritoTemporal();
     }
     else if (infoModal >= 2) {
         const numeroProductos = document.getElementById("infoNumeroComprado");
@@ -65,7 +72,6 @@ function mostrarCompra() {
         if (infoModal < MAX) {
             infoModal = infoModal + 1;
         }
-        carritoTemporalActualizar();
     }
 }   
 
@@ -77,7 +83,7 @@ modalAbrir.addEventListener("click", function(e) {
     e.preventDefault();
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
-    agregarCarrito();
+    addCarrito();
     calcularPrecioCuotas();
     mostrarCompra();
 });
@@ -87,15 +93,4 @@ modalCerrar.addEventListener("click", function() {
     modalCompra.style.visibility = "hidden";
 })
 
-
-function carritoTemporal() {
-    const carritoItems = document.getElementById('carritoTemporal')
-    const items = document.createElement('p')
-    carritoItems.appendChild(items);
-    items.className = "itemsCarrito";
-    items.textContent =  "Producto: " + productoCarrito + " Precio: $" + precioProductoFinal + " " +"Cantidad de cuotas: " + numeroCuotas;
-}
-function carritoTemporalActualizar() {
-    const itemsActualiza = document.querySelector(".itemsCarrito")
-    itemsActualiza.textContent =  "Producto: " + productoCarrito + " Precio: $" + precioProductoFinal + " " +"Cantidad de cuotas: " + numeroCuotas;
-}
+*/

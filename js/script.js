@@ -13,27 +13,21 @@ const fetchData = async () => {
     }
 }
 
-let carrito = {}
+let carrito = {};
 
-
-const pintarProducto = () => {
-    data.forEach(producto => {
-        producto.id;
-    })
-}
 
 const addCartProductoButon = document.querySelectorAll('.botonCompra');
 addCartProductoButon.forEach(addCartButon => {
     addCartButon.addEventListener('click', addCart);
 })
 
-function addCart(event) {
-    const boton = event.target;
+function addCart(e) {
+    const boton = e.target;
     const item = boton.closest('.productoItems');
     setCarrito(item);
 }
+
 const setCarrito = objeto => {
-    // console.log(objeto)
     const producto = {
         id: objeto.querySelector('.botonCompra').id,
         img: objeto.querySelector('.imgProducto').src,
@@ -41,8 +35,14 @@ const setCarrito = objeto => {
         precio: objeto.querySelector('.precioProducto').textContent,
         cantidad: 1
     }
-    console.log(producto)
+    if (carrito.hasOwnProperty(producto.id)) {
+        producto.cantidad = carrito[producto.id].cantidad + 1
+    }
+    carrito[producto.id] = {...producto}
+
+    console.log(carrito)
 }
+
 
 /*
 const IVA = 1.21;

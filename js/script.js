@@ -1,3 +1,9 @@
+// producto carrito
+const templateCarritoProducto = document.querySelector('#templateProducto').content;
+const carritoItems = document.querySelector('.carritoItems');
+const confirmacionCompra = document.querySelector('.carritoCompraFinal');
+const fragment = document.createDocumentFragment();
+
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,13 +45,19 @@ const setCarrito = objeto => {
         producto.cantidad = carrito[producto.id].cantidad + 1
     }
     carrito[producto.id] = {...producto}
-
     pintarCarrito();
 }
 const pintarCarrito = () => {
     Object.values(carrito).forEach(producto => {
-        
+        templateCarritoProducto.querySelector('.imgProductoCarrito').src = producto.img
+        templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
+        templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
+        templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.precio
+        confirmacionCompra.querySelector('.precio__total__numero').textContent = producto.cantidad * producto.precio
+        const clone = templateCarritoProducto.cloneNode(true)
+        fragment.appendChild(clone)
     })
+    carritoItems.appendChild(fragment)
 }
 
 

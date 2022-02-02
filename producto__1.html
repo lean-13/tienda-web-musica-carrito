@@ -80,7 +80,7 @@
         </div>
         <div class="producto__x__descripcion--modificacion producto__x__descripcion--size producto__x__descripcion--color">
             <h2 class="titulo--modificacion titulo--color tituloProducto">Guitarra criolla clásica La Alpujarra 80</h2>
-            <h3 class="precio--modificacion precio--size precio-color precioProducto">$ 34,000</h3>
+            <h3 class="precio--modificacion precio--size precio-color precioProducto">34000</h3>
             <p>Disfrutá con esta guitarra La Alpujarra de la conexión con la música. Está diseñada para aficionados y profesionales. Con este instrumento descubrirás nuevos acordes, entonarás tus canciones y disfrutarás de la vida musical. <br> Un modelo para cada guitarrista La tapa de abeto genera un tono brillante y claro, incluso en los registros más agudos.</p>
             <h4>caracteristicas de Alpujarra 80</h4>
             <ul>
@@ -104,6 +104,17 @@
             <button class="boton__comprar__texto--modificacion boton__comprar__texto--size boton__comprar__texto--color botonCompra" id="1">Agregar al carrito</button>
         </div>
     </section>
+    <section>
+        <div class="carrito__seccion__productos--size carritoItems">
+
+        </div>
+        <!-- compra de carrito -->
+        <div class="carrito__compra--modificacion carrito__compra--size carrito__compra--color carritoCompraFinal">                    <div class="precio__total--modificacion precio__total--size">
+            <h3 class="titulo--modificacion titulo--color">Total:</h3>
+                <h4 class="titulo--modificacion titulo--color precio__total__numero" >0</h4>
+            </div>
+        </div>
+    </section>
     <!-- seccion 5 -->
     <!-- contacto -->
     <footer class="contacto--modificacion contacto--size contacto--color">
@@ -125,6 +136,21 @@
                 <a href="https://www.instagram.com/leandro_goni/"><i class="fab fa-instagram"></i></a>
             </div>
     </footer>
+    <template id="templateProducto">
+        <!-- producto -->
+        <div class="producto__carrito--modificacion producto__carrito--size producto__carrito--color carritoProducto">
+            <div class="divImgProductoCarrito">
+                <img src="" alt="producto" width="150px" height="150px" class="imgProductoCarrito">
+            </div>
+            <div class="divInfoProductoCarrito">
+                <strong class="infoIdProductoCarrito"></strong>
+                <strong class="infoProductoCarrito"></strong>
+            </div>
+            <div class="divPrecioProductoCarrito">
+                <strong class="precioProductoCarrito"></strong>
+            </div>
+        </div>
+    </template>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- iniciar libreria AOS -->

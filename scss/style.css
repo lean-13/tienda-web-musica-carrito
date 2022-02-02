@@ -1133,6 +1133,7 @@ header nav a {
   width: 100%;
   height: 180px;
   margin-top: 10px;
+  margin-left: 1%;
 }
 
 .producto__carrito--color {
@@ -1155,6 +1156,15 @@ header nav a {
 .precio__total--size {
   padding-right: 20px;
   padding-top: 10px;
+}
+
+.carritoCompraFinal {
+  background-color: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 5px;
+  width: auto;
+  height: 85px;
 }
 
 /* informacion */

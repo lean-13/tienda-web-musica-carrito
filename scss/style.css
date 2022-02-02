@@ -1112,12 +1112,21 @@ header nav a {
   background-color: white;
 }
 
-.carrito__productos--size {
+.carrito__seccion__productos--size {
   margin-right: 2%;
 }
 
 .producto__carrito--modificacion {
   border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .producto__carrito--size {

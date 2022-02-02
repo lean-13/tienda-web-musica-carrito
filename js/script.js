@@ -40,7 +40,12 @@ const setCarrito = objeto => {
     }
     carrito[producto.id] = {...producto}
 
-    console.log(carrito)
+    pintarCarrito();
+}
+const pintarCarrito = () => {
+    Object.values(carrito).forEach(producto => {
+        
+    })
 }
 
 

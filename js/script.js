@@ -73,7 +73,7 @@ const iconoCarritoCompra = () => {
         iconoCarrito.innerHTML = 'shopping_cart'
     }
     else {
-        iconoCarrito.innerHTML = 'add_shopping_cart'
+        iconoCarrito.innerHTML = 'shopping_cart_checkout'
     }
 }
 

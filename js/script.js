@@ -13,6 +13,10 @@ const iconoCarrito = document.querySelector('.iconoCarritoCompra');
 // productos
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+        pintarCarrito();
+    }
 });
 
 const fetchData = async () => {
@@ -65,6 +69,8 @@ const pintarCarrito = () => {
         fragment.appendChild(clone)
     })
     carritoItems.appendChild(fragment)
+
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
 const iconoCarritoCompra = () => {

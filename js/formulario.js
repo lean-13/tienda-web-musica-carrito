@@ -1,5 +1,4 @@
-
-formulario = []
+formulario = [];
 
 $(document).ready(function () {
 
@@ -10,8 +9,7 @@ $(document).ready(function () {
         var numeroTelefono = $('#numeroTelefono').val();
         var campoTexto = $('#campoTexto').val();
 
-
+        formulario.push(nombreCompleto, email, numeroTelefono, campoTexto)
     });
-
-
+    
 });

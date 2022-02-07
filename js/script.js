@@ -49,8 +49,10 @@ const setCarrito = objeto => {
     }
     carrito[producto.id] = {...producto}
     pintarCarrito();
+    iconoCarrito()
 }
 const pintarCarrito = () => {
+    carritoItems.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarritoProducto.querySelector('.imgProductoCarrito').src = producto.img
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
@@ -63,17 +65,14 @@ const pintarCarrito = () => {
     carritoItems.appendChild(fragment)
 }
 
-
+function iconoCarrito() {
+    if (carrito.length > 0){
+        
+    }
+}
 /*
 
 let numeroCuotas = 1;
-
-
-function precioFinal() {
-    precioProductoFinal = precio * IVA * infoModal;
-    const infoPrecioFinal = document.getElementById('infoPrecioFinal')
-    infoPrecioFinal.textContent = "Precio: $" + precioProductoFinal;
-}
 
 // cuotas
 
@@ -93,20 +92,6 @@ function calcularPrecioCuotas() {
 
 const MAX = 9;
 let infoModal = 1;
-function mostrarCompra() {
-    if (infoModal === 1) {
-        const infoCompra = document.getElementById("infoProductoComprado");
-        infoCompra.textContent = "Producto: " + carrito.toString();
-        infoModal = infoModal + 1;
-    }
-    else if (infoModal >= 2) {
-        const numeroProductos = document.getElementById("infoNumeroComprado");
-        numeroProductos.textContent ="Cantidad: " + infoModal;
-        if (infoModal < MAX) {
-            infoModal = infoModal + 1;
-        }
-    }
-}   
 
 let modalAbrir = document.querySelectorAll(".botonCompra")[0];
 let modalCerrar = document.querySelectorAll(".botonCerrar")[0];
@@ -117,8 +102,6 @@ modalAbrir.addEventListener("click", function(e) {
     modalCompra.style.opacity = "1";
     modalCompra.style.visibility = "visible";
     addCarrito();
-    calcularPrecioCuotas();
-    mostrarCompra();
 });
 
 modalCerrar.addEventListener("click", function() {

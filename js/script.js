@@ -1,3 +1,6 @@
+
+const IVA = 1.21;
+
 // producto carrito
 const templateCarritoProducto = document.querySelector('#templateProducto').content;
 const carritoItems = document.querySelector('.carritoItems');
@@ -53,7 +56,7 @@ const pintarCarrito = () => {
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
         templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
         templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.precio
-        confirmacionCompra.querySelector('.precio__total__numero').textContent = producto.cantidad * producto.precio
+        confirmacionCompra.querySelector('.precio__total__numero').textContent = producto.cantidad * producto.precio * IVA
         const clone = templateCarritoProducto.cloneNode(true)
         fragment.appendChild(clone)
     })
@@ -62,7 +65,7 @@ const pintarCarrito = () => {
 
 
 /*
-const IVA = 1.21;
+
 let numeroCuotas = 1;
 
 

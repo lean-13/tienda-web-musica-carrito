@@ -23,6 +23,8 @@ const fetchData = async () => {
     try {
         const res = await fetch('../../data/dataProductos.json');
         const data = await res.json();
+        // temporal
+        iconoCarritoCompra()
     } catch (error) {
         console.log(Error);
     }
@@ -55,7 +57,6 @@ const setCarrito = objeto => {
     }
     carrito[producto.id] = {...producto}
     pintarCarrito();
-    iconoCarritoCompra()
 }
 const pintarCarrito = () => {
     carritoItems.innerHTML = ''

@@ -7,6 +7,8 @@ const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
 const fragment = document.createDocumentFragment();
 
+// icono carrito
+const iconoCarrito = document.querySelector('.iconoCarritoCompra');
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,7 +51,7 @@ const setCarrito = objeto => {
     }
     carrito[producto.id] = {...producto}
     pintarCarrito();
-    iconoCarrito()
+    iconoCarritoCompra()
 }
 const pintarCarrito = () => {
     carritoItems.innerHTML = ''
@@ -65,11 +67,16 @@ const pintarCarrito = () => {
     carritoItems.appendChild(fragment)
 }
 
-function iconoCarrito() {
-    if (carrito.length > 0){
-        
+const iconoCarritoCompra = () => {
+    iconoCarrito.innerHTML = ''
+    if (Object.keys(carrito).length === 0){
+        iconoCarrito.innerHTML = 'shopping_cart'
+    }
+    else {
+        iconoCarrito.innerHTML = 'add_shopping_cart'
     }
 }
+
 /*
 
 let numeroCuotas = 1;

@@ -2,6 +2,11 @@ formulario = [];
 
 $(document).ready(function () {
 
+    var modalConfirmacion = $('#modalConfirmacion');
+    var modal = $('#modalConfirmacion');
+    var templateNombre = $('.confirmacionNombreFormulario');
+    
+
     $('#formulario').submit(function(e) { 
         e.preventDefault();
         var nombreCompleto = $('#nombreCompleto').val();
@@ -10,7 +15,12 @@ $(document).ready(function () {
         var campoTexto = $('#campoTexto').val();
 
         formulario.push(nombreCompleto, email, numeroTelefono, campoTexto)
+        confirmacionFormulario();
     });
     
-    
+    const confirmacionFormulario = () => {
+        $(templateNombre).text(formulario[0])
+        modalConfirmacion.show();
+    }
+
 });

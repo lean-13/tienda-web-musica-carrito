@@ -3,7 +3,6 @@ formulario = [];
 $(document).ready(function () {
 
     var modalConfirmacion = $('#modalConfirmacion');
-    var modal = $('#modalConfirmacion');
     var templateNombre = $('.confirmacionNombreFormulario');
     
 
@@ -21,6 +20,12 @@ $(document).ready(function () {
     const confirmacionFormulario = () => {
         $(templateNombre).text(formulario[0])
         modalConfirmacion.show();
+        cerrarConfirmacionFormulario();
     }
 
+    const cerrarConfirmacionFormulario = () => {
+        $(modalConfirmacion).on('click', () => {
+            modalConfirmacion.hide();
+        })
+    }
 });

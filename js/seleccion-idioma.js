@@ -20,7 +20,8 @@ $(document).ready(function () {
         modal.animate({top:'120px'},700)
     }
     const cerrarSeleccionIdioma = ()=>{
-        seleccion.fadeOut(700);
+        seleccion.fadeOut(800);
+        modal.animate({top:'-450px'},700);
     }
     const idioma = localStorage.getItem("idioma");
 

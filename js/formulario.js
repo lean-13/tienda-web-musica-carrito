@@ -8,10 +8,10 @@ $(document).ready(function () {
 
     $('#formulario').submit(function(e) { 
         e.preventDefault();
-        var nombreCompleto = $('#nombreCompleto').val();
-        var email = $('#email').val();
-        var numeroTelefono = $('#numeroTelefono').val();
-        var campoTexto = $('#campoTexto').val();
+        let nombreCompleto = $('#nombreCompleto').val();
+        let email = $('#email').val();
+        let numeroTelefono = $('#numeroTelefono').val();
+        let campoTexto = $('#campoTexto').val();
 
         formulario.push(nombreCompleto, email, numeroTelefono, campoTexto)
         confirmacionFormulario();
@@ -19,13 +19,13 @@ $(document).ready(function () {
     
     const confirmacionFormulario = () => {
         $(templateNombre).text(formulario[0])
-        modalConfirmacion.show();
+        modalConfirmacion.fadeIn();
         cerrarConfirmacionFormulario();
     }
 
     const cerrarConfirmacionFormulario = () => {
         $(modalConfirmacion).on('click', () => {
-            modalConfirmacion.hide();
+            modalConfirmacion.fadeOut();
         })
     }
 });

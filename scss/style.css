@@ -1546,7 +1546,7 @@ header nav a {
   position: fixed;
   z-index: 3;
   background-color: rgba(128, 128, 128, 0.459);
-  display: block;
+  display: none;
 }
 
 .modal--modificacion {

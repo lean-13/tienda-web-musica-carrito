@@ -3,6 +3,7 @@ $(document).ready(function () {
     // seleccion de idioma español o ingles
     let seleccion = $('#modalSeleccionIdioma');
     const seleccionIdioma = () => {
+        seleccion.fadeIn(700);
         $(".es").on("click",() => {
             localStorage.setItem("idioma","es");
             cerrarSeleccionIdioma()
@@ -14,7 +15,7 @@ $(document).ready(function () {
     }
 
     const cerrarSeleccionIdioma = ()=>{
-        seleccion.fadeOut();
+        seleccion.fadeOut(700);
     }
     const idioma = localStorage.getItem("idioma");
 
@@ -23,7 +24,7 @@ $(document).ready(function () {
     }
     else {
         console.log(`idioma: ${idioma}`);
-        $(seleccion).fadeOut();
+        $(seleccion).fadeOut(0);
     }
 
 

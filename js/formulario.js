@@ -2,8 +2,9 @@ formulario = [];
 
 $(document).ready(function () {
 
-    var modalConfirmacion = $('#modalConfirmacion');
-    var templateNombre = $('.confirmacionNombreFormulario');
+    let modalConfirmacion = $('#modalConfirmacion');
+    let modalAnimation = $('.modal__confirmacion--animation');
+    let templateNombre = $('.confirmacionNombreFormulario');
     
 
     $('#formulario').submit(function(e) { 
@@ -19,13 +20,15 @@ $(document).ready(function () {
     
     const confirmacionFormulario = () => {
         $(templateNombre).text(formulario[0])
-        modalConfirmacion.fadeIn();
+        modalConfirmacion.fadeIn(800);
+        modalAnimation.animate({top:'150px'},700);
         cerrarConfirmacionFormulario();
     }
 
     const cerrarConfirmacionFormulario = () => {
         $(modalConfirmacion).on('click', () => {
-            modalConfirmacion.fadeOut();
+            modalConfirmacion.fadeOut(800);
+            modalAnimation.animate({top:'-300px'},700);
         })
     }
 });

@@ -2,8 +2,9 @@
 $(document).ready(function () {
     // seleccion de idioma español o ingles
     let seleccion = $('#modalSeleccionIdioma');
+    let modal = $('.modal--animation')
     const seleccionIdioma = () => {
-        seleccion.fadeIn(700);
+        mostrarModal();
         $(".es").on("click",() => {
             localStorage.setItem("idioma","es");
             cerrarSeleccionIdioma()
@@ -14,6 +15,10 @@ $(document).ready(function () {
         })
     }
 
+    const mostrarModal = () => {
+        seleccion.fadeIn(800);
+        modal.animate({top:'120px'},700)
+    }
     const cerrarSeleccionIdioma = ()=>{
         seleccion.fadeOut(700);
     }

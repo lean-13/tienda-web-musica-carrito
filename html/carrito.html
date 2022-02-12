@@ -31,27 +31,27 @@
         <nav class="navbar navbar-expand-md navbar-dark border-3 border-bottom border-dark fixed-top">
             <a href="../index.html" class="navbar-brand" id="logo">
                 <img class="logo--modificacion logo--size logo--color logo--animacion" src="../img/icons8-musicalmente.svg" alt="logo">
-                    <span class="material-icons-outlined logo__simbolo_recargar__pagina--modificacion logo__simbolo_recargar__pagina--size logo__simbolo_recargar__pagina--color logo__simbolo_recargar__pagina--animacion">undo</span>
+                    <span class="material-icons-outlined logo__simbolo_recargar__pagina--modificacion logo__simbolo_recargar__pagina--size logo__simbolo_recargar__pagina--color logo__simbolo_recargar__pagina--animacion">autorenew</span>
             </a>  
             <button type="button" class="navbar-toggler" id="botonMenu">
                 <span class="navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"></span>
             </button>
             <div id="menuNavegacion" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link menu__icons"><span class="material-icons-outlined">home</span>Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a href="categorias/categorias.html" class="nav-link" role="button" data-bs-toggle="dropdown">Categorias</a>
+                        <a href="../categorias/categorias/categorias.html" class="nav-link menu__icons" role="button" data-bs-toggle="dropdown"><span class="material-icons-outlined">category</span>Categorias</a>
                         <ul class="dropdown-menu bg-dark" id="submenu">
-                            <li><a href="categorias/categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
+                            <li><a href="categorias/categorias/categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
                             <li><a href="categorias/categoria-cuerda.html" class="dropdown-item">Instrumentos de cuerda</a></li>
                             <li><a href="categorias/categoria-percusion.html" class="dropdown-item">Instrumentos de percusion</a></li>
                             <li><a href="categorias/categoria-viento.html" class="dropdown-item">Instrumentos de viento</a></li>
                             <li><a href="categorias/categoria-microfono.html" class="dropdown-item">Microfonos</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="carrito.html" class="nav-link">Carrito</a></li>
-                    <li class="nav-item"><a href="otros/informacion.html" class="nav-link">Informacion</a></li>
-                    <li class="nav-item"><a href="otros/contacto.html" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="carrito.html" class="nav-link  menu__icons"><span class="material-icons-outlined iconoCarritoCompra">shopping_cart</span>Carrito</a></li>
+                    <li class="nav-item"><a href="otros/informacion.html" class="nav-link menu__icons"><span class="material-icons-outlined">article</span>Informacion</a></li>
+                    <li class="nav-item"><a href="otros/contacto.html" class="nav-link menu__icons"><span class="material-icons-outlined">assignment_ind</span>Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,6 +61,16 @@
     <section class="carrito--modificacion carrito--size carrito--color" id="carrito">
         <h1 class="titulo--modificacion titulo--color"><span class="material-icons-outlined">shopping_cart</span> carrito</h1>
         <div class="carrito__seccion__productos--size carritoItems">
+
+        </div>
+        <!-- compra de carrito -->
+        <div class="carrito__compra--modificacion carrito__compra--size carrito__compra--color carritoCompraFinal">                    
+            <div class="precio__total--modificacion precio__total--size">
+                <h3 class="titulo--modificacion titulo--color">Total:</h3>
+                    <h4 class="titulo--modificacion titulo--color precio__total__numero" >0</h4>
+            </div>
+        </div>
+        <template id="templateProducto">
             <!-- producto -->
             <div class="producto__carrito--modificacion producto__carrito--size producto__carrito--color carritoProducto">
                 <div class="divImgProductoCarrito">
@@ -74,14 +84,7 @@
                     <strong class="precioProductoCarrito"></strong>
                 </div>
             </div>
-        </div>
-        <!-- compra de carrito -->
-        <div class="carrito__compra--modificacion carrito__compra--size carrito__compra--color carritoCompraFinal">
-            <div class="precio__total--modificacion precio__total--size">
-                <h3 class="titulo--modificacion titulo--color">Total:</h3>
-                <h4 class="titulo--modificacion titulo--color precio__total__numero" >0</h4>
-            </div>
-        </div>
+        </template>
     </section>
     <!-- seccion 5 -->
     <!-- contacto -->
@@ -108,10 +111,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- iniciar libreria AOS -->
     <script>
-        AOS.init();
+        AOS.init({
+            // pixeles para iniciar animacion
+            offset: -20,
+        });
     </script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- mi js -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

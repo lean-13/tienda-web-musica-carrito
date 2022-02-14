@@ -5,6 +5,7 @@ const IVA = 1.21;
 const templateCarritoProducto = document.querySelector('#templateProducto').content;
 const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
+const producto = document.querySelector('.productoItems');
 const fragment = document.createDocumentFragment();
 
 // conversor btc
@@ -21,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
+    getData();
+    // temporal
+    iconoCarritoCompra()
 });
 
 const fetchData = async () => {
@@ -28,20 +32,31 @@ const fetchData = async () => {
         // productos
         const res = await fetch('../../data/dataProductos.json');
         const data = await res.json();
-        // btc
-        const precioBtc = await fetch(BTC);
-        // temporal
-        iconoCarritoCompra()
     } catch (error) {
         console.log(Error);
     }
 }
 
-fetch(BTC)
+const getData = () => {
+    try {
+    return fetch(BTC);
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+// leer API coingecko
+getData()
 .then((response) => response.json())
 .then(function (data) {
     console.log(data)
+    producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + data.bitcoin.ars;
 })
+
+
+const calcularPrecioBtc = data => {
+    
+}
 
 let carrito = {};
 

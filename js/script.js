@@ -7,6 +7,10 @@ const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
 const fragment = document.createDocumentFragment();
 
+// conversor btc
+const BTC = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=ars';
+
+
 // icono carrito
 const iconoCarrito = document.querySelector('.iconoCarritoCompra');
 
@@ -21,14 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = async () => {
     try {
+        // productos
         const res = await fetch('../../data/dataProductos.json');
         const data = await res.json();
+        // btc
+        const precioBtc = await fetch(BTC);
         // temporal
         iconoCarritoCompra()
     } catch (error) {
         console.log(Error);
     }
 }
+
+fetch(BTC)
+.then((response) => response.json())
+.then(function (data) {
+    console.log(data)
+})
 
 let carrito = {};
 

@@ -11,7 +11,7 @@ const fragment = document.createDocumentFragment();
 // conversor btc
 const BTC = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=ars';
 
-
+const dataProductos = '../../data/dataProductos.json'
 // icono carrito
 const iconoCarrito = document.querySelector('.iconoCarritoCompra');
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchData = async () => {
     try {
         // productos
-        const res = await fetch('../../data/dataProductos.json');
+        const res = await fetch(dataProductos);
         const data = await res.json();
     } catch (error) {
         console.log(Error);
@@ -49,14 +49,11 @@ const getData = () => {
 getData()
 .then((response) => response.json())
 .then(function (data) {
-    console.log(data)
-    producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + data.bitcoin.ars;
+    const precioProducto = document.querySelector('.precioProducto').content;
+    let precioBtc = data.bitcoin.ars;
+    let precioFinalBtc = precioBtc / precioProducto;
+    producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + precioFinalBtc;
 })
-
-
-const calcularPrecioBtc = data => {
-    
-}
 
 let carrito = {};
 
@@ -112,43 +109,3 @@ const iconoCarritoCompra = () => {
     }
 }
 
-/*
-
-let numeroCuotas = 1;
-
-// cuotas
-
-const selectCuotas = document.querySelector('.selectCuotas');
-
-selectCuotas.addEventListener('change', (event) => {
-    const cantidadCuotas = document.getElementById('infoNumeroCuotas');
-    cantidadCuotas.textContent = "Cuotas: " + event.target.value;
-    numeroCuotas = event.target.value;
-})
-
-function calcularPrecioCuotas() {
-    let precioCuotas = precioProductoFinal / numeroCuotas;
-    const infoPrecioCuotas = document.getElementById('infoPrecioCuotas')
-    infoPrecioCuotas.textContent = "Cuotas de: $" + precioCuotas;
-}
-
-const MAX = 9;
-let infoModal = 1;
-
-let modalAbrir = document.querySelectorAll(".botonCompra")[0];
-let modalCerrar = document.querySelectorAll(".botonCerrar")[0];
-let modalCompra = document.querySelectorAll(".modalCompra")[0];
-
-modalAbrir.addEventListener("click", function(e) {
-    e.preventDefault();
-    modalCompra.style.opacity = "1";
-    modalCompra.style.visibility = "visible";
-    addCarrito();
-});
-
-modalCerrar.addEventListener("click", function() {
-    modalCompra.style.opacity = "0";
-    modalCompra.style.visibility = "hidden";
-})
-
-*/

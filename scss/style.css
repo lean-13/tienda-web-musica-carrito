@@ -1437,6 +1437,11 @@ header nav a {
   padding-left: 30px;
 }
 
+.precioProductoBtc {
+  color: #f7931a;
+  display: block;
+}
+
 .boton__comprar--modificacion {
   position: relative;
 }

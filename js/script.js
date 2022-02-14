@@ -49,9 +49,9 @@ const getData = () => {
 getData()
 .then((response) => response.json())
 .then(function (data) {
-    const precioProducto = document.querySelector('.precioProducto').content;
+    const precioProducto = document.querySelector('.precioProducto').textContent;
     let precioBtc = data.bitcoin.ars;
-    let precioFinalBtc = precioBtc / precioProducto;
+    let precioFinalBtc =  precioProducto / precioBtc;
     producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + precioFinalBtc;
 })
 

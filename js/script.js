@@ -68,7 +68,7 @@ const pintarCarrito = () => {
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
         templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
         templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.precio
-        confirmacionCompra.querySelector('.precio__total__numero').textContent = producto.cantidad * producto.precio * IVA
+        confirmacionCompra.querySelector('.precio__total__numero').textContent = "$" + producto.cantidad * producto.precio * IVA
         const clone = templateCarritoProducto.cloneNode(true)
         fragment.appendChild(clone)
     })

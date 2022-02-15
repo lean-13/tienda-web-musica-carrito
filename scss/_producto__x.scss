@@ -106,7 +106,8 @@
 // modalcarrito
 .modal__carrito--modificacion {
     position: fixed;
-
+    display: none;
+    z-index: 2;
 }
 .modal__carrito--size {
     // size
@@ -121,6 +122,8 @@
 // modal seccion
 .modal__carrito__seccion--modificacion {
     border-radius: 5px;
+    position: fixed;
+    z-index: 3;
 }
 .modal__carrito__seccion--size {
     width: auto;
@@ -135,4 +138,9 @@
 }
 .modal__carrito__seccion--color{
     background-color: $color3;
+}
+.modalCarritoSeccion {
+    // position
+    top: -500px;
+    left: 8%;
 }

@@ -1541,6 +1541,8 @@ header nav a {
 
 .modal__carrito--modificacion {
   position: fixed;
+  display: none;
+  z-index: 2;
 }
 
 .modal__carrito--size {
@@ -1555,6 +1557,8 @@ header nav a {
 
 .modal__carrito__seccion--modificacion {
   border-radius: 5px;
+  position: fixed;
+  z-index: 3;
 }
 
 .modal__carrito__seccion--size {
@@ -1571,6 +1575,11 @@ header nav a {
 
 .modal__carrito__seccion--color {
   background-color: white;
+}
+
+.modalCarritoSeccion {
+  top: -500px;
+  left: 8%;
 }
 
 .subrayadoText {

@@ -40,16 +40,16 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a href="../../index.html" class="nav-link menu__icons"><span class="material-icons-outlined">home</span>Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a href="categorias/categorias.html" class="nav-link menu__icons" role="button" data-bs-toggle="dropdown"><span class="material-icons-outlined">category</span>Categorias</a>
+                        <a href="categorias/categorias/categorias.html" class="nav-link menu__icons" role="button" data-bs-toggle="dropdown"><span class="material-icons-outlined">category</span>Categorias</a>
                         <ul class="dropdown-menu bg-dark" id="submenu">
-                            <li><a href="../categorias/categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
+                            <li><a href="../categorias/categorias/categoria-productos.html" class="dropdown-item">Todos los productos</a></li>
                             <li><a href="../categorias/categoria-cuerda.html" class="dropdown-item">Instrumentos de cuerda</a></li>
                             <li><a href="../categorias/categoria-percusion.html" class="dropdown-item">Instrumentos de percusion</a></li>
                             <li><a href="../categorias/categoria-viento.html" class="dropdown-item">Instrumentos de viento</a></li>
                             <li><a href="../categorias/categoria-microfono.html" class="dropdown-item">Microfonos</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="../carrito.html" class="nav-link  menu__icons"><span class="material-icons-outlined">shopping_cart</span>Carrito</a></li>
+                    <li class="nav-item"><a href="../carrito.html" class="nav-link  menu__icons"><span class="material-icons-outlined iconoCarritoCompra">shopping_cart</span>Carrito</a></li>
                     <li class="nav-item"><a href="../otros/informacion.html" class="nav-link menu__icons"><span class="material-icons-outlined">article</span>Informacion</a></li>
                     <li class="nav-item"><a href="../otros/contacto.html" class="nav-link menu__icons"><span class="material-icons-outlined">assignment_ind</span>Contacto</a></li>
                 </ul>
@@ -57,11 +57,11 @@
         </nav>
     </header>
     <section class="producto__x--modificacion producto__x--size producto__x--color productoItems">
-        <div class="producto__x__img--modificacion producto__x__img--size producto__x__img--color imgProducto">
+        <div class="producto__x__img--modificacion producto__x__img--size producto__x__img--color">
             <img class="imgProducto" src="../../img/producto-3.jpg" alt="producto-3" width="300px" height="300px">
         </div>
         <div class="producto__x__descripcion--modificacion producto__x__descripcion--size producto__x__descripcion--color">
-            <h2 class="titulo--modificacion titulo--color">Piano Eléctrico Artesia Performer</h2>
+            <h2 class="titulo--modificacion titulo--color tituloProducto">Piano Eléctrico Artesia Performer</h2>
             <strong class="precio--modificacion precio--size precio-color">Precio $ </stro>
             <strong class="precio--modificacion precio--size precio-color precioProducto">49000</strong>
             <strong class="precio--modificacion precio--size precio-color precioProductoBtc">Btc: $ </strong>
@@ -87,6 +87,20 @@
             <button class="boton__comprar__texto--modificacion boton__comprar__texto--size boton__comprar__texto--color botonCompra" id="3">Agregar al carrito</button>
         </div>
     </section>
+    <section class="modal__carrito--modificacion modal__carrito--size modal__carrito--color modalCarrito">
+        <div class="modal__carrito__seccion--modificacion modal__carrito__seccion--size modal__carrito__seccion--color modalCarritoSeccion">
+            <div class="carrito__seccion__productos--size carritoItems">
+    
+            </div>
+            <!-- compra de carrito -->
+            <div class="carrito__compra--modificacion carrito__compra--size carrito__compra--color carritoCompraFinal">                    
+                <div class="precio__total--modificacion precio__total--size">
+                    <h3 class="titulo--modificacion titulo--color">Total:</h3>
+                        <h4 class="titulo--modificacion titulo--color precio__total__numero" >0</h4>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- seccion 5 -->
     <!-- contacto -->
     <footer class="contacto--modificacion contacto--size contacto--color">
@@ -108,6 +122,22 @@
                 <a href="https://www.instagram.com/leandro_goni/"><i class="fab fa-instagram"></i></a>
             </div>
     </footer>
+    <template id="templateProducto">
+        <!-- producto -->
+        <div class="producto__carrito--modificacion producto__carrito--size producto__carrito--color carritoProducto">
+            <div class="divImgProductoCarrito">
+                <img src="" alt="producto" width="150px" height="150px" class="imgProductoCarrito">
+            </div>
+            <div class="divInfoProductoCarrito">
+                <strong class="infoIdProductoCarrito"></strong>
+                <strong class="infoProductoCarrito"></strong>
+            </div>
+            <div class="divPrecioProductoCarrito">
+                <strong>Precio: $ </strong>
+                <strong class="precioProductoCarrito"></strong>
+            </div>
+        </div>
+    </template>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- iniciar libreria AOS -->
@@ -117,11 +147,14 @@
             offset: -20,
         });
     </script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <!-- mi js -->
     <script src="../../js/script.js"></script>
+    <script src="../../js/modalCarrito.js"></script>
     <script src="../../js/precioBtc.js"></script>
 </body>
 </html>

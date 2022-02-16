@@ -8,18 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const getData = () => {
     try {
-    return fetch(BTC);
+    fetch(BTC).then((response) => response.json())
+    .then( (data) => {
+        const precioProducto = document.querySelector('.precioProducto').textContent;
+        let precioBtc = data.bitcoin.ars;
+        let precioFinalBtc =  precioProducto / precioBtc;
+        producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + precioFinalBtc;
+
+        return data
+    })
     }
     catch(error){
         console.log(error)
     }
 }
-// leer API coingecko
-getData()
-.then((response) => response.json())
-.then(function (data) {
-    const precioProducto = document.querySelector('.precioProducto').textContent;
-    let precioBtc = data.bitcoin.ars;
-    let precioFinalBtc =  precioProducto / precioBtc;
-    producto.querySelector('.precioProductoBtc').textContent = "Btc: $ " + precioFinalBtc;
-})

@@ -44,9 +44,6 @@
     height: 50px;
     margin-top: 20px;
 }
-.precio__total--modificacion {
-    text-align: right;
-}
 .precio__total--size {
     padding-right: 20px;
     padding-top: 10px;
@@ -70,4 +67,17 @@
     // size
     width: 85%;
     height: 85px;
+    // grid
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10%;
+    text-align: right;
+    align-items: center;
+}
+.carritoCompraOpciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30%;
+    text-align: center;
+    align-items: center;
 }

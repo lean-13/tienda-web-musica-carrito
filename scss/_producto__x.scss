@@ -145,3 +145,12 @@
     left: 8%;
     overflow-y: auto; 
 }
+// colores de scroll
+.modalCarritoSeccion::-webkit-scrollbar {
+    width:  8px;
+    background-color: $color8;
+}
+.modalCarritoSeccion::-webkit-scrollbar-thumb {
+    background-color: $color1;
+    border-radius: 5px;
+}

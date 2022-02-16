@@ -23,16 +23,12 @@ body {
 
 body::-webkit-scrollbar {
   width: 8px;
-  background-color: transparent;
+  background-color: rgba(128, 128, 128, 0.459);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: blanchedalmond;
   border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background-color: white;
 }
 
 .subrayadoText {
@@ -1636,6 +1632,16 @@ header nav a {
   top: -500px;
   left: 8%;
   overflow-y: auto;
+}
+
+.modalCarritoSeccion::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(128, 128, 128, 0.459);
+}
+
+.modalCarritoSeccion::-webkit-scrollbar-thumb {
+  background-color: #013440;
+  border-radius: 5px;
 }
 
 .subrayadoText {

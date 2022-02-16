@@ -16,14 +16,11 @@ body {
 // colores de scroll
 body::-webkit-scrollbar {
     width:  8px;
-    background-color: transparent;
+    background-color: $color8;
 }
 body::-webkit-scrollbar-thumb {
     background-color: $color2;
     border-radius: 5px;
-}
-body::-webkit-scrollbar-thumb:hover {
-    background-color: $color3;
 }
 @import "barra__superior__menu";
 /* seccion 2 */

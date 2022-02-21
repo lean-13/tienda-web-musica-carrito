@@ -41,6 +41,7 @@
     border-radius: 5px;
     position: absolute;
     border: none;
+    letter-spacing: 0.5px;
 }
 .boton__comprar__texto--size {
     width: 150px;
@@ -168,4 +169,32 @@
 .modalCarritoSeccion::-webkit-scrollbar-thumb {
     background-color: $color1;
     border-radius: 5px;
+}
+
+// link ver carrito
+.link__ver__carrito--modificacion a{
+    border: 1px solid $color4;
+    text-decoration: none;
+    border-radius: 5px;
+    // text
+    font-family: $font3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.link__ver__carrito--size a{
+    width: 200px; 
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+.link__ver__carrito--color a{
+    background-color: $color1;
+    color: $color3;
+}
+.link__ver__carrito--color a:hover {
+    animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    color: $color2;
+    transition: 0.7s;
 }

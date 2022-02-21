@@ -1501,6 +1501,7 @@ header nav a {
   border-radius: 5px;
   position: absolute;
   border: none;
+  letter-spacing: 0.5px;
 }
 
 .boton__comprar__texto--size {
@@ -1654,6 +1655,37 @@ header nav a {
 .modalCarritoSeccion::-webkit-scrollbar-thumb {
   background-color: #013440;
   border-radius: 5px;
+}
+
+.link__ver__carrito--modificacion a {
+  border: 1px solid black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Century Gothic", CenturyGothic;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.link__ver__carrito--size a {
+  width: 200px;
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+}
+
+.link__ver__carrito--color a {
+  background-color: #013440;
+  color: white;
+}
+
+.link__ver__carrito--color a:hover {
+  -webkit-animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulseb 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  color: blanchedalmond;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .subrayadoText {

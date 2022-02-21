@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
-    // temporal
     iconoCarritoCompra()
 });
 
@@ -77,13 +76,4 @@ const pintarCarrito = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
-const iconoCarritoCompra = () => {
-    iconoCarrito.innerHTML = ''
-    if (Object.keys(carrito).length === 0){
-        iconoCarrito.innerHTML = 'shopping_cart'
-    }
-    else {
-        iconoCarrito.innerHTML = 'shopping_cart_checkout'
-    }
-}
 

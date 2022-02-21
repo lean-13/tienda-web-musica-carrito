@@ -37,7 +37,7 @@
     a {
         background-color: $color1;
         color: $color3;
-        box-shadow: 0 0 0 0 rgba(63, 60, 60, 0.1);
+        box-shadow: 0 0 0 0 $color6;
         animation: pulse404 2s infinite cubic-bezier(0.66, 0, 0, 1);
     }
     a:hover {
@@ -47,12 +47,12 @@
 }
 @keyframes pulse404 {
     0% {
-        box-shadow: 0 0 0 5px $color1;
+        box-shadow: 0px 0px 0px 3px $color6;
     }
     50% {
-        box-shadow: 0 0 0 0px $color1;
+        box-shadow: 0px 0px 0px 0px $color6;
     }
     100% {
-        box-shadow: 0 0 0 5px $color1;
+        box-shadow: 0px 0px 0px 3px $color6;
     }
 }

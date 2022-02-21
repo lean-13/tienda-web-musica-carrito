@@ -64,13 +64,13 @@
 }
 @keyframes pulseb {
     0% {
-        box-shadow: 0 0 0 3px $color4;
+        box-shadow: 0 0 0 3px $color5;
     }
     50% {
-        box-shadow: 0 0 0 0px $color4;
+        box-shadow: 0 0 0 0px $color5;
     }
     100% {
-        box-shadow: 0 0 0 3px $color4;
+        box-shadow: 0 0 0 3px $color5;
     }
 }
 // cuotas
@@ -173,7 +173,7 @@
 
 // link ver carrito
 .link__ver__carrito--modificacion a{
-    border: 1px solid $color4;
+    border: none;
     text-decoration: none;
     border-radius: 5px;
     // text

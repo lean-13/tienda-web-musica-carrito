@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     iconoCarritoCompra()
 });
 
-
 let carritoInfo = parseInt(localStorage.getItem("carrito").length);
-console.log(carritoInfo)
+
 const iconoCarritoCompra = () => {
     iconoCarrito.innerHTML = ''
     if (carritoInfo <= 2){

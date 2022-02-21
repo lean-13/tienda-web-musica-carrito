@@ -1271,31 +1271,59 @@ header nav a {
 .boton__vaciar__carrito--modificacion {
   border-radius: 10px;
   font-family: "Century Gothic", CenturyGothic;
-  text-rendering: optimizeLegibility;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
 .boton__vaciar__carrito--size {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .boton__vaciar__carrito--color {
-  background-color: white;
-  color: #013440;
-  border-color: #013440;
+  background-color: #013440;
+  color: white;
+  border: none;
 }
 
 .boton__vaciar__carrito--color:hover {
-  color: black;
-  border-color: #d11c1c;
-  -webkit-box-shadow: #d11c1c 0px 1px 4px 0px;
-          box-shadow: #d11c1c 0px 1px 4px 0px;
+  -webkit-animation: pulseBorrado 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulseBorrado 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  color: blanchedalmond;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+@-webkit-keyframes pulseBorrado {
+  0% {
+    -webkit-box-shadow: 0 0 0 2px #d11c1c;
+            box-shadow: 0 0 0 2px #d11c1c;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #d11c1c;
+            box-shadow: 0 0 0 0px #d11c1c;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 2px #d11c1c;
+            box-shadow: 0 0 0 2px #d11c1c;
+  }
+}
+
+@keyframes pulseBorrado {
+  0% {
+    -webkit-box-shadow: 0 0 0 2px #d11c1c;
+            box-shadow: 0 0 0 2px #d11c1c;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #d11c1c;
+            box-shadow: 0 0 0 0px #d11c1c;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 2px #d11c1c;
+            box-shadow: 0 0 0 2px #d11c1c;
+  }
 }
 
 .subrayadoText {
@@ -1403,8 +1431,8 @@ header nav a {
 .boton__404__inicio--color a {
   background-color: #013440;
   color: white;
-  -webkit-box-shadow: 0 0 0 0 rgba(63, 60, 60, 0.1);
-          box-shadow: 0 0 0 0 rgba(63, 60, 60, 0.1);
+  -webkit-box-shadow: 0 0 0 0 #d11c1c;
+          box-shadow: 0 0 0 0 #d11c1c;
   -webkit-animation: pulse404 2s infinite cubic-bezier(0.66, 0, 0, 1);
           animation: pulse404 2s infinite cubic-bezier(0.66, 0, 0, 1);
 }
@@ -1417,31 +1445,31 @@ header nav a {
 
 @-webkit-keyframes pulse404 {
   0% {
-    -webkit-box-shadow: 0 0 0 5px #013440;
-            box-shadow: 0 0 0 5px #013440;
+    -webkit-box-shadow: 0px 0px 0px 3px #d11c1c;
+            box-shadow: 0px 0px 0px 3px #d11c1c;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px #013440;
-            box-shadow: 0 0 0 0px #013440;
+    -webkit-box-shadow: 0px 0px 0px 0px #d11c1c;
+            box-shadow: 0px 0px 0px 0px #d11c1c;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 5px #013440;
-            box-shadow: 0 0 0 5px #013440;
+    -webkit-box-shadow: 0px 0px 0px 3px #d11c1c;
+            box-shadow: 0px 0px 0px 3px #d11c1c;
   }
 }
 
 @keyframes pulse404 {
   0% {
-    -webkit-box-shadow: 0 0 0 5px #013440;
-            box-shadow: 0 0 0 5px #013440;
+    -webkit-box-shadow: 0px 0px 0px 3px #d11c1c;
+            box-shadow: 0px 0px 0px 3px #d11c1c;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px #013440;
-            box-shadow: 0 0 0 0px #013440;
+    -webkit-box-shadow: 0px 0px 0px 0px #d11c1c;
+            box-shadow: 0px 0px 0px 0px #d11c1c;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 5px #013440;
-            box-shadow: 0 0 0 5px #013440;
+    -webkit-box-shadow: 0px 0px 0px 3px #d11c1c;
+            box-shadow: 0px 0px 0px 3px #d11c1c;
   }
 }
 
@@ -1528,31 +1556,31 @@ header nav a {
 
 @-webkit-keyframes pulseb {
   0% {
-    -webkit-box-shadow: 0 0 0 3px black;
-            box-shadow: 0 0 0 3px black;
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px black;
-            box-shadow: 0 0 0 0px black;
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 3px black;
-            box-shadow: 0 0 0 3px black;
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
   }
 }
 
 @keyframes pulseb {
   0% {
-    -webkit-box-shadow: 0 0 0 3px black;
-            box-shadow: 0 0 0 3px black;
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
   }
   50% {
-    -webkit-box-shadow: 0 0 0 0px black;
-            box-shadow: 0 0 0 0px black;
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 3px black;
-            box-shadow: 0 0 0 3px black;
+    -webkit-box-shadow: 0 0 0 3px #64ac1d;
+            box-shadow: 0 0 0 3px #64ac1d;
   }
 }
 
@@ -1658,7 +1686,7 @@ header nav a {
 }
 
 .link__ver__carrito--modificacion a {
-  border: 1px solid black;
+  border: none;
   text-decoration: none;
   border-radius: 5px;
   font-family: "Century Gothic", CenturyGothic;

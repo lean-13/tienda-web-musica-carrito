@@ -9,8 +9,6 @@ const producto = document.querySelector('.productoItems');
 const fragment = document.createDocumentFragment();
 
 const dataProductos = '../../data/dataProductos.json'
-// icono carrito
-const iconoCarrito = document.querySelector('.iconoCarritoCompra');
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
-    iconoCarritoCompra()
 });
 
 const fetchData = async () => {

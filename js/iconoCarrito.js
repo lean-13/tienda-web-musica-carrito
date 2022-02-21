@@ -1,19 +1,23 @@
+$(document).ready(function () {
+  // icono carrito
+    let iconoCarrito = $('.iconoCarritoCompra');
 
-// icono carrito
-const iconoCarrito = document.querySelector('.iconoCarritoCompra');
+    $('DOMContentLoaded', () => {
+        iconoCarritoCompra()
+    });
 
-document.addEventListener('DOMContentLoaded', () => {
-    iconoCarritoCompra()
+    let carritoInfo = parseInt(localStorage.getItem("carrito").length);
+    const iconoCarritoCompra = () => {
+        if (carritoInfo <= 2){
+            iconoCarrito.slideUp(300);
+            $(iconoCarrito).text('shopping_cart');
+            iconoCarrito.slideDown(500);
+        }
+        else {
+            iconoCarrito.slideUp(300);
+            $(iconoCarrito).text('shopping_cart_checkout');
+            iconoCarrito.slideDown(500);
+        }
+    }
 });
 
-let carritoInfo = parseInt(localStorage.getItem("carrito").length);
-
-const iconoCarritoCompra = () => {
-    iconoCarrito.innerHTML = ''
-    if (carritoInfo <= 2){
-        iconoCarrito.innerHTML = 'shopping_cart'
-    }
-    else {
-        iconoCarrito.innerHTML = 'shopping_cart_checkout'
-    }
-}

@@ -137,6 +137,12 @@ header nav a {
   padding-top: 0px;
 }
 
+.iconoCarritoCompra {
+  position: absolute;
+  top: 17px;
+  left: 328px;
+}
+
 /* seccion 2 */
 #iconoFlecha span {
   font-size: 100px;

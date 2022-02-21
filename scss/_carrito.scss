@@ -47,11 +47,16 @@
     height: 50px;
     margin-top: 20px;
 }
+.precio__total--modificacion {
+    display: flex;
+    flex: auto;
+}
 .precio__total--size {
     padding-right: 20px;
-    padding-top: 10px;
 }
-
+.precioTituloModificacion {
+    margin-right: 15px;
+}
 // temporal
 .carritoCompraFinal {
     // color
@@ -61,21 +66,6 @@
     // size
     width: auto;
     height: 85px;
-}
-.carritoCompraFinalPosition {
-    // modificacion
-    position: fixed;
-    top: -510px;
-    left: 8.5%;
-    // size
-    width: 85%;
-    height: 85px;
-    // grid
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10%;
-    text-align: right;
-    align-items: center;
 }
 .carritoCompraOpciones {
     display: grid;

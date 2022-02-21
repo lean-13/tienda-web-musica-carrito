@@ -139,6 +139,21 @@
 .modal__carrito__seccion--color{
     background-color: $color3;
 }
+.carritoCompraFinalPosition {
+    // modificacion
+    position: fixed;
+    top: -510px;
+    left: 8.5%;
+    // size
+    width: 85%;
+    height: 85px;
+    // grid
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
+    text-align: center;
+    align-items: center;
+}
 .modalCarritoSeccion {
     // position
     top: -500px;

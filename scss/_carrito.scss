@@ -69,8 +69,8 @@
 }
 .carritoCompraOpciones {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15%;
     text-align: center;
     align-items: center;
 }
@@ -108,4 +108,63 @@
     100% {
         box-shadow: 0 0 0 2px $color6;
     }
+}
+// comprar
+.boton__comprar__carrito--modificacion {
+    border-radius: 10px;
+    font-family: $font3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.boton__comprar__carrito--size {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.boton__comprar__carrito--color {
+    background-color: $color1;
+    color: $color3;
+    border: none;
+}
+.boton__comprar__carrito--color:hover {
+    animation: pulseComprar 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    color: $color2;
+    transition: 0.7s;
+}
+@keyframes pulseComprar {
+    0% {
+        box-shadow: 0 0 0 2px $color5;
+    }
+    50% {
+        box-shadow: 0 0 0 0px $color5;
+    }
+    100% {
+        box-shadow: 0 0 0 2px $color5;
+    }
+}
+// cuotas
+.imputSeleccionCuotas {
+    // modificacion
+    border-radius: 5px;
+    select {
+        cursor: pointer;
+    }
+    // size
+    width: 50px;
+    height: 50px;
+    // color
+    color: $color4;
+    select {
+        box-shadow: 3px 3px 2px 0px $color1;
+    }
+    // text
+    label {
+        font-size: 18px;
+        letter-spacing: 0.1px;
+    }
+}
+.imputSeleccionCuotas:hover {
+    color: $color1;
+    transition: 0.7s;
 }

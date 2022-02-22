@@ -1265,9 +1265,9 @@ header nav a {
 .carritoCompraOpciones {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15%;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1330,6 +1330,91 @@ header nav a {
     -webkit-box-shadow: 0 0 0 2px #d11c1c;
             box-shadow: 0 0 0 2px #d11c1c;
   }
+}
+
+.boton__comprar__carrito--modificacion {
+  border-radius: 10px;
+  font-family: "Century Gothic", CenturyGothic;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.boton__comprar__carrito--size {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.boton__comprar__carrito--color {
+  background-color: #013440;
+  color: white;
+  border: none;
+}
+
+.boton__comprar__carrito--color:hover {
+  -webkit-animation: pulseComprar 2s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulseComprar 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  color: blanchedalmond;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+@-webkit-keyframes pulseComprar {
+  0% {
+    -webkit-box-shadow: 0 0 0 2px #64ac1d;
+            box-shadow: 0 0 0 2px #64ac1d;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 2px #64ac1d;
+            box-shadow: 0 0 0 2px #64ac1d;
+  }
+}
+
+@keyframes pulseComprar {
+  0% {
+    -webkit-box-shadow: 0 0 0 2px #64ac1d;
+            box-shadow: 0 0 0 2px #64ac1d;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0px #64ac1d;
+            box-shadow: 0 0 0 0px #64ac1d;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 2px #64ac1d;
+            box-shadow: 0 0 0 2px #64ac1d;
+  }
+}
+
+.imputSeleccionCuotas {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  color: black;
+}
+
+.imputSeleccionCuotas select {
+  cursor: pointer;
+}
+
+.imputSeleccionCuotas select {
+  -webkit-box-shadow: 3px 3px 2px 0px #013440;
+          box-shadow: 3px 3px 2px 0px #013440;
+}
+
+.imputSeleccionCuotas label {
+  font-size: 18px;
+  letter-spacing: 0.1px;
+}
+
+.imputSeleccionCuotas:hover {
+  color: #013440;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .subrayadoText {

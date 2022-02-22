@@ -168,3 +168,54 @@
     color: $color1;
     transition: 0.7s;
 }
+// modal compra carrito
+.modal__compra__exterior--modificacion {
+    position: fixed;
+    z-index: 2;
+}
+.modal__compra__exterior--size {
+    // size
+    width: 100%;
+    height: 100%;
+    // posicion
+    top: 50px;
+}
+.modal__compra__exterior--color {
+    background-color: $color8;
+}
+.modal__compra__carrito--modificacion {
+    border-radius: 5px;
+    // position
+    position: fixed;
+    z-index: 3;
+}
+.modal__compra__carrito--size {
+    width: 96%;
+    height: 88%;
+    // position
+    top: 60px;
+    left: 2%;
+}
+.modal__compra__carrito--color {
+    background-color: $color3;
+}
+// seccion de metodo de pago
+.modal__compra__pago__seccion--modificacion {
+    display: flex;
+    justify-content: space-between;
+}
+.modal__compra__pago__seccion--size {
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+}
+// botonos compra
+.carrito__modal__compra--modificacion {
+    display: flex;
+    justify-content: space-between;
+}
+.carrito__modal__compra--size {
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 20px;
+}

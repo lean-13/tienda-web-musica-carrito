@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(botonModal).on('click', () => {
         mostrarModalCarrito();
     })
-    $('.modalCarrito').on('click', () => {
+    $(modalCarrito).on('click', () => {
         cerrarModalCarrito();
     })
     const mostrarModalCarrito = () => {

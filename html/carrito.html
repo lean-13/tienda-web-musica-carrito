@@ -73,7 +73,7 @@
                     <p class="titulo--modificacion titulo--color precio__total__numero" >$ 0000</p>
             </div>
             <div>
-                <button class="boton__comprar__carrito--modificacion boton__comprar__carrito--size boton__comprar__carrito--color" id="botonComprarCarrito">Comprar Carrito</button>
+                <button class="boton__comprar__carrito--modificacion boton__comprar__carrito--size boton__comprar__carrito--color" id="botonAbrirModalCompra">Comprar Carrito</button>
             </div>   
         </div>
         <template id="templateProducto">
@@ -93,26 +93,18 @@
             </div>
         </template>
     </section>
-    <section class="modal__carrito--modificacion modal__carrito--size modal__carrito--color modalCarrito">
-        <div class="modal__carrito__seccion--modificacion modal__carrito__seccion--size modal__carrito__seccion--color modalCarritoSeccion">
-            <div class="carrito__seccion__productos--size carritoItems">
-    
+    <section class="modal__compra__exterior--modificacion modal__compra__exterior--size modal__compra__exterior--color modalCompraExterior">
+        <div class="modal__compra__carrito--modificacion modal__compra__carrito--size modal__compra__carrito--color modalCompraCarrito">
+            <div class="modal__compra__pago__seccion--modificacion modal__compra__pago__seccion--size modal__compra__pago__seccion--color">
+                
             </div>
-            <!-- compra de carrito -->
-            <div class="carrito__compra--modificacion carrito__compra--size carrito__compra--color carritoCompraFinal carritoCompraFinalPosition">
-                <div class="form-group imputSeleccionCuotas">
-                    <label for="exampleFormControlSelect1">Cuotas</label>
-                    <select class="form-control selectCuotas" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                </div>                   
-                <div class="precio__total--modificacion precio__total--size">
-                    <p class="titulo--modificacion titulo--color precioTituloModificacion">Total:</p>
-                        <p class="titulo--modificacion titulo--color precio__total__numero" >0</p>
+            <div class="carrito__modal__compra--modificacion carrito__modal__compra--size carrito__modal__compra--color">
+                <div>
+                    <button class="boton__vaciar__carrito--modificacion boton__vaciar__carrito--size boton__vaciar__carrito--color" id="botonCancelar">Cancelar compra</button>
+                </div> 
+                <div>
+                    <button class="boton__comprar__carrito--modificacion boton__comprar__carrito--size boton__comprar__carrito--color" id="botonComprarCarrito">Comprar Carrito</button>
+                </div>             
                 </div>
             </div>
         </div>

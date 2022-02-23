@@ -7,6 +7,9 @@ const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
 const producto = document.querySelector('.productoItems');
 const fragment = document.createDocumentFragment();
+// sumar-restar productos
+const botonSumar = document.querySelector('.botonSumarProducto');
+const botonRestar = document.querySelector('.botonRestarProducto');
 
 const dataProductos = '../../data/dataProductos.json'
 
@@ -43,6 +46,10 @@ function addCart(e) {
     setCarrito(item);
 }
 
+carritoItems.addEventListener('click', e => {
+    botonSumaResta(e);
+})
+
 const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector('.botonCompra').id,
@@ -73,4 +80,9 @@ const pintarCarrito = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
-
+const botonSumaResta = e => {
+    console.log(e.target)
+    if(e.target.classList.contains('botonSumarProducto')) {
+        console.log(carrito[e.target.id])
+    }
+}

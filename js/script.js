@@ -7,6 +7,7 @@ const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
 const producto = document.querySelector('.productoItems');
 const fragment = document.createDocumentFragment();
+const divPrecioFinal = document.querySelector('.seccionPrecioTotal')
 // sumar-restar productos
 const botonSumar = document.querySelector('.botonSumarProducto');
 const botonRestar = document.querySelector('.botonRestarProducto');
@@ -73,12 +74,13 @@ const pintarCarrito = () => {
         templateCarritoProducto.querySelector('.BotonSuma').id = producto.id
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
         templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
-        templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.precio
-        confirmacionCompra.querySelector('.precio__total__numero').textContent = "$" + producto.cantidad * producto.precio * IVA
+        templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.cantidad * producto.precio
+        confirmacionCompra.querySelector('.precio__total__numero')
         const clone = templateCarritoProducto.cloneNode(true)
         fragment.appendChild(clone)
     })
     carritoItems.appendChild(fragment)
+    pintarPrecioFinal();
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
@@ -98,5 +100,12 @@ const botonSumaResta = e => {
         }
         pintarCarrito();
     }
-    e.stopPropagation()
+    e.stopPropagation();
+}
+
+const pintarPrecioFinal = () => {
+    const cantidadFinal = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
+    const precioFinal = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
+
+    confirmacionCompra.querySelector('.precio__total__numero').textContent = "$" + precioFinal;
 }

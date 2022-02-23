@@ -180,11 +180,11 @@
 // boton eliminar producto
 .botonSuprimirProducto {
     // modificacion
-    position: absolute;
+    position: relative;
     border: none;
     // size
-    top: 25px;
-    right: 65px;
+    top: -160px;
+    left: 950px;
     // color
     background-color: $color3;
     color: $color4;

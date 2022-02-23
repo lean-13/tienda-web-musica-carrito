@@ -1,7 +1,7 @@
 
 
 const vaciar = document.getElementById('botonVaciarCarrito')
-const reinicionPrecio = document.querySelector('.precio__total__numero');
+const reinicioPrecio = document.querySelector('.precio__total__numero');
 
 const selectCuotas = document.querySelector('.imputSeleccionCuotas');
 
@@ -12,7 +12,7 @@ vaciar.addEventListener('click', () => {
 const vaciarCarrito = () => {
     carrito = {};
     pintarCarrito();
-    reinicionPrecio.textContent = "$ " + "0000"
+    reinicioPrecio.textContent = "$ " + "0000"
 }
 
 

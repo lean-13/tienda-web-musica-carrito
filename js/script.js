@@ -11,7 +11,9 @@ const fragment = document.createDocumentFragment();
 const botonSumar = document.querySelector('.botonSumarProducto');
 const botonRestar = document.querySelector('.botonRestarProducto');
 
+
 const dataProductos = '../../data/dataProductos.json'
+
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,7 +35,6 @@ const fetchData = async () => {
 }
 
 let carrito = {};
-
 
 const addCartProductoButon = document.querySelectorAll('.botonCompra');
 addCartProductoButon.forEach(addCartButon => {
@@ -68,6 +69,8 @@ const pintarCarrito = () => {
     carritoItems.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarritoProducto.querySelector('.imgProductoCarrito').src = producto.img
+        templateCarritoProducto.querySelector('.BotonResta').id = producto.id
+        templateCarritoProducto.querySelector('.BotonSuma').id = producto.id
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
         templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
         templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.precio
@@ -81,8 +84,19 @@ const pintarCarrito = () => {
 }
 
 const botonSumaResta = e => {
-    console.log(e.target)
     if(e.target.classList.contains('botonSumarProducto')) {
-        console.log(carrito[e.target.id])
+        const productoItem = carrito[e.target.id]
+        productoItem.cantidad = carrito[e.target.id].cantidad + 1;
+        carrito[e.target.id] = {...productoItem}
+        pintarCarrito();
     }
+    if(e.target.classList.contains('botonRestarProducto')) {
+        const productoItem = carrito[e.target.id]
+        productoItem.cantidad = carrito[e.target.id].cantidad - 1;
+        if(productoItem.cantidad === 0) {
+            delete carrito[e.target.id]
+        }
+        pintarCarrito();
+    }
+    e.stopPropagation()
 }

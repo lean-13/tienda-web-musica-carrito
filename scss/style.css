@@ -1425,10 +1425,10 @@ header nav a {
 }
 
 .botonSuprimirProducto {
-  position: absolute;
+  position: relative;
   border: none;
-  top: 25px;
-  right: 65px;
+  top: -160px;
+  left: 950px;
   background-color: white;
   color: black;
 }

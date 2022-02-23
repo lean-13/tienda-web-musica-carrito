@@ -7,7 +7,7 @@ const carritoItems = document.querySelector('.carritoItems');
 const confirmacionCompra = document.querySelector('.carritoCompraFinal');
 const producto = document.querySelector('.productoItems');
 const fragment = document.createDocumentFragment();
-const divPrecioFinal = document.querySelector('.seccionPrecioTotal')
+const cantidadFinal = document.querySelector('.cantidad__total__numero')
 // sumar-restar productos
 const botonSumar = document.querySelector('.botonSumarProducto');
 const botonRestar = document.querySelector('.botonRestarProducto');
@@ -97,6 +97,7 @@ const botonSumaResta = e => {
         productoItem.cantidad = carrito[e.target.id].cantidad - 1;
         if(productoItem.cantidad === 0) {
             delete carrito[e.target.id]
+            cerrarModalCarrito();
         }
         pintarCarrito();
     }
@@ -104,8 +105,8 @@ const botonSumaResta = e => {
 }
 
 const pintarPrecioFinal = () => {
-    const cantidadFinal = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
+    const numeroCantidadFinal = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
     const precioFinal = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
-
+    cantidadFinal.textContent = numeroCantidadFinal;
     confirmacionCompra.querySelector('.precio__total__numero').textContent = "$" + precioFinal;
 }

@@ -1427,6 +1427,8 @@ header nav a {
 .botonSuprimirProducto {
   position: relative;
   border: none;
+  width: 20px;
+  height: 20px;
   top: -160px;
   left: 950px;
   background-color: white;

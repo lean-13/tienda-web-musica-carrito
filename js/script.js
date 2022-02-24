@@ -77,7 +77,7 @@ const pintarCarrito = () => {
         // botones
         templateCarritoProducto.querySelector('.BotonResta').id = producto.id
         templateCarritoProducto.querySelector('.BotonSuma').id = producto.id
-        templateCarritoProducto.querySelector('.botonSuprimirProducto').id = producto.id
+        templateCarritoProducto.querySelector('.botonSuprimirProductoFunciones').id = producto.id
         const clone = templateCarritoProducto.cloneNode(true)
         fragment.appendChild(clone)
     })
@@ -102,7 +102,7 @@ const botonSumaResta = e => {
         }
         pintarCarrito();
     }
-    if(e.target.classList.contains('botonSuprimirProducto')) {
+    if(e.target.classList.contains('botonSuprimirProductoFunciones')) {
         delete carrito[e.target.id]
         pintarCarrito();
     }

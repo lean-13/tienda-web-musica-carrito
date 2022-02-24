@@ -70,12 +70,14 @@ const pintarCarrito = () => {
     carritoItems.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarritoProducto.querySelector('.imgProductoCarrito').src = producto.img
-        templateCarritoProducto.querySelector('.BotonResta').id = producto.id
-        templateCarritoProducto.querySelector('.BotonSuma').id = producto.id
         templateCarritoProducto.querySelector('.infoIdProductoCarrito').textContent = producto.cantidad
         templateCarritoProducto.querySelector('.infoProductoCarrito').textContent = producto.nombre
         templateCarritoProducto.querySelector('.precioProductoCarrito').textContent = producto.cantidad * producto.precio
         confirmacionCompra.querySelector('.precio__total__numero')
+        // botones
+        templateCarritoProducto.querySelector('.BotonResta').id = producto.id
+        templateCarritoProducto.querySelector('.BotonSuma').id = producto.id
+        templateCarritoProducto.querySelector('.botonSuprimirProducto').id = producto.id
         const clone = templateCarritoProducto.cloneNode(true)
         fragment.appendChild(clone)
     })
@@ -87,18 +89,21 @@ const pintarCarrito = () => {
 
 const botonSumaResta = e => {
     if(e.target.classList.contains('botonSumarProducto')) {
-        const productoItem = carrito[e.target.id]
+        const productoItem = carrito[e.target.id];
         productoItem.cantidad = carrito[e.target.id].cantidad + 1;
         carrito[e.target.id] = {...productoItem}
         pintarCarrito();
     }
     if(e.target.classList.contains('botonRestarProducto')) {
-        const productoItem = carrito[e.target.id]
+        const productoItem = carrito[e.target.id];
         productoItem.cantidad = carrito[e.target.id].cantidad - 1;
         if(productoItem.cantidad === 0) {
             delete carrito[e.target.id]
-            cerrarModalCarrito();
         }
+        pintarCarrito();
+    }
+    if(e.target.classList.contains('botonSuprimirProducto')) {
+        delete carrito[e.target.id]
         pintarCarrito();
     }
     e.stopPropagation();

@@ -1261,8 +1261,8 @@ header nav a {
 .carritoCompraOpciones {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 15%;
   text-align: center;
   -webkit-box-align: center;
@@ -1430,7 +1430,7 @@ header nav a {
   width: 20px;
   height: 20px;
   top: -160px;
-  left: 950px;
+  left: 940px;
   background-color: white;
   color: black;
 }

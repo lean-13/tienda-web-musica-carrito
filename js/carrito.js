@@ -15,7 +15,7 @@ const vaciarCarrito = () => {
     reinicioPrecio.textContent = "$ " + "0000"
 }
 
-
+/*
 selectCuotas.addEventListener('change', (event) => {
     const cantidadCuotas = document.getElementById('infoNumeroCuotas');
     cantidadCuotas.textContent = "Cuotas: " + event.target.value;
@@ -27,3 +27,4 @@ function calcularPrecioCuotas() {
     const infoPrecioCuotas = document.getElementById('infoPrecioCuotas')
     infoPrecioCuotas.textContent = "Cuotas de: $" + precioCuotas;
 }
+*/

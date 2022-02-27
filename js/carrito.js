@@ -1,11 +1,39 @@
+$(document).ready(function () {
+    
+// boton vaciar
+let vaciar = $('#botonVaciarCarrito')
+let reinicioPrecio = $('.precio__total__numero');
+// modal compra
+let modalExteriorCompra = $('.modalCompraExterior');
+let modalCompra = $('.modalCompraCarrito')
+// boton compra
+let botonCompra = $('#botonAbrirModalCompra');
+// boton confirmar
+let botonConfirmarCompra = $('#botonComprarCarrito')
+// boton cerrar modal
+let botonCancelar = $('#botonCancelar');
 
 
-const vaciar = document.getElementById('botonVaciarCarrito')
-const reinicioPrecio = document.querySelector('.precio__total__numero');
+// compra
+$(botonCompra).on('click', () => {
+    mostrarModalCompra();
+})
 
-const selectCuotas = document.querySelector('.imputSeleccionCuotas');
+const mostrarModalCompra = () => {
+    modalExteriorCompra.fadeIn(800);
+    modalCompra.animate({top:'60px'},700)
+}
 
-vaciar.addEventListener('click', () => {
+$(botonCancelar).on('click', () => {
+    cerrarModalCompra();
+})
+const cerrarModalCompra = () => {
+    modalExteriorCompra.fadeOut(800);
+    modalCompra.animate({top:'-540px'},700)
+}
+// confirmacion compra
+// vaciar carrito
+$(vaciar).on('click', () => {
     vaciarCarrito();
 })
 
@@ -15,16 +43,8 @@ const vaciarCarrito = () => {
     reinicioPrecio.textContent = "$ " + "0000"
 }
 
-/*
-selectCuotas.addEventListener('change', (event) => {
-    const cantidadCuotas = document.getElementById('infoNumeroCuotas');
-    cantidadCuotas.textContent = "Cuotas: " + event.target.value;
-    numeroCuotas = event.target.value;
-})
 
-function calcularPrecioCuotas() {
-    let precioCuotas = precioProductoFinal / numeroCuotas;
-    const infoPrecioCuotas = document.getElementById('infoPrecioCuotas')
-    infoPrecioCuotas.textContent = "Cuotas de: $" + precioCuotas;
-}
-*/
+
+});
+
+

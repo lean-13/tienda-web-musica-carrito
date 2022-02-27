@@ -1478,6 +1478,7 @@ header nav a {
 .modal__compra__exterior--modificacion {
   position: fixed;
   z-index: 2;
+  display: none;
 }
 
 .modal__compra__exterior--size {
@@ -1499,7 +1500,7 @@ header nav a {
 .modal__compra__carrito--size {
   width: 96%;
   height: 88%;
-  top: 60px;
+  top: -540px;
   left: 2%;
 }
 

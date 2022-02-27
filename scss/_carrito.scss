@@ -225,6 +225,7 @@
 .modal__compra__exterior--modificacion {
     position: fixed;
     z-index: 2;
+    display: none;
 }
 .modal__compra__exterior--size {
     // size
@@ -246,7 +247,7 @@
     width: 96%;
     height: 88%;
     // position
-    top: 60px;
+    top: -540px;
     left: 2%;
 }
 .modal__compra__carrito--color {
@@ -360,7 +361,6 @@
 
     resize: none;
 }
-
 
 // metodos de pago
 

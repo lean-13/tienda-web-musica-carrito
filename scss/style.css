@@ -21,10 +21,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-body textarea {
-  resize: none;
-}
-
 body::-webkit-scrollbar {
   width: 8px;
   background-color: rgba(128, 128, 128, 0.459);
@@ -988,6 +984,7 @@ header nav a {
 
 .textarea--modificacion {
   border-radius: 5px;
+  resize: none;
 }
 
 .textarea--size {
@@ -1635,6 +1632,7 @@ header nav a {
 .textoDescripcion {
   width: 100%;
   height: 100px;
+  resize: none;
 }
 
 .container {

@@ -12,10 +12,6 @@ body {
     /* color fondo */
     background-color: $color1;
     font-family: $font1;
-
-    textarea {
-        resize: none;
-    }
 }
 // colores de scroll
 body::-webkit-scrollbar {

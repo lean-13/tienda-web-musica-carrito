@@ -1515,8 +1515,26 @@ header nav a {
   padding-top: 20px;
 }
 
+.informacion__direccion--modificacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#direccion {
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#numeroTelefono {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
 .container {
-  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1532,45 +1550,45 @@ header nav a {
           flex-flow: column;
 }
 
-.container form {
-  padding: 20px;
+.container .container-pago {
+  padding: 10px;
   width: 600px;
-  margin-top: 80px;
 }
 
-.container form .inputBox {
+.container .container-pago .inputBox {
   margin-top: 0px;
 }
 
-.container form .inputBox span {
+.container .container-pago .inputBox span {
   color: #999;
   padding-bottom: 5px;
 }
 
-.container form .inputBox input,
-.container form .inputBox select {
+.container .container-pago .inputBox input,
+.container .container-pago .inputBox select {
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #444;
 }
 
-.container form .flexbox {
+.container .container-pago .flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
 
-.container form .flexbox .inputBox {
+.container .container-pago .flexbox .inputBox {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 150px;
           flex: 1 1 150px;
 }
 
 .container .card-container {
-  margin-bottom: -120px;
+  margin-bottom: -10px;
+  margin-left: 12%;
   position: relative;
   height: 280px;
   width: 400px;
@@ -1589,6 +1607,7 @@ header nav a {
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  margin-bottom: 80px;
   -webkit-transform: perspective(1000px) rotateY(0deg);
           transform: perspective(1000px) rotateY(0deg);
   -webkit-transition: -webkit-transform .4s ease-out;
@@ -1617,7 +1636,7 @@ header nav a {
 .container .card-container .front .card-number-box {
   padding: 30px 0;
   font-size: 22px;
-  color: #fff;
+  color: white;
 }
 
 .container .card-container .front .flexbox {
@@ -1632,7 +1651,7 @@ header nav a {
 
 .container .card-container .front .flexbox .box {
   font-size: 15px;
-  color: #fff;
+  color: white;
 }
 
 .container .card-container .back {
@@ -1658,7 +1677,7 @@ header nav a {
 }
 
 .container .card-container .back .stripe {
-  background: #000;
+  background: black;
   width: 100%;
   margin: 10px 0;
   height: 50px;
@@ -1669,7 +1688,7 @@ header nav a {
 }
 
 .container .card-container .back .box span {
-  color: #fff;
+  color: white;
   font-size: 15px;
 }
 
@@ -1678,7 +1697,7 @@ header nav a {
   padding: 10px;
   margin-top: 5px;
   color: #333;
-  background: #fff;
+  background: white;
   border-radius: 5px;
   width: 100%;
 }

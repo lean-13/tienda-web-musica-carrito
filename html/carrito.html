@@ -106,110 +106,107 @@
     </section>
     <section class="modal__compra__exterior--modificacion modal__compra__exterior--size modal__compra__exterior--color modalCompraExterior">
         <div class="modal__compra__carrito--modificacion modal__compra__carrito--size modal__compra__carrito--color modalCompraCarrito">
-            <div class="modal__compra__pago__seccion--modificacion modal__compra__pago__seccion--size modal__compra__pago__seccion--color">
-                <div class="modal__compra__seccion__direccion">
-                    <form class="form--modificacion form--size" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class=" modal__compra__pago__seccion--size modal__compra__pago__seccion--color">
+                <form class="modal__compra__pago__seccion--modificacion" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
+                    <div class="modal__compra__seccion__direccion">
                         <h2 class="formulario__input--modificacion titulo--modificacion titulo--color">Datos de envio</h2>
-                        <input type="text" placeholder="Direccion" class="form-control cssInput" id="direccion" required>
-                        <input type="number" placeholder="Numero" class="form-control cssInput" id="numeroTelefono">
-                        <div class="input-group mb-3 email--modificacion email--size">
+                        <div class="informacion__direccion--modificacion informacion__direccion--size">
+                            <input type="text" placeholder="Direccion" class="form-control" id="direccion" required>
+                            <input type="number" placeholder="Numero" class="form-control" id="numeroTelefono">
+                        </div>
+                        <div class="input-group mb-3">
                             <input type="email" class="form-control" id="email" placeholder="Email" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">@example.com</span>
                             </div>
                         </div>
                         <textarea name="areadetexto" id="campoTexto" cols="30" rows="10" placeholder="Descripcion de hogar" class="form-control textarea--modificacion textarea--size" required></textarea>
-                        <div class="condiciones--modificacion condiciones--size">
-                            <label for="terminos">Aceptar Terminos</label>
-                            <input type="checkbox" name="terminos" class="checkbox--modificacion checkbox--size" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal__compra__seccion__metodo__pago">
-                    <div class="container">
-                        <div class="card-container">
-                            <div class="front">
-                                <div class="image">
-                                    <img src="../img/chip.png" alt="">
-                                    <img src="../img/logo.png" alt="">
-                                </div>
-                                <div class="card-number-box">################</div>
-                                <div class="flexbox">
-                                    <div class="box">
-                                        <span>titular</span>
-                                        <div class="card-holder-name">nombre completo</div>
+                    </div>
+                    <div class="modal__compra__seccion__metodo__pago">
+                        <div class="container">
+                            <div class="container-pago">
+                                <div class="card-container">
+                                    <div class="front">
+                                        <div class="image">
+                                            <img src="../img/chip.png" alt="">
+                                            <img src="../img/logo.png" alt="">
+                                        </div>
+                                        <div class="card-number-box">################</div>
+                                        <div class="flexbox">
+                                            <div class="box">
+                                                <span>titular</span>
+                                                <div class="card-holder-name">nombre completo</div>
+                                            </div>
+                                            <div class="box">
+                                                <span>vencimiento</span>
+                                                <div class="expiration">
+                                                    <span class="exp-month">mm</span>
+                                                    <span class="exp-year">aa</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="box">
-                                        <span>vencimiento</span>
-                                        <div class="expiration">
-                                            <span class="exp-month">mm</span>
-                                            <span class="exp-year">aa</span>
+                                    <div class="back">
+                                        <div class="stripe"></div>
+                                        <div class="box">
+                                            <span>cod seguridad</span>
+                                            <div class="cvv-box"></div>
+                                            <img src="../img/chip.png" alt="">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="back">
-                                <div class="stripe"></div>
-                                <div class="box">
-                                    <span>cod seguridad</span>
-                                    <div class="cvv-box"></div>
-                                    <img src="../img/chip.png" alt="">
-                                </div>
-                            </div>
-                    
-                        </div>
-                        <form action="">
-                            <div class="inputBox">
-                                <span>numero de tarjeta</span>
-                                <input type="text" maxlength="16" class="card-number-input">
-                            </div>
-                            <div class="inputBox">
-                                <span>titular</span>
-                                <input type="text" class="card-holder-input">
-                            </div>
-                            <div class="flexbox">
                                 <div class="inputBox">
-                                    <span>mes de vencimiento</span>
-                                    <select name="" id="" class="month-input">
-                                        <option value="month" selected disabled>mes</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
+                                    <span>numero de tarjeta</span>
+                                    <input type="text" maxlength="16" class="card-number-input">
                                 </div>
                                 <div class="inputBox">
-                                    <span>año de vencimiento</span>
-                                    <select name="" id="" class="year-input">
-                                        <option value="year" selected disabled>año</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                        <option value="2027">2027</option>
-                                        <option value="2028">2028</option>
-                                        <option value="2029">2029</option>
-                                        <option value="2030">2030</option>
-                                    </select>
+                                    <span>titular</span>
+                                    <input type="text" class="card-holder-input">
                                 </div>
-                                <div class="inputBox">
-                                    <span>cod seguridad</span>
-                                    <input type="text" maxlength="4" class="cvv-input">
+                                <div class="flexbox">
+                                    <div class="inputBox">
+                                        <span>mes de vencimiento</span>
+                                        <select name="" id="" class="month-input">
+                                            <option value="month" selected disabled>mes</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputBox">
+                                        <span>año de vencimiento</span>
+                                        <select name="" id="" class="year-input">
+                                            <option value="year" selected disabled>año</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputBox">
+                                        <span>cod seguridad</span>
+                                        <input type="text" maxlength="4" class="cvv-input">
+                                    </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>    
-                </div>
+                        </div>    
+                    </div>
+                </form>
             </div>
             <div class="carrito__modal__compra--modificacion carrito__modal__compra--size carrito__modal__compra--color">
                 <div>

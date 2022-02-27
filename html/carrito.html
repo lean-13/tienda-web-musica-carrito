@@ -110,18 +110,33 @@
                 <form class="modal__compra__pago__seccion--modificacion" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
                     <div class="modal__compra__seccion__direccion">
                         <h2 class="formulario__input--modificacion titulo--modificacion titulo--color">Datos de envio</h2>
-                        <div class="informacion__direccion--modificacion informacion__direccion--size">
-                            <input type="text" placeholder="Direccion" class="form-control" id="direccion" required>
-                            <input type="number" placeholder="Numero" class="form-control" id="numeroCasa">
+                        <div class="divTituloDireccion">
+                            <span class="tituloDireccion">Direccion</span>
+                            <span class="tituloDireccionNumero">Numero</span>
                         </div>
-                        <input type="text" placeholder="Codigo Postal" class="form-control" id="codigoPostal" required>
-                        <div class="input-group mb-3 emailContacto">
-                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <div class="informacion__direccion--modificacion informacion__direccion--size">
+                            <input type="text" class="form-control" id="direccion" required>
+                            <input type="number" class="form-control" id="numeroCasa">
+                        </div>
+                        <div class="divCodigoPostal">
+                            <Span>codigo postal</Span>
+                            <input type="text" class="form-control" id="codigoPostal" required>
+                        </div>
+                        <span class="tituloEmail">Email</span>
+                        <div class="input-group emailContacto">
+                            <input type="email" class="form-control" id="email" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">@example.com</span>
                             </div>
                         </div>
-                        <textarea name="areadetexto" id="campoTexto" cols="30" rows="10" placeholder="Descripcion de vivienda" class="form-control textoDescripcion" required></textarea>
+                        <div class="divNumeroTelefono">
+                            <span>Numero de telefono</span>
+                            <input type="text" class="form-control" id="numeroTelefono" required>
+                        </div>  
+                        <div class="divTextoDescripcion">
+                            <span>Descripcion de vivienda</span>
+                            <textarea name="areadetexto" id="campoTexto" cols="30" rows="10" class="form-control textoDescripcion" required></textarea>
+                        </div>
                     </div>
                     <div class="modal__compra__seccion__metodo__pago">
                         <div class="container">

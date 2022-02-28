@@ -1824,6 +1824,63 @@ header nav a {
   padding-top: 20px;
 }
 
+.modal__confirmacion__exterior--modificacion {
+  position: fixed;
+}
+
+.modal__confirmacion__exterior--size {
+  width: 100%;
+  height: 100%;
+  top: 50px;
+}
+
+.modal__confirmacion__exterior--color {
+  background-color: rgba(128, 128, 128, 0.459);
+}
+
+.modal__confirmacion--modificacion {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  top: 80px;
+}
+
+.modal__confirmacion--size {
+  width: 60%;
+  height: 80%;
+}
+
+.modal__confirmacion__contenido {
+  margin-top: 10%;
+}
+
+.textoConfirmacion {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 10%;
+}
+
+.logoConfirmacion {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(4px 6px 2px #013440);
+          filter: drop-shadow(4px 6px 2px #013440);
+}
+
+.logoConfirmacion img {
+  width: 40%;
+  height: 40%;
+}
+
 .subrayadoText {
   background: #013440e3;
   color: white;

@@ -12,6 +12,7 @@ let botonCompra = $('#botonAbrirModalCompra');
 let botonConfirmarCompra = $('#botonComprarCarrito')
 // boton cerrar modal
 let botonCancelar = $('#botonCancelar');
+// modal confirmacion
 
 
 // compra
@@ -32,6 +33,16 @@ const cerrarModalCompra = () => {
     modalCompra.animate({top:'-540px'},700)
 }
 // confirmacion compra
+
+$(botonConfirmarCompra).on('click', () => {
+    mostrarModalConfirmacion();
+})
+
+const mostrarModalConfirmacion = () => {
+    cerrarModalCompra();
+
+}
+
 // vaciar carrito
 $(vaciar).on('click', () => {
     vaciarCarrito();

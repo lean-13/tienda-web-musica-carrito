@@ -13,7 +13,8 @@ let botonConfirmarCompra = $('#botonComprarCarrito')
 // boton cerrar modal
 let botonCancelar = $('#botonCancelar');
 // modal confirmacion
-
+let modalExteriorConfirmacion = $('.modalConfirmacionExterior');
+let modalConfirmacion = $('.modalConfirmacion');
 
 // compra
 $(botonCompra).on('click', () => {
@@ -30,7 +31,7 @@ $(botonCancelar).on('click', () => {
 })
 const cerrarModalCompra = () => {
     modalExteriorCompra.fadeOut(800);
-    modalCompra.animate({top:'-540px'},700)
+    modalCompra.animate({top:'-540px'},800)
 }
 // confirmacion compra
 
@@ -40,9 +41,18 @@ $(botonConfirmarCompra).on('click', () => {
 
 const mostrarModalConfirmacion = () => {
     cerrarModalCompra();
-
+    modalExteriorConfirmacion.fadeIn(800);
+    modalConfirmacion.animate({top:'80px'},800)
 }
 
+$(modalExteriorConfirmacion).on('click', () => {
+    cerrarModalConfirmacion();
+})
+
+const cerrarModalConfirmacion = () => {
+    modalExteriorConfirmacion.fadeOut(800);
+    modalConfirmacion.animate({top:'670px'},800)
+}
 // vaciar carrito
 $(vaciar).on('click', () => {
     vaciarCarrito();

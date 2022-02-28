@@ -1826,6 +1826,7 @@ header nav a {
 
 .modal__confirmacion__exterior--modificacion {
   position: fixed;
+  display: none;
 }
 
 .modal__confirmacion__exterior--size {
@@ -1851,7 +1852,7 @@ header nav a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  top: 80px;
+  top: 670px;
 }
 
 .modal__confirmacion--size {

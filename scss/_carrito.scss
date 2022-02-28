@@ -518,7 +518,7 @@
 
 .modal__confirmacion__exterior--modificacion {
     position: fixed;
-
+    display: none;
 }
 .modal__confirmacion__exterior--size {
     width: 100%;
@@ -537,7 +537,7 @@
     align-items: center;
     text-align: center;
     // position
-    top: 80px;
+    top: 670px;
 }
 .modal__confirmacion--size {
     width: 60%;

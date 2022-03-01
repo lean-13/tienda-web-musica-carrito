@@ -1800,12 +1800,6 @@ header nav a {
 .modal__confirmacion__exterior--modificacion {
   position: fixed;
   display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .modal__confirmacion__exterior--size {
@@ -1831,13 +1825,14 @@ header nav a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  top: 670px;
   border-radius: 5px;
 }
 
 .modal__confirmacion--size {
   width: 60%;
   height: 80%;
+  top: 670px;
+  left: 22%;
 }
 
 .modal__confirmacion--color {

@@ -16,7 +16,9 @@ let modalConfirmacion = $('.modalConfirmacion');
 
 // compra
 $(botonCompra).on('click', () => {
-    mostrarModalCompra();
+    if (localStorage['carrito'].length > 2) {
+        mostrarModalCompra();
+    }
 })
 
 const mostrarModalCompra = () => {

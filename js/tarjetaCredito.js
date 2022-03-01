@@ -18,12 +18,7 @@ $(document).ready(function () {
             });
     
         })
-    
-    
-    //Estas las traducen ustedes. Pueden guiarse por las de arriba.
-    //https://api.jquery.com/ para guiarse con los métodos y eventos
-    
-    
+       
         document.querySelector('.month-input').oninput = () => {
             document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
         }

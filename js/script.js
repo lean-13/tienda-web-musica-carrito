@@ -83,7 +83,6 @@ const pintarCarrito = () => {
     })
     carritoItems.appendChild(fragment)
     pintarPrecioFinal();
-
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 

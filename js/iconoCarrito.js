@@ -2,16 +2,14 @@ $(document).ready(function () {
     // icono carrito
     let iconoCarrito = $('.iconoCarritoCompra');
 
-        console.log(300)
-    /*
+    let contenidoCarrito = localStorage['carrito'].length
+
     $('DOMContentLoaded', () => {
         iconoCarritoCompra()
     });
 
-    let carritoInfo = carrito[];
-
     const iconoCarritoCompra = () => {
-        if (carritoInfo <= 2){
+        if (contenidoCarrito <= 2){
             iconoCarrito.slideUp(300);
             $(iconoCarrito).text('shopping_cart');
             iconoCarrito.slideDown(500);
@@ -22,6 +20,6 @@ $(document).ready(function () {
             iconoCarrito.slideDown(500);
         }
     }
-    */
+    
 });
 

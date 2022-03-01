@@ -114,3 +114,44 @@ const pintarPrecioFinal = () => {
     cantidadFinal.textContent = numeroCantidadFinal;
     confirmacionCompra.querySelector('.precio__total__numero').textContent = "$" + precioFinal;
 }
+
+
+
+$(document).ready(function () {
+
+    // icono carrito
+
+    let botonCompra = $('.botonCompra')
+    let carritoVacio = {};
+
+    $(botonCompra).on('click', () => {
+        carritoConProducto();
+    })
+
+    const carritoConProducto = () => {
+        carritoVacio = 1;
+        localStorage.setItem('carritoVacio', carritoVacio);
+        iconoCarritoCompra();
+    }
+    const carritonSinProducto = () => {
+        delete carritoVacio
+        carritoVacio = 0;
+        localStorage.setItem('carritoVacio',carritoVacio);
+        iconoCarritoCompra();
+    }
+
+    const iconoCarritoCompra = () => {
+        if (localCarritoVacio <= 2){
+            iconoCarrito.slideUp(300);
+            $(iconoCarrito).text('shopping_cart');
+            iconoCarrito.slideDown(500);
+        }
+        else {
+            iconoCarrito.slideUp(300);
+            $(iconoCarrito).text('shopping_cart_checkout');
+            iconoCarrito.slideDown(500);
+        }
+    }
+
+
+});

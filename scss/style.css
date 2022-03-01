@@ -1448,33 +1448,6 @@ header nav a {
   transition: 0.7s;
 }
 
-.imputSeleccionCuotas {
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  color: black;
-}
-
-.imputSeleccionCuotas select {
-  cursor: pointer;
-}
-
-.imputSeleccionCuotas select {
-  -webkit-box-shadow: 3px 3px 2px 0px #013440;
-          box-shadow: 3px 3px 2px 0px #013440;
-}
-
-.imputSeleccionCuotas label {
-  font-size: 18px;
-  letter-spacing: 0.1px;
-}
-
-.imputSeleccionCuotas:hover {
-  color: #013440;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
 .modal__compra__exterior--modificacion {
   position: fixed;
   z-index: 2;

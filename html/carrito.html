@@ -105,9 +105,9 @@
         </template>
     </section>
     <section class="modal__compra__exterior--modificacion modal__compra__exterior--size modal__compra__exterior--color modalCompraExterior">
-        <div class="modal__compra__carrito--modificacion modal__compra__carrito--size modal__compra__carrito--color modalCompraCarrito">
-            <div class=" modal__compra__pago__seccion--size modal__compra__pago__seccion--color">
-                <form class="modal__compra__pago__seccion--modificacion" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <form class="modal__compra__pago__seccion--modificacion" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="modal__compra__carrito--modificacion modal__compra__carrito--size modal__compra__carrito--color modalCompraCarrito">
+                <div class="modal__compra__pago__seccion--modificacion modal__compra__pago__seccion--size modal__compra__pago__seccion--color">
                     <div class="modal__compra__seccion__direccion">
                         <h2 class="formulario__input--modificacion titulo--modificacion titulo--color">Datos de envio</h2>
                         <div class="divTituloDireccion">
@@ -216,23 +216,23 @@
                                     </div>
                                     <div class="inputBox">
                                         <span>cod seguridad</span>
-                                        <input type="text" maxlength="4" class="cvv-input">
+                                        <input type="text" maxlength="3" class="cvv-input">
                                     </div>
                                 </div>
                             </div>
                         </div>    
                     </div>
-                </form>
+                </div>
+                <div class="carrito__modal__compra--modificacion carrito__modal__compra--size carrito__modal__compra--color">
+                    <div>
+                        <button class="boton__vaciar__carrito--modificacion boton__vaciar__carrito--size boton__vaciar__carrito--color" id="botonCancelar">Cancelar compra</button>
+                    </div> 
+                    <div>
+                        <input type="submit" name="Comprar Carrito" class="boton__comprar__carrito--modificacion boton__comprar__carrito--size boton__comprar__carrito--color" id="botonComprarCarrito">
+                    </div>           
+                </div>
             </div>
-            <div class="carrito__modal__compra--modificacion carrito__modal__compra--size carrito__modal__compra--color">
-                <div>
-                    <button class="boton__vaciar__carrito--modificacion boton__vaciar__carrito--size boton__vaciar__carrito--color" id="botonCancelar">Cancelar compra</button>
-                </div> 
-                <div>
-                    <button type="submit" name="Enviar" class="boton__comprar__carrito--modificacion boton__comprar__carrito--size boton__comprar__carrito--color" id="botonComprarCarrito">Comprar Carrito</button>
-                </div>             
-            </div>
-        </div>
+        </form>
     </section>
     <section class="modal__confirmacion__exterior--modificacion modal__confirmacion__exterior--size modal__confirmacion__exterior--color modalConfirmacionExterior">
         <div class="modal__confirmacion--modificacion modal__confirmacion--size modal__confirmacion--color modalConfirmacion">

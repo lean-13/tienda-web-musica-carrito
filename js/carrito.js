@@ -36,6 +36,7 @@ const cerrarModalCompra = () => {
 // confirmacion compra
 
 $(botonConfirmarCompra).on('click', () => {
+    e.preventDefault();
     mostrarModalConfirmacion();
 })
 

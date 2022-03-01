@@ -8,8 +8,6 @@ let modalExteriorCompra = $('.modalCompraExterior');
 let modalCompra = $('.modalCompraCarrito')
 // boton compra
 let botonCompra = $('#botonAbrirModalCompra');
-// boton confirmar
-let botonConfirmarCompra = $('#botonComprarCarrito')
 // boton cerrar modal
 let botonCancelar = $('#botonCancelar');
 // modal confirmacion
@@ -35,11 +33,10 @@ const cerrarModalCompra = () => {
 }
 // confirmacion compra
 
-$(botonConfirmarCompra).on('click', () => {
+$('#datosDePago').submit(function(e) { 
     e.preventDefault();
     mostrarModalConfirmacion();
-})
-
+});
 const mostrarModalConfirmacion = () => {
     cerrarModalCompra();
     modalExteriorConfirmacion.fadeIn(800);

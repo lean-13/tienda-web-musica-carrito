@@ -1,11 +1,12 @@
-formulario = [];
+
 
 $(document).ready(function () {
 
-    let modalConfirmacion = $('#modalConfirmacion');
-    let modalAnimation = $('.modal__confirmacion--animation');
+    let modalConfirmacion = $('#modalFormularioConfirmacion');
+    let modalAnimation = $('.modal__formulario__confirmacion--animation');
     let templateNombre = $('.confirmacionNombreFormulario');
     
+    formulario = [];
 
     $('#formulario').submit(function(e) { 
         e.preventDefault();

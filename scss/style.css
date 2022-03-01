@@ -1140,7 +1140,7 @@ header nav a {
   }
 }
 
-#modalConfirmacion {
+#modalFormularioConfirmacion {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1149,13 +1149,13 @@ header nav a {
   background-color: rgba(128, 128, 128, 0.459);
 }
 
-.modal__confirmacion--modificacion {
+.modal__formulario__confirmacion--modificacion {
   position: fixed;
   text-align: center;
   border-radius: 5px;
 }
 
-.modal__confirmacion--size {
+.modal__formulario__confirmacion--size {
   width: 60%;
   height: 300px;
   padding-top: 40px;
@@ -1164,7 +1164,7 @@ header nav a {
   left: 22%;
 }
 
-.modal__confirmacion--color {
+.modal__formulario__confirmacion--color {
   background-color: white;
   -webkit-box-shadow: #013440 0px 2px 10px 4px;
           box-shadow: #013440 0px 2px 10px 4px;
@@ -1800,6 +1800,12 @@ header nav a {
 .modal__confirmacion__exterior--modificacion {
   position: fixed;
   display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal__confirmacion__exterior--size {
@@ -1826,11 +1832,18 @@ header nav a {
           align-items: center;
   text-align: center;
   top: 670px;
+  border-radius: 5px;
 }
 
 .modal__confirmacion--size {
   width: 60%;
   height: 80%;
+}
+
+.modal__confirmacion--color {
+  background-color: white;
+  -webkit-box-shadow: #013440 0px 2px 10px 4px;
+          box-shadow: #013440 0px 2px 10px 4px;
 }
 
 .modal__confirmacion__contenido {

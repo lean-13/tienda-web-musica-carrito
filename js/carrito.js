@@ -37,6 +37,8 @@ const cerrarModalCompra = () => {
 
 $('#datosDePago').submit(function(e) { 
     e.preventDefault();
+    vaciarCarrito();
+    vaciarFormulario();
     mostrarModalConfirmacion();
 });
 const mostrarModalConfirmacion = () => {
@@ -64,6 +66,9 @@ const vaciarCarrito = () => {
     reinicioPrecio.textContent = "$ " + "0000"
 }
 
+const vaciarFormulario = () => {
+    document.getElementById("pagoFormulario").reset();
+}
 
 
 });

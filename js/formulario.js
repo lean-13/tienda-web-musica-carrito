@@ -17,6 +17,7 @@ $(document).ready(function () {
 
         formulario.push(nombreCompleto, email, numeroTelefono, campoTexto)
         confirmacionFormulario();
+        vaciarFormularioContacto();
     });
     
     const confirmacionFormulario = () => {
@@ -31,5 +32,8 @@ $(document).ready(function () {
             modalConfirmacion.fadeOut(800);
             modalAnimation.animate({top:'-300px'},700);
         })
+    }
+    const vaciarFormularioContacto = () => {
+        document.getElementById("FormularioContacto").reset();
     }
 });

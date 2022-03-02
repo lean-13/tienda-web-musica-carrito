@@ -18,22 +18,11 @@ const dataProductos = '../../data/dataProductos.json'
 
 // productos
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
 });
-
-const fetchData = async () => {
-    try {
-        // productos
-        const res = await fetch(dataProductos);
-        const data = await res.json();
-    } catch (error) {
-        console.log(Error);
-    }
-}
 
 let carrito = {};
 
